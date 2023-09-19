@@ -1,0 +1,37 @@
+$primaryBase: #37CD73;
+$primaryStars: #FFEB35;
+$backgroundBase: #37CD73;
+$backgroundLight: #ECFEF6;
+$backgroundWhite: #FFFFFF;
+$backgroundNoStarsPlate: #D3DFDA;
+$backgroundBasePlus: #3E9962;
+$textLight: #FFFFFF;
+$textDarkL1: #0D220C;
+$textGrayL2: #809087;
+$textGrayL3: #A8B4AC;
+$textAccent: #37CD73;
+$accentSuper: #0D7717;
+$badgeNew: #8155FF;
+$badgeTop: #FFB341;
+$badgeSale: #FF66C2;
+$warning: red;
+$apmSlide: rgba(0, 0, 0, 0.75);
+$reviewMyPlate: #FCF2FF;
+
+%shadow{
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+%blur{
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.15);
+}
+
+%radius{
+    border-radius: 4px;
+}
+
+%transition{
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+}

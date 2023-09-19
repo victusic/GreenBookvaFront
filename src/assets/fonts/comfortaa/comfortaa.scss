@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Comfortaa';
+	src: url('comfortaa.eot'); /* IE 9 Compatibility Mode */
+	src: url('comfortaa.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('comfortaa.woff2') format('woff2'), /* Super Modern Browsers */
+		url('comfortaa.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('comfortaa.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('comfortaa.svg#comfortaa') format('svg'); /* Chrome < 4, Legacy iOS */
+}

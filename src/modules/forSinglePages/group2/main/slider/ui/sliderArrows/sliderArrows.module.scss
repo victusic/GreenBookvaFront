@@ -1,0 +1,35 @@
+.arrowsPlate{
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  @media (max-width: 1024px) {
+    left: 8px;
+    right: 8px;
+  }
+
+  @media (max-width: 520px) {
+    left: 6px;
+    right: 6px;
+  }
+
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.arrowOpacity{
+  opacity: 0.2;
+  z-index: 200;
+  pointer-events: all;
+}
+
+.arrowOpacity:hover{
+  opacity: 0.7;
+}
+
+.arrowOpacity:active{
+  opacity: 1;
+}

@@ -1,0 +1,11 @@
+.scroll{
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    justify-content: flex-start;
+    flex-wrap: nowrap; 
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}

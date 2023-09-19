@@ -1,0 +1,14 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/typography';
+
+.inInput{
+    width: 320px;
+    @extend %text3;
+    color: $textGrayL3;
+    margin-bottom: 2px;
+    line-height: 20px;
+    cursor: pointer;
+    @extend %transition;
+    @media (max-width: 1024px) {width: 295px;}
+    @media (max-width: 520px) {width: 240px;}
+}

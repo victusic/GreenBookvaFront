@@ -1,0 +1,50 @@
+@import '../../../../../styles/colors';
+@import '../../../../../styles/typography';
+
+.linkTextPlate{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    @media (max-width: 650px) {
+        position: relative;
+        align-items: start;
+        height: 160px;
+    }
+}
+
+.linkTextTitle{
+    color: $textDarkL1;
+    cursor: default;
+}
+
+.linkTextData{
+    color: $textAccent;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.linkSvgCopy{
+    width: 10px;
+    height: 12px;
+    margin-left: 4px;
+    cursor: pointer;
+    fill: $textGrayL3;
+}
+
+.linkSvgCopy:hover{
+    fill: $textGrayL2;
+}
+
+.linkSvgCopy:active{
+    fill: $accentSuper;
+}
+
+.copyStyle{
+    color: $accentSuper;
+}

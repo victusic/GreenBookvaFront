@@ -1,0 +1,216 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/typography';
+
+.topLine{
+    width: 100%;
+    height: 38px;
+    background: $backgroundBasePlus;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 1024px) {height: 32px;}
+    @media (max-width: 520px) {
+        height: 41px; 
+        background: $primaryBase;
+    }
+}
+
+.topLeftPanel{
+    display: flex;
+    float: left;
+    align-items: center;
+    height: 100%;
+    @media (max-width: 520px) {display: none;}
+}
+
+.topRightPanel{
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    @media (max-width: 520px) {display: none;}
+}
+
+/*пк - планшет*/
+
+.Location{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    fill: $backgroundNoStarsPlate;
+    color: $backgroundNoStarsPlate;
+}
+
+.Location:hover{
+    fill: $backgroundWhite;
+    color: $backgroundWhite;
+}
+
+.topTextLeft{
+    @extend %text3;
+    color: $backgroundNoStarsPlate;
+    cursor: pointer;
+    margin-right: 32px;
+    @media (max-width: 1024px) {margin-right: 20px;}
+    @media (max-width: 545px) {margin-right: 15px;}
+    @extend %transition;
+}
+
+.topTextLeft:hover{
+    color: $backgroundWhite;
+}
+
+.topTextLeft:active{
+    color: $backgroundWhite;
+}
+
+.topTextRight{
+    @extend %text3;
+    color: $backgroundNoStarsPlate;
+    cursor: pointer;
+    margin-left: 32px;
+    margin-right: 0px;
+    @media (max-width: 1024px) {margin-left: 20px;}
+    @media (max-width: 550px) {margin-left: 15px;}
+    @extend %transition;
+}
+
+.topTextSvg{
+    color: $backgroundNoStarsPlate;
+    width: 8px;
+    height: 10px;
+    cursor: pointer;
+    margin-right: 4px;
+    @media (max-width: 1024px) {
+        width: 7px;
+        height: 8px;
+    }
+    fill: inherit;
+}
+
+.topTextRightHide{
+    @media (max-width: 800px) {display: none;}
+}
+
+.currencyPlate{
+    margin-top: 1px;
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 32px;
+    height: 16px;
+    @media (max-width: 1024px) {
+        margin-left: 20px;
+        height: 14px;
+    }
+    @media (max-width: 545px) {
+        margin-left: 15px;
+        height: 12px;
+    }
+    //классическое подчёркивание ломается на символе $
+}
+
+.currencyText{
+    @extend %text3;
+    color: $backgroundNoStarsPlate;
+    cursor: pointer;
+    @extend %transition;
+}
+
+.currencyText:hover{
+    @extend %text3;
+    color: $textLight;
+    cursor: pointer;
+    @extend %transition;
+}
+
+.currencyTextActive{
+    color: $textLight;
+    border-bottom: 2px $textLight solid;
+}
+
+
+/*мобильный*/
+
+.mobileFlexLeft{
+    display: none;
+    @media (max-width: 520px) {
+        float: left;
+        display: flex;
+        width: 170px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3px;
+    }
+}
+
+.mobileFlexRight{
+    display: none;
+    @media (max-width: 520px) {
+        float: right;
+        display: flex;
+        width: 130px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media (max-width: 320px) {width: 120px;}
+}
+
+.menuSvg{
+    display: block;
+    width: 19px;
+    height: 14px;
+    fill: $textLight;
+}
+
+.menuSvg:hover{
+    fill: $textGrayL2;
+}
+
+.logoText{
+    display: block;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: $textLight;
+    letter-spacing: 0.07em;
+    white-space: nowrap;
+    margin-left: 5px;
+}
+
+.buttonBoxSvg{
+    width: 18px;
+    height: 18px;
+    fill: $textLight;
+}
+
+.buttonBoxSvg:hover{
+    fill: $textGrayL2;
+}
+
+.buttonBoxCount{
+    position: absolute;
+    top: -2px;
+    border-radius: 360px;
+    width: 9px;
+    height: 9px;
+    @extend %standart-font;
+    font-size: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonBoxCountFavorites{
+    color: $textDarkL1;
+    background-color: $backgroundWhite;
+    right: 27px;
+    
+}
+
+.buttonBoxCountShoppingCart{
+    background-color: $badgeSale;
+    right: -5px;
+    color: $textLight;
+}

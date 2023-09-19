@@ -1,0 +1,70 @@
+@import '../../../../../styles/colors';
+@import '../../../../../styles/typography';
+
+.LeftBarTitle{
+    color: $textDarkL1;
+    cursor: default;
+    margin-top: 36px;
+    margin-bottom: 25px;
+    padding-right: 10px;
+    @media (max-width: 1024px) {
+        margin-top: 32px;
+        margin-bottom: 20px;
+    }
+    @media (max-width: 520px) {
+        margin-top: 22px;
+        margin-bottom: 15px;
+    }
+    @media (max-width: 824px) {
+        font-size: 28px;
+    }
+}
+
+.LeftBarCategoriesTitle{
+    color: $textGrayL2;
+    cursor: default;
+    @extend %text1;
+}
+
+.LeftBarCategories{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    color: $textGrayL2;
+    cursor: pointer;
+    @extend %text2;
+    @extend %no-transposition;
+}
+.LeftBarCategories:hover{
+    color: $textGrayL3;
+}
+.LeftBarCategories:active{
+    color: $accentSuper;
+}
+
+.countLine{
+    margin-top: 10px;
+    width: 100%;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    @media (max-width: 1024px) {
+        margin-bottom: 30px;
+        padding-right: 15px;
+    }
+    @media (max-width: 520px) {
+        margin-bottom: 25px;
+        padding-right: 10px;
+    }
+}
+
+
+.titleColor{
+    color: $textDarkL1;
+}
+
+.antiMargin{
+    margin-top: 15px;
+}

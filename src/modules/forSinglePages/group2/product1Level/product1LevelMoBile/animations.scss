@@ -1,0 +1,35 @@
+@keyframes openList {
+    0%{
+        height: 0px;
+        opacity: 0;
+    }
+    40%{
+        height: auto;
+        opacity: 0;
+    }
+    100%{
+       height: auto;
+        opacity: 1;
+    }
+}
+
+.categoriesList{
+    display: none;
+    height: 0px;
+}
+
+.categoriesList-enter-active{
+    display: block;
+    animation: openList .6s forwards;
+}
+
+.categoriesList-enter-done{
+    display: block;
+    height: auto;
+}
+
+.categoriesList-exit-active{
+    display: block;
+    animation: openList .6s reverse;
+}
+

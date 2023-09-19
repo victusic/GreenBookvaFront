@@ -1,0 +1,23 @@
+@import '../../../styles/colors';
+@import '../../../styles/typography';
+
+.base{
+    width: 255px;
+    height: 40px;
+    background: $backgroundWhite;
+    border: 1px solid $textGrayL3;
+    padding-left: 7px;
+    @extend %radius;
+    @extend %transition;
+    color: $textGrayL2;
+    @extend %text2;
+    @media (max-width: 1400px) {width: 200px;}
+    @media (max-width: 1170px) {width: 150px;}
+    @media (max-width: 1024px) {
+        width: 130px;
+        height: 30px;
+        padding-left: 5px;
+    }
+    @media (max-width: 800px) { width: 75%;}
+    @media (max-width: 520px) { width: 65%;}
+}

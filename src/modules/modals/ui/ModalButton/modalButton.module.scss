@@ -1,0 +1,30 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/typography';
+
+.base{
+    width: 320px;
+    height: 42px;
+    background: $backgroundBase;
+    border: none;
+    @extend %radius;
+    @extend %shadow;
+    @extend %transition;
+    color: $textLight;
+    @extend %text2;
+    cursor: pointer;
+    @media (max-width: 1024px) {
+        width: 295px;
+    }
+    @media (max-width: 520px) {
+        width: 240px;
+        height: 34px;
+    }
+}
+
+.base:hover{
+    background: $backgroundBasePlus;
+}
+
+.base:active{
+    background: $accentSuper;
+}

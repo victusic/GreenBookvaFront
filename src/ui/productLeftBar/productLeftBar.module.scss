@@ -1,0 +1,25 @@
+.leftBar{
+    width: 440px;
+    min-width: 440px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1350px) {
+        width: 360px;
+        min-width: 360px;
+    }
+    @media (max-width: 1150px) {
+        width: 320px;
+        min-width: 320px;
+    }
+    @media (max-width: 1024px) {
+        width: 276px;
+        min-width: 276px;
+    }
+    @media (max-width: 824px) {
+        width: 256px;
+        min-width: 256px;
+    }
+    @media (max-width: 624px) {
+        display: none;
+    }
+}

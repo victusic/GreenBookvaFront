@@ -1,0 +1,98 @@
+@import '../../../../../styles/colors';
+@import '../../../../../styles/typography';
+
+.productDescriptionPlate{
+    width: 450px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+    @media (max-width: 1024px) {width: 600px;
+        margin-right: 0px;
+        margin-left: 0px;}
+    @media (max-width: 860px) {width: 550px;}
+    @media (max-width: 810px) {width: 500px;}
+    @media (max-width: 760px) {width: 450px;}
+    @media (max-width: 710px) {width: 400px;}
+    @media (max-width: 660px) {width: 350px;}
+    @media (max-width: 610px) {width: 300px;}
+    @media (max-width: 560px) {width: 250px;}
+    @media (max-width: 524px) {
+        width: 100%;
+        margin-top: 25px;
+    }
+}
+
+.productName{
+    margin-bottom: 10px;
+    color: $textDarkL1;
+}
+
+.productNoAuthor{
+    margin-bottom: 20px;
+}
+
+.productAuthorName{
+    margin-bottom: 25px;
+    color: $textAccent;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.productAuthorName:hover{
+    color: $accentSuper;
+}
+
+.productAuthorName:active{
+    color: $textDarkL1;
+}
+
+.productDescriptionLine{
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.productDescriptionTitle{
+    position: relative;
+    width: 220px;
+    min-width: 220px;
+    @media (max-width: 610px) {
+        width: 185px;
+        min-width: 185px;
+    }
+}
+
+.productDescriptionValue{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @media (max-width: 610px) {
+        justify-content: end;
+    }
+}
+
+.badgesPlate{
+    position: absolute;
+    top: -7px;
+    right: 10px;
+    @media (max-width: 610px) {
+        right: -10px;
+    }
+}
+
+.rateClick{
+    color: $textAccent;
+    cursor: pointer;
+    width: fit-content;
+    @extend %text2;
+}
+
+.rateClick:hover{
+    color: $accentSuper;
+}
+
+.rateClick:active{
+    color: $textDarkL1;
+}

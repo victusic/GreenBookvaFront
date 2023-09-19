@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+<h1 align="center">Green Bookva (Front)</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3>ENG</h3>
+<h4>The largest project I've created is a full-fledged bookstore (except for payment), with adaptive layout, using the SCSS preprocessor</h4> 
+<h5>React/Redux is also implemented:</h5>
+<ul>
+  <li>Page and dynamic pagination</li>
+  <li>Filters, sorting</li>
+  <li>Cart, Favorites, orders, personal cabinet</li>
+  <li>Realized promotions, promo codes, work with bank cards</li>
+  <li>and much more...</li>
+</ul>
 
-## Available Scripts
+<h4>See the result: https://green-bookva.shop/</h4> 
 
-In the project directory, you can run:
+<h4>The project is powered by GreenBookvaApi</h4> 
 
-### `npm start`
+<h5>Additionally:</h5>
+<ul>
+  <li>Project in Figma </li>
+  <li>Sketch file</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h3>RU</h3>
+<h4>Самый крупный проект, созданной мной, представляет из себя полноценный книжный магазин (кроме оплаты), с адаптивной вёрсткой, с применением препроцессора SCSS</h4>
+<h5>Применены React/Redux, так же реализованны:</h5>
+<ul>
+  <li>Постраничная и динамическия пагинация</li>
+  <li>Фильтры, сортировка</li>
+  <li>Корзина, Избранное, заказы, личный кабинет</li>
+  <li>Реализованны акции, промокоды, работа с банковскими картами</li>
+  <li>и многое другое...</li>
+</ul>
 
-### `npm test`
+<h4>Увидеть на результат: https://green-bookva.shop/</h4> 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h4>Проект работает с помощью GreenBookvaApi</h4> 
 
-### `npm run build`
+<h5>Дополнительно:</h5>
+<ul>
+  <li>Проект в Figma</li>
+  <li>Файл с набросками</li>
+</ul>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h6>Презентационная работа</h6>

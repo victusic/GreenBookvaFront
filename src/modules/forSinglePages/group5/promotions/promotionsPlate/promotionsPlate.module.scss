@@ -1,0 +1,15 @@
+@import '../../../../../styles/colors';
+@import '../../../../../styles/typography';
+
+.stocksBlockPlate{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -40px;
+    @media (max-width: 1024px) {
+        margin-bottom: -35px;
+    }
+    @media (max-width: 520px) {
+        margin-bottom: -25px;
+    }
+}

@@ -1,0 +1,14 @@
+@import '../../../../../styles/colors';
+@import '../../../../../styles/typography';
+
+.cartPlate{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.countTitle{
+    color: $textDarkL1;
+    cursor: default;
+    margin-bottom: 20px;
+}

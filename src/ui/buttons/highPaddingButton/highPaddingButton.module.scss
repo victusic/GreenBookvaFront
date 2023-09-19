@@ -1,0 +1,29 @@
+@import '../../../styles/colors';
+@import '../../../styles/typography';
+
+.highButton{
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    color: $textLight;
+    background: $primaryBase;
+    @extend %radius;
+    @extend %transition;
+    @extend %text3;
+    cursor: pointer;
+    @media (max-width: 1024px) {height: 38px;}
+    @media (max-width: 520px) {
+        height: 28px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.highButton:hover{
+    background: $backgroundBasePlus;
+}
+
+.highButton:active{
+    background: $accentSuper;
+}

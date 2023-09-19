@@ -1,0 +1,14 @@
+.navigateLine{
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: -20px;
+    z-index: 10000;
+    @media (max-width: 1024px) {
+        margin-top: 20px;
+    }
+    @media (max-width: 520px) {
+        margin-top: 10px;
+    }
+}

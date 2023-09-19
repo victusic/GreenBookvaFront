@@ -1,0 +1,31 @@
+@import '../../../../../styles/colors';
+
+.linkStyle{
+    position: relative;
+    min-width: 470px;
+    height: 400px;
+    margin-left: 20px;
+    @media (max-width: 1325px) {
+        min-width: 365px;
+        height: 305px;
+    }
+    @media (max-width: 1024px) {
+        margin-left: 10px;
+        min-width: 305px;
+        height: 250px;
+    }
+    @media (max-width: 840px) {
+        min-width: 260px;
+        height: 225px;
+    }
+    cursor: pointer;
+    @media (max-width: 745px) {display: none;}
+}
+
+.recommendationBanner{
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    @extend %radius;
+}

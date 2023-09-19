@@ -1,0 +1,75 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/typography';
+
+.productPlate{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    @extend %radius;
+    @extend %shadow;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    @media (max-width: 520px) {
+        height: 40px;
+    }
+}
+
+.productPlate:last-child{
+    margin-bottom: 0;
+}
+
+.productPlateImg{
+    height: 50px;
+    max-width: 40px;
+    @extend %radius;
+    @media (max-width: 520px) {
+        height: 40px;
+        max-width: 35px;}
+}
+
+.productPlateTextBlock{
+    position: absolute;
+    right: 10px;
+    left: 47px;
+    height: 50px;
+    @media (max-width: 520px) {
+        height: 40px;
+        left: 40px;
+    }
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.productPlateName{
+    max-width: 100%;
+    min-width: 100%;
+    @extend %text2;
+    color: $textDarkL1;
+    @extend %no-transposition;
+}
+
+.productPlateFlex{
+    max-width: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.productPlateAuthor{
+    max-width: 80%;
+    min-width: 80%;
+    @extend %text3;
+    color: $textGrayL2;
+    @extend %no-transposition;
+}
+.productPlatePrice{
+    max-width: 20%;
+    min-width: 20%;
+    @extend %text3;
+    text-align: right;
+    color: $accentSuper;
+    @extend %no-transposition;
+}

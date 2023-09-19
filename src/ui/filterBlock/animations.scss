@@ -1,0 +1,27 @@
+@keyframes openList {
+    from{
+        height: auto;
+    }
+    to{
+       height: auto;
+    }
+}
+
+.paramsList{
+    height: auto;
+}
+
+.paramsList-enter-active{
+    animation: openList .6s forwards;
+    //transition: height 600ms ease;
+    height: auto;
+}
+
+.paramsList-enter-done{
+    height: auto;
+}
+
+.paramsList-exit-active{
+    animation: openList .6s reverse;
+}
+
