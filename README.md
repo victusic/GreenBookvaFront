@@ -13,12 +13,12 @@
 
 <h4>See the result: https://green-bookva.shop/</h4> 
 
-<h4>The project is powered by GreenBookvaApi</h4> 
+<h4>The project is powered by <a href="https://github.com/victusic/GreenBookvaApi">GreenBookvaApi</a></h4> 
 
 <h5>Additionally:</h5>
 <ul>
-  <li>Project in Figma </li>
-  <li>Sketch file</li>
+  <li><a href="https://www.figma.com/file/MNIRiMpLyB3krgtCViVkhe/Green-Bookva?type=design&node-id=0%3A1&mode=design&t=yUH5tkRf9JODAQhw-1">Project in Figma (Ui Kit, design)</a></li> 
+  <li><a href="https://drive.google.com/drive/folders/1ohxieZ_U31q61mQcNQkOw1FyBHyYmExR?usp=sharing">Sketch file and ER</a></li>
 </ul>
 
 
@@ -35,12 +35,12 @@
 
 <h4>Увидеть на результат: https://green-bookva.shop/</h4> 
 
-<h4>Проект работает с помощью GreenBookvaApi</h4> 
+<h4>Проект работает с помощью <a href="https://github.com/victusic/GreenBookvaApi">GreenBookvaApi</a></h4> 
 
 <h5>Дополнительно:</h5>
 <ul>
-  <li>Проект в Figma</li>
-  <li>Файл с набросками</li>
+  <li><a href="https://www.figma.com/file/MNIRiMpLyB3krgtCViVkhe/Green-Bookva?type=design&node-id=0%3A1&mode=design&t=yUH5tkRf9JODAQhw-1">Проект в Figma (Ui Kit, design)</a></li>
+  <li><a href="https://drive.google.com/drive/folders/1ohxieZ_U31q61mQcNQkOw1FyBHyYmExR?usp=sharing">Файл с набросками и ER</a></li>
 </ul>
 
 <h6>Презентационная работа</h6>
