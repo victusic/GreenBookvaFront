@@ -13,6 +13,8 @@
 
 <h4>See the result: https://green-bookva.shop/</h4> 
 
+<h6>A pending update for Mozilla</h6> 
+
 <h4>The project is powered by <a href="https://github.com/victusic/GreenBookvaApi">GreenBookvaApi</a></h4> 
 
 <h5>Additionally:</h5>
@@ -34,6 +36,8 @@
 </ul>
 
 <h4>Увидеть на результат: https://green-bookva.shop/</h4> 
+
+<h6>Ожидается апдейт под Мозиллу</h6> 
 
 <h4>Проект работает с помощью <a href="https://github.com/victusic/GreenBookvaApi">GreenBookvaApi</a></h4> 
 
