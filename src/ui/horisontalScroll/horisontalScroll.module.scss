@@ -3,7 +3,8 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     justify-content: flex-start;
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
+    scrollbar-width: none;
 }
 
 .scroll::-webkit-scrollbar {
