@@ -1,0 +1,17 @@
+@import '../../../../../styles/colors';
+@import '../../../../../styles/typography';
+
+.desc{
+    color: $textDarkL1;
+    margin-top: 40px;
+    @extend %text1;
+    width: 65%;
+    @media (max-width: 1460px) {width: 60%;}
+    @media (max-width: 1024px) {
+        margin-top: 35px;
+        width: 100%;
+    }
+    @media (max-width: 520px) {
+        margin-top: 25px;
+    }
+}

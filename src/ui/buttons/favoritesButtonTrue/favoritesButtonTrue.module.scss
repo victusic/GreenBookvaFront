@@ -1,0 +1,40 @@
+@import '../../../styles/colors';
+@import '../../../styles/typography';
+
+.favoritesButton{
+    width: 40px;
+    height: 40px;
+    background: $backgroundNoStarsPlate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    @extend %transition;
+    @extend %radius;
+    fill: $textLight;
+    @media (max-width: 1024px) {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.favoritesButton:hover{
+    background: $textGrayL2;
+    fill: $textLight;
+    
+    //fill: $warning;
+}
+
+.favoritesButton:active{
+    background: $warning;
+    fill: $textLight;
+}
+
+.favoritesSvg{
+    height: 18px;
+    fill: inherit;
+    @media (max-width: 1024px) {
+        height: 12px;
+    }
+}

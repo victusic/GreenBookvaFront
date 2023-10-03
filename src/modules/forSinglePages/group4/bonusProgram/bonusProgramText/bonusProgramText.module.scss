@@ -1,0 +1,127 @@
+@import '../../../../../styles/colors';
+@import '../../../../../styles/typography';
+
+.descPlate{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    @media (max-width: 1024px) {margin-bottom: 35px;}
+    @media (max-width: 512px) {margin-bottom: 25px;}
+    @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.descText{
+    color: $textGrayL2;
+    width: 550px;
+    @media (max-width: 700px) {
+        width: auto;
+        margin-bottom: 35px;
+    }
+    @media (max-width: 512px) {margin-bottom: 25px;}
+    cursor: default;
+}
+
+/*2*/
+
+.visiblePlate{
+    width: 100%;
+    height: 285px;
+    background: $backgroundLight;
+    display: flex;
+
+    @media (max-width: 1024px) {
+        height: 500px;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 520px) {
+        flex-wrap: nowrap;
+        height: auto;
+        flex-direction: column;
+    }
+}
+
+.visibleTitleBlock{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    @media (max-width: 1024px) {
+        width: 50%;
+        height: 50%;
+    }
+    @media (max-width: 520px) {
+        width: 100%;
+        height: 80px;
+    }
+}
+
+.visibleSvgBlock{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: 1024px) {
+        width: 50%;
+        height: 50%;
+    }
+    @media (max-width: 520px) {
+        width: 100%;
+        height: 205px;
+    }
+}
+
+.visibleSvgBlockText1{
+    width: 80%;
+    text-align: center;
+    color: $badgeNew;
+    cursor: default;
+}
+
+.visibleSvgBlockText2{
+    color: $badgeTop;
+    width: 80%;
+    text-align: center;
+    cursor: default;
+}
+
+.visibleSvgBlockText3{
+    color: $badgeSale;
+    width: 80%;
+    text-align: center;
+    cursor: default;
+}
+
+.viewSvg{
+    width: 90px;
+}
+
+.viewTitle{
+    color: $textDarkL1;
+    cursor: default;
+    @media (min-width: 1024px) {
+        margin-bottom: 40px;
+    }
+}
+
+/*3*/
+
+.bottomText{
+    width: 70%;
+    color: $textGrayL3;
+    margin-left: 15%;
+    text-align: center;
+    margin-top: 60px;
+    @media (max-width: 1024px) {
+        margin-top: 40px;
+        width: 100%;
+        margin-left: 0;
+    }
+}

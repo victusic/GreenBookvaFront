@@ -1,0 +1,176 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/typography';
+
+.centralLine{
+    width: 100%;
+    margin-top: 16px;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 1024px) {
+        height: 70px; 
+        margin-top: 10px;
+    }
+    @media (max-width: 520px) {
+        height: 39px;
+        margin-top: -1px;
+    }
+}
+
+.logo{
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    @media (max-width: 520px) {
+        display: none;
+    }
+}
+
+
+.centralFlex{
+    display: flex;
+    align-items: center;
+}
+
+.logoSvg{
+    width: 82px;
+    //min-width: 82px;
+    height: 52px;
+    margin-right: 10px;
+    @media (max-width: 1024px) {
+        width: 80px;
+        height: 44px;
+    }
+}
+
+.logoText{
+    width: 70px;
+    //min-width: 70px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: $textLight;
+    margin-right: 115px;
+    letter-spacing: 0.05em;
+
+    @media (max-width: 1400px) {margin-right: 45px;}
+    @media (max-width: 1024px) {
+        font-size: 16px; 
+        height: 44px;
+        margin-right: 24px;
+    }
+    @media (max-width: 695px) {
+        margin-right: 0px;
+    }
+}
+
+.buttonBoxPlate{
+    min-width: 310px;
+    display: flex;
+    flex-shrink: 0;
+    @media (max-width: 1024px) {
+        min-width: 190px;
+    }
+    @media (max-width: 580px) {
+        display: none;
+    }
+}
+
+.buttonBox{
+    position: relative;
+    cursor: pointer;
+    width: 55px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 25px;
+    color: $textLight;
+    fill: $textLight;
+    @media (max-width: 1024px) {
+        width: 22px;
+        height: 36px;
+        justify-content: center;
+        margin-left: 24px;
+    }
+    @extend %transition;
+}
+
+.buttonBox:hover{
+    color: $textGrayL2;
+    fill: $textGrayL2;
+}
+
+.buttonBox2{
+    width: 75px;
+    @media (max-width: 1024px) {
+        width: 26px;
+    }
+}
+
+.buttonBoxSvg{
+    width: 28px;
+    height: 28px;
+    fill: inherit;
+    @media (max-width: 1024px) {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.buttonBoxText{
+    @extend %text2;
+    color: inherit;
+    white-space: nowrap;
+    @media (max-width: 1024px) {display: none;}
+}
+
+.buttonBoxCount{
+    position: absolute;
+    top: -8px;
+    border-radius: 360px;
+    width: 12px;
+    height: 12px;
+    @extend %standart-font;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+       
+    @media (max-width: 1024px) {
+        width: 10px;
+        height: 10px;
+        font-size: 6px;
+        top: -4px;
+    }
+}
+
+.buttonBoxCountFavorites{
+    color: $textDarkL1;
+    background-color: $backgroundWhite;
+    right: 10px;
+    @media (max-width: 1024px) {
+        right: -8px;
+    }
+    
+}
+
+.buttonBoxCountShoppingCart{
+    background-color: $badgeSale;
+    right: 2px;
+    color: $textLight;
+    @media (max-width: 1024px) {
+        right: -6px;
+    }
+}
+
+.visibleNone{
+    display: none;
+}

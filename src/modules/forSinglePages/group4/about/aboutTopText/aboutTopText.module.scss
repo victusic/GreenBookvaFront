@@ -1,0 +1,40 @@
+@import '../../../../../styles/colors';
+@import '../../../../../styles/typography';
+
+.aboutDescription{
+    color: $textGrayL2;
+    cursor: default;
+}
+
+.imgPlate{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 1024px) {
+        margin-bottom: 35px;
+        margin-top: 35px;
+    }
+    @media (max-width: 520px) {
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+}
+
+.imgTechnology{
+    height: 70px;
+    margin-right: 40px;
+    @media (max-width: 1024px) {
+        margin-right: 35px;
+    }
+    @media (max-width: 822px) {
+        margin-right: 35px;
+        margin-bottom: 35px;
+    }
+    @media (max-width: 520px) {
+        height: 40px;
+        margin-right: 25px;
+        margin-bottom: 25px;
+    }
+}

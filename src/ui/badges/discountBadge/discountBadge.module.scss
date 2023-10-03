@@ -1,0 +1,27 @@
+@import '../../../styles/colors';
+@import '../../../styles/typography';
+
+.badgePlate{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+    width: 53px;
+    height: 21px;
+    background: $badgeSale;
+    @extend %text3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $textLight;
+    @extend %radius;
+    cursor: default;
+    @media (max-width: 1024px) {
+        width: 82px;
+        height: 19px;
+    }
+    @media (max-width: 520px) {
+        width: 68px;
+        height: 17px;
+    }
+}

@@ -1,0 +1,88 @@
+%title-font{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 500;
+}
+
+%standart-font{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+}
+
+h1{
+    @extend %title-font; 
+    font-size: 48px;
+    @media (max-width: 1024px) {font-size: 40px;}
+    @media (max-width: 520px) {font-size: 36px;}
+}
+
+h2{
+    @extend %title-font; 
+    font-size: 32px;
+    @media (max-width: 1024px) {font-size: 30px;}
+    @media (max-width: 520px) {font-size: 28px;}
+}
+
+h3{
+    @extend %title-font; 
+    font-size: 24px;
+    @media (max-width: 1024px) {font-size: 20px;}
+    @media (max-width: 520px) {font-size: 18px;}
+}
+
+h4{
+    @extend %title-font; 
+    font-size: 18px;
+    @media (max-width: 1024px) {font-size: 18px;}
+    @media (max-width: 520px) {font-size: 16px;}
+}
+
+h5{
+    @extend %title-font; 
+    font-size: 14px;
+    @media (max-width: 1024px) {font-size: 14px;}
+    @media (max-width: 520px) {font-size: 12px;}
+}
+
+h6{
+    @extend %title-font; 
+    font-size: 12px;
+    @media (max-width: 1024px) {font-size: 10px;}
+    @media (max-width: 520px) {font-size: 8px;}
+}
+
+%text1{
+    @extend %standart-font;
+    font-size: 16px;
+    @media (max-width: 1024px) {font-size: 14px;}
+    @media (max-width: 520px) {font-size: 12px;}
+}
+
+%text2{
+    @extend %standart-font;
+    font-size: 14px;
+    @media (max-width: 1024px) {font-size: 12px;}
+    @media (max-width: 520px) {font-size: 10px;}
+}
+
+%text3{
+    @extend %standart-font;
+    font-size: 12px;
+    @media (max-width: 1024px) {font-size: 10px;}
+    @media (max-width: 520px) {font-size: 8px;}
+}
+
+%no-select-text{
+    -webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+%no-transposition{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

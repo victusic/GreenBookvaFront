@@ -1,0 +1,38 @@
+@import '../../../../../styles/colors';
+@import '../../../../../styles/typography';
+
+.MobilePlate{
+    display: none;
+    @media (max-width: 624px) {
+        margin-top: 25px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.MobileTitle{
+    color: $textDarkL1;
+    margin-bottom: 20px;
+}
+
+.MobileCategoriesTitle{
+    color: $textGrayL2;
+    @extend %text1;
+}
+
+.MobileCategories{
+    margin-top: 15px;
+    margin-left: 10px;
+    color: $textGrayL2;
+    cursor: pointer;
+    @extend %text2;
+    @extend %no-transposition;
+    @extend %transition;
+}
+.MobileCategories:hover{
+    color: $textGrayL3;
+}
+.MobileCategories:active{
+    color: $accentSuper;
+}

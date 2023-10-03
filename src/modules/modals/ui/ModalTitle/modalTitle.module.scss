@@ -1,0 +1,10 @@
+@import '../../../../styles/colors';
+
+.title{
+    width: 320px;
+    margin-bottom: 20px;
+    color: $textDarkL1;
+    cursor: default;
+    @media (max-width: 1024px) {width: 295px;}
+    @media (max-width: 520px) {width: 240px;}
+}

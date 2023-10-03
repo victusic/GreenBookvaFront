@@ -1,0 +1,76 @@
+@import '../../../../../styles/colors';
+@import '../../../../../styles/typography';
+
+.cartRightPlate{
+    width: 530px;
+    min-width: 530px;
+    height: fit-content;
+    margin-left: 30px;
+    margin-top: 118px;
+    @extend %radius;
+    @extend %shadow;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1400px) {
+        padding: 40px;
+        width: 420px;
+        min-width: 420px;
+    }
+    @media (max-width: 1170px) {
+        padding: 25px;
+        width: 340px;
+        min-width: 340px;
+    }
+    @media (max-width: 1024px) {
+        padding: 15px;
+        width: 280px;
+        min-width: 280px;
+    }
+    @media (max-width: 800px) {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 25px;
+    }
+    @media (max-width: 520px) {margin-top: 20px;}
+}
+
+.betweenFlexPlate{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.priceAboutTitle{
+    color: $textGrayL2;
+    cursor: default;
+}
+
+.priceAbout{
+    color: $textGrayL2;
+}
+
+.pricеDiscount{
+    color: $textDarkL1;
+}
+
+.pricеFinal{
+    color: $accentSuper;
+}
+
+.warningText{
+    color: $textGrayL2;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+    @extend %text1;
+    cursor: default;
+}
+
+.noPromocodeText{
+    @extend %text3;
+    color: $warning;
+    margin-bottom: -20px;
+}

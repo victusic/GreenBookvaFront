@@ -1,0 +1,22 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/typography';
+
+.base{
+    width: 320px;
+    background: $backgroundWhite;
+    border: 1px solid $textGrayL3;
+    @extend %radius;
+    @extend %transition;
+    color: $textGrayL2;
+    @extend %text2;
+    margin-bottom: 20px;
+    padding: 7px;
+    resize: none;
+    @media (max-width: 1024px) {
+        width: 295px;
+    }
+    @media (max-width: 520px) {
+        width: 240px;
+        height: 34px;
+    }
+}

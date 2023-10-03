@@ -1,0 +1,29 @@
+@import '../../../styles/colors';
+@import '../../../styles/typography';
+
+.buyButton{
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $backgroundBase;
+    color: $textLight;
+    @extend %text3;
+    border: none;
+    @extend %radius;
+    @extend %transition;
+    cursor: pointer;
+    @media (max-width: 1024px) {height: 50px; }
+    @media (max-width: 520px) {height: 45px; }
+}
+
+.buyButton:hover{
+    background: $backgroundBasePlus;
+}
+
+.buyButton:active{
+    background: $accentSuper;
+}

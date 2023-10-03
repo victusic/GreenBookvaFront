@@ -1,0 +1,17 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/typography';
+
+.description{
+    width: 320px;
+    @extend %text2;
+    color: $textGrayL2;
+    margin-bottom: 20px;
+    line-height: 20px;
+    @media (max-width: 1024px) {
+        width: 295px;
+    }
+    @media (max-width: 520px) {
+        width: 240px;
+        line-height: 14px;
+    }
+}

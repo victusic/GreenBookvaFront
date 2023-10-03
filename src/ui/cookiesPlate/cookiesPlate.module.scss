@@ -1,0 +1,84 @@
+@import '../../styles/colors';
+@import '../../styles/typography';
+
+.cookiesLine{
+    width: 100%;
+    position: fixed;
+    bottom: 20px;
+    padding-left: 20px;
+    display: flex;
+    pointer-events: none;
+    z-index: 10000000;
+    @media (max-width: 1024px) {
+        bottom: 10px;
+        padding-left: 10px;
+    }
+}
+
+.cookiesPlate{
+    position: relative;
+    width: 300px;
+    padding: 30px;
+    background-color: $backgroundLight;
+    @extend %radius;
+    @extend %shadow;
+    pointer-events: all;
+    @media (max-width: 1024px) {
+        width: 290px;
+        padding: 25px;
+    }
+    @media (max-width: 512px) {
+        width: 200px;
+        padding: 20px;
+    }
+
+
+}
+
+.cookiesTitleText{
+    color: $textDarkL1;
+    cursor: default;
+    margin-bottom: 15px;
+}
+
+.buttonsPlate{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.buttonInfo{
+    cursor: pointer;
+    color: $textGrayL3;
+    margin-bottom: 15px;
+}
+
+.buttonInfo:hover{
+    color: $textGrayL2;
+}
+
+.buttonInfo:active{
+    color: $textDarkL1;
+}
+
+.exitSvg{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+    fill: $textDarkL1;
+}
+
+.exitSvg:hover{
+    fill: $textGrayL2;
+}
+
+.exitSvg:active{
+    fill: $warning;
+}
+
+.notVisible{
+    display: none;
+}
