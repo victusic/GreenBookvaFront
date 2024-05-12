@@ -1,5 +1,5 @@
 export const getReview = async (index) => {
-  const review = await fetch(`https://db.green-bookva.shop/review/${index}`);
+  const review = await fetch(`https://db.greenbookva.shop/review/${index}`);
 
   if (!review.ok) {
     throw new Response('', { status: review.status, statusText: review.statusText });
@@ -17,7 +17,7 @@ export const addReview = async (product, account, header, review, rate) => {
     evaluation: rate,
   };
 
-  const reviewRequest = await fetch(`https://db.green-bookva.shop/review `, {
+  const reviewRequest = await fetch(`https://db.greenbookva.shop/review `, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ export const updateReview = async (id, header, review, rate) => {
     evaluation: rate,
   };
 
-  const reviewRequest = await fetch(`https://db.green-bookva.shop/review/${id}`, {
+  const reviewRequest = await fetch(`https://db.greenbookva.shop/review/${id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ export const updateReview = async (id, header, review, rate) => {
 };
 
 export const delReview = async (index) => {
-  const review = await fetch(`https://db.green-bookva.shop/review/${index}`, { method: 'DELETE' });
+  const review = await fetch(`https://db.greenbookva.shop/review/${index}`, { method: 'DELETE' });
 
   if (!review.ok) {
     throw new Response('', { status: review.status, statusText: review.statusText });

@@ -1,5 +1,5 @@
 export const getPromocode = async (code) => {
-  const promocode = await fetch(`https://db.green-bookva.shop/promo?code=${code}`);
+  const promocode = await fetch(`https://db.greenbookva.shop/promo?code=${code}`);
 
   if (!promocode.ok) {
     throw new Response('', { status: promocode.status, statusText: promocode.statusText });
@@ -9,7 +9,7 @@ export const getPromocode = async (code) => {
 };
 
 export const getPhrases = async (code) => {
-  const phrases = await fetch(`https://db.green-bookva.shop/phrases?code=${code}`);
+  const phrases = await fetch(`https://db.greenbookva.shop/phrases?code=${code}`);
 
   if (!phrases.ok) {
     throw new Response('', { status: phrases.status, statusText: phrases.statusText });

@@ -1,5 +1,5 @@
 export const getAuthor = async (index) => {
-  const author = await fetch(`https://db.green-bookva.shop/author/${index}`);
+  const author = await fetch(`https://db.greenbookva.shop/author/${index}`);
 
   if (!author.ok) {
     throw new Response('', { status: author.status, statusText: author.statusText });
@@ -9,7 +9,7 @@ export const getAuthor = async (index) => {
 };
 
 export const getAuthorSlides = async (index) => {
-  const author = await fetch(`https://db.green-bookva.shop/author/${index}/slides`);
+  const author = await fetch(`https://db.greenbookva.shop/author/${index}/slides`);
 
   if (!author.ok) {
     throw new Response('', { status: author.status, statusText: author.statusText });
@@ -19,7 +19,7 @@ export const getAuthorSlides = async (index) => {
 };
 
 export const getAuthorImages = async (index) => {
-  const author = await fetch(`https://db.green-bookva.shop/author/${index}/images`);
+  const author = await fetch(`https://db.greenbookva.shop/author/${index}/images`);
 
   if (!author.ok) {
     throw new Response('', { status: author.status, statusText: author.statusText });
@@ -29,7 +29,7 @@ export const getAuthorImages = async (index) => {
 };
 
 export const getPublisher = async (index) => {
-  const publisher = await fetch(`https://db.green-bookva.shop/publisher/${index}`);
+  const publisher = await fetch(`https://db.greenbookva.shop/publisher/${index}`);
 
   if (!publisher.ok) {
     throw new Response('', { status: publisher.status, statusText: publisher.statusText });
@@ -39,7 +39,7 @@ export const getPublisher = async (index) => {
 };
 
 export const getPublisherSlides = async (index) => {
-  const publisher = await fetch(`https://db.green-bookva.shop/publisher/${index}/slides`);
+  const publisher = await fetch(`https://db.greenbookva.shop/publisher/${index}/slides`);
 
   if (!publisher.ok) {
     throw new Response('', { status: publisher.status, statusText: publisher.statusText });
@@ -49,7 +49,7 @@ export const getPublisherSlides = async (index) => {
 };
 
 export const getManufacturer = async (index) => {
-  const manufacturer = await fetch(`https://db.green-bookva.shop/manufacturer/${index}`);
+  const manufacturer = await fetch(`https://db.greenbookva.shop/manufacturer/${index}`);
 
   if (!manufacturer.ok) {
     throw new Response('', { status: manufacturer.status, statusText: manufacturer.statusText });
@@ -59,7 +59,7 @@ export const getManufacturer = async (index) => {
 };
 
 export const getManufacturerSlides = async (index) => {
-  const manufacturer = await fetch(`https://db.green-bookva.shop/manufacturer/${index}/slides`);
+  const manufacturer = await fetch(`https://db.greenbookva.shop/manufacturer/${index}/slides`);
 
   if (!manufacturer.ok) {
     throw new Response('', { status: manufacturer.status, statusText: manufacturer.statusText });

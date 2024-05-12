@@ -4,7 +4,7 @@ import { refreshTokenAction, refreshSignStateAction, refreshProfileAction } from
 
 export const fetchSignGetCode = (mail) => {
   return function (dispatchSign) {
-    fetch('https://db.green-bookva.shop/sign?mail=' + mail)
+    fetch('https://db.greenbookva.shop/sign?mail=' + mail)
       .then((response) => response.json())
       .then((json) => dispatchSign(refreshTokenAction(json.token)))
       .catch((error) => {
@@ -21,7 +21,7 @@ export const fetchSignPostCode = (code, mail, token) => {
       mail: mail,
     };
 
-    fetch('https://db.green-bookva.shop/sign', {
+    fetch('https://db.greenbookva.shop/sign', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ export const fetchSignUp = (name, surname, mail) => {
       mail: mail,
     };
 
-    fetch('https://db.green-bookva.shop/signUp', {
+    fetch('https://db.greenbookva.shop/signUp', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ export const fetchSignUp = (name, surname, mail) => {
 
 export const fetchCheckGetCode = (id) => {
   return function (dispatchSign) {
-    fetch('https://db.green-bookva.shop/check/' + id)
+    fetch('https://db.greenbookva.shop/check/' + id)
       .then((response) => response.json())
       .then((json) => dispatchSign(refreshTokenAction(json.token)))
       .catch((error) => {
@@ -95,7 +95,7 @@ export const fetchCheckPostCode = (code, mail, token) => {
       mail: mail,
     };
 
-    fetch('https://db.green-bookva.shop/check', {
+    fetch('https://db.greenbookva.shop/check', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

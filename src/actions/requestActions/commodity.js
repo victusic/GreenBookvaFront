@@ -1,5 +1,5 @@
 export const getProductsNew = async () => {
-  const products = await fetch('https://db.green-bookva.shop/commodity/product/new');
+  const products = await fetch('https://db.greenbookva.shop/commodity/product/new');
 
   if (!products.ok) {
     throw new Response('', { status: products.status, statusText: products.statusText });
@@ -9,7 +9,7 @@ export const getProductsNew = async () => {
 };
 
 export const getProductsBestsellers = async () => {
-  const products = await fetch('https://db.green-bookva.shop/commodity/product/bestseller');
+  const products = await fetch('https://db.greenbookva.shop/commodity/product/bestseller');
 
   if (!products.ok) {
     throw new Response('', { status: products.status, statusText: products.statusText });
@@ -19,7 +19,7 @@ export const getProductsBestsellers = async () => {
 };
 
 export const getProductsBest = async () => {
-  const products = await fetch('https://db.green-bookva.shop/commodity/product/best');
+  const products = await fetch('https://db.greenbookva.shop/commodity/product/best');
 
   if (!products.ok) {
     throw new Response('', { status: products.status, statusText: products.statusText });
@@ -29,7 +29,7 @@ export const getProductsBest = async () => {
 };
 
 export const getProductsByCategory = async (index) => {
-  const products = await fetch(`https://db.green-bookva.shop/commodity/product?category=${index}`);
+  const products = await fetch(`https://db.greenbookva.shop/commodity/product?category=${index}`);
 
   if (!products.ok) {
     throw new Response('', { status: products.status, statusText: products.statusText });
@@ -39,7 +39,7 @@ export const getProductsByCategory = async (index) => {
 };
 
 export const getProductsBySubcategory = async (index) => {
-  const products = await fetch(`https://db.green-bookva.shop/commodity/product?subcategory=${index}`);
+  const products = await fetch(`https://db.greenbookva.shop/commodity/product?subcategory=${index}`);
 
   if (!products.ok) {
     throw new Response('', { status: products.status, statusText: products.statusText });
@@ -49,7 +49,7 @@ export const getProductsBySubcategory = async (index) => {
 };
 
 export const getProductsByType = async (index) => {
-  const products = await fetch(`https://db.green-bookva.shop/commodity/product/types?type=${index}`);
+  const products = await fetch(`https://db.greenbookva.shop/commodity/product/types?type=${index}`);
 
   if (!products.ok) {
     throw new Response('', { status: products.status, statusText: products.statusText });
@@ -59,7 +59,7 @@ export const getProductsByType = async (index) => {
 };
 
 export const getProductsByPromotion = async (index) => {
-  const products = await fetch(`https://db.green-bookva.shop/commodity/product?promotion=${index}`);
+  const products = await fetch(`https://db.greenbookva.shop/commodity/product?promotion=${index}`);
 
   if (!products.ok) {
     throw new Response('', { status: products.status, statusText: products.statusText });
@@ -69,7 +69,7 @@ export const getProductsByPromotion = async (index) => {
 };
 
 export const getProductsNoPromotion = async (index) => {
-  const products = await fetch(`https://db.green-bookva.shop/commodity/product?no_promotion=${index}`);
+  const products = await fetch(`https://db.greenbookva.shop/commodity/product?no_promotion=${index}`);
 
   if (!products.ok) {
     throw new Response('', { status: products.status, statusText: products.statusText });
@@ -93,7 +93,7 @@ export const getProductsList = async (
   minPrice,
   maxPrice,
 ) => {
-  const url = new URL('https://db.green-bookva.shop/commodity/list/product');
+  const url = new URL('https://db.greenbookva.shop/commodity/list/product');
   const params = {
     limit: limit,
     page: page,
@@ -181,7 +181,7 @@ export const getCountProductsList = async (
   minPrice,
   maxPrice,
 ) => {
-  const url = new URL('https://db.green-bookva.shop/commodity/info/list/product?');
+  const url = new URL('https://db.greenbookva.shop/commodity/info/list/product?');
 
   const params = {
     min_price: minPrice,
@@ -245,7 +245,7 @@ export const getCountProductsList = async (
 };
 
 export const getInfoProductsList = async (requestType, id, isStock, bindings, minPrice, maxPrice) => {
-  const url = new URL('https://db.green-bookva.shop/commodity/info/list/product?');
+  const url = new URL('https://db.greenbookva.shop/commodity/info/list/product?');
   const params = {
     min_price: minPrice,
     max_price: maxPrice,
@@ -278,7 +278,7 @@ export const getInfoProductsList = async (requestType, id, isStock, bindings, mi
 };
 
 export const getProductsByAuthor = async (index) => {
-  const products = await fetch(`https://db.green-bookva.shop/commodity/product?author=${index}`);
+  const products = await fetch(`https://db.greenbookva.shop/commodity/product?author=${index}`);
 
   if (!products.ok) {
     throw new Response('', { status: products.status, statusText: products.statusText });
@@ -288,7 +288,7 @@ export const getProductsByAuthor = async (index) => {
 };
 
 export const getProductsByManufacturer = async (index) => {
-  const products = await fetch(`https://db.green-bookva.shop/commodity/product?manufacturer=${index}`);
+  const products = await fetch(`https://db.greenbookva.shop/commodity/product?manufacturer=${index}`);
 
   if (!products.ok) {
     throw new Response('', { status: products.status, statusText: products.statusText });
@@ -298,7 +298,7 @@ export const getProductsByManufacturer = async (index) => {
 };
 
 export const getProductsByPublisher = async (index) => {
-  const products = await fetch(`https://db.green-bookva.shop/commodity/product?publisher=${index}`);
+  const products = await fetch(`https://db.greenbookva.shop/commodity/product?publisher=${index}`);
 
   if (!products.ok) {
     throw new Response('', { status: products.status, statusText: products.statusText });
@@ -308,7 +308,7 @@ export const getProductsByPublisher = async (index) => {
 };
 
 export const getProductOne = async (index) => {
-  const product = await fetch(`https://db.green-bookva.shop/commodity/one/product/${index}`);
+  const product = await fetch(`https://db.greenbookva.shop/commodity/one/product/${index}`);
 
   if (!product.ok) {
     throw new Response('', { status: product.status, statusText: product.statusText });
@@ -318,7 +318,7 @@ export const getProductOne = async (index) => {
 };
 
 export const getProductOneImages = async (index) => {
-  const images = await fetch(`https://db.green-bookva.shop/commodity/one/product/${index}/images`);
+  const images = await fetch(`https://db.greenbookva.shop/commodity/one/product/${index}/images`);
 
   if (!images.ok) {
     throw new Response('', { status: images.status, statusText: images.statusText });
@@ -328,7 +328,7 @@ export const getProductOneImages = async (index) => {
 };
 
 export const getProductOneImagesList = async (index) => {
-  const images = await fetch(`https://db.green-bookva.shop/commodity/one/product/${index}/images/list`);
+  const images = await fetch(`https://db.greenbookva.shop/commodity/one/product/${index}/images/list`);
 
   if (!images.ok) {
     throw new Response('', { status: images.status, statusText: images.statusText });
@@ -338,7 +338,7 @@ export const getProductOneImagesList = async (index) => {
 };
 
 export const getProductOneReviews = async (index) => {
-  const reviews = await fetch(`https://db.green-bookva.shop/commodity/one/product/${index}/reviews`);
+  const reviews = await fetch(`https://db.greenbookva.shop/commodity/one/product/${index}/reviews`);
 
   if (!reviews.ok) {
     throw new Response('', { status: reviews.status, statusText: reviews.statusText });
