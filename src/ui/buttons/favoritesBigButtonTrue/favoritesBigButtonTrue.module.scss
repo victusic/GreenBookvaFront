@@ -1,43 +1,47 @@
 @import '../../../styles/colors';
 @import '../../../styles/typography';
 
-.favoritesButton{
-    width: 60px;
-    height: 60px;
-    background: $backgroundNoStarsPlate;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border: none;
-    @extend %transition;
-    @extend %radius;
-    fill: $textLight;
-    @media (max-width: 1024px) {
-        width: 50px;
-        height: 50px; 
-    }
-    @media (max-width: 520px) {
-        width: 45px;
-        height: 45px; 
-    }
+.favoritesButton {
+  width: 60px;
+  height: 60px;
+  background: $backgroundNoStarsPlate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  @extend %transition;
+  @extend %radius;
+  fill: $textLight;
+  @media (max-width: 1024px) {
+    width: 50px;
+    height: 50px;
+  }
+  @media (max-width: 520px) {
+    width: 45px;
+    height: 45px;
+  }
 }
 
-.favoritesButton:hover{
-    background: $textGrayL2;
-    fill: $textLight;
-    
-    //fill: $warning;
+.favoritesButton:hover {
+  background: $textGrayL2;
+  fill: $textLight;
+
+  //fill: $warning;
 }
 
-.favoritesButton:active{
-    background: $warning;
-    fill: $textLight;
+.favoritesButton:active {
+  background: $warning;
+  fill: $textLight;
 }
 
-.favoritesSvg{
-    height: 25px;    
-    fill: inherit;
-    @media (max-width: 1024px) {height: 20px;}
-    @media (max-width: 520px) {height: 15px;}
+.favoritesSvg {
+  height: 25px;
+  fill: inherit;
+  @media (max-width: 1024px) {
+    height: 20px;
+  }
+  @media (max-width: 520px) {
+    height: 15px;
+  }
 }

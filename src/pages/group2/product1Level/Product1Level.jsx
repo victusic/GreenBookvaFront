@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 
@@ -13,24 +13,25 @@ import { Await, useLoaderData } from 'react-router-dom';
 import Product1LevelTemplate from '../../../templates/product1LevelTemplate/Product1LevelTemplate';
 
 const Product1Level = () => {
-  
-  const {type} = useLoaderData();
+  const { type } = useLoaderData();
 
   return (
     <Pad>
-      <Suspense fallback={<Loader/>}>
+      <Suspense fallback={<Loader />}>
         <NavigateLine>
-            <Await resolve={type}>
-                {(typeName)=>(<NavigateElement route={'/type/'+typeName[0].id}>{typeName[0].name}</NavigateElement>)}
-            </Await>
+          <Await resolve={type}>
+            {(typeName) => (
+              <NavigateElement route={'/type/' + typeName[0].id}>{typeName[0].name}</NavigateElement>
+            )}
+          </Await>
         </NavigateLine>
         <PagesPlate>
-            <Product1LevelBar/>
-            <Product1LevelTemplate/>
+          <Product1LevelBar />
+          <Product1LevelTemplate />
         </PagesPlate>
       </Suspense>
     </Pad>
-  )
-}
+  );
+};
 
-export default Product1Level
+export default Product1Level;

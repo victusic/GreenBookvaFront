@@ -1,21 +1,21 @@
 @import '../../styles/colors';
 @import '../../styles/typography';
 
-.cartMainPlate{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.cartMainPlate {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.cartTwoZones{
-    display: flex;
-    @media (max-width: 800px) {
-        flex-direction: column;
-    }
+.cartTwoZones {
+  display: flex;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 }
 
-.cartLeftZone{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
+.cartLeftZone {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }

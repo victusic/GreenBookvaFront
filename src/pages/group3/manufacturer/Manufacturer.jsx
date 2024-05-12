@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 import Loader from '../../../ui/loader/Loader';
@@ -12,35 +12,41 @@ import NoManufacturer from '../../../assets/img/no-manufacturer.png';
 import ProductLine from '../../../modules/products/productLine/ProductLine';
 
 const Manufacturer = () => {
-
-  const {manufacturer, manufacturerSlides, manufacturerProducts} = useLoaderData();
+  const { manufacturer, manufacturerSlides, manufacturerProducts } = useLoaderData();
 
   return (
     <Pad>
-      <Suspense fallback={<Loader/>}>
+      <Suspense fallback={<Loader />}>
         <SingleTitle>Производитель</SingleTitle>
 
         <Await resolve={manufacturer}>
-            {manufacturer => <TitleApm info={manufacturer[0]} imagePath='manufacturers' image={NoManufacturer}/>}
+          {(manufacturer) => (
+            <TitleApm info={manufacturer[0]} imagePath="manufacturers" image={NoManufacturer} />
+          )}
         </Await>
 
         <Await resolve={manufacturerSlides}>
-            {manufacturerSlides => manufacturerSlides.map((slide, index)=> 
-                <SlideApm key={index} imagePath='manufacturers' info={slide}/>
-            )}
+          {(manufacturerSlides) =>
+            manufacturerSlides.map((slide, index) => (
+              <SlideApm key={index} imagePath="manufacturers" info={slide} />
+            ))
+          }
         </Await>
 
         <Await resolve={manufacturer}>
-            {manufacturer =>
-                <Await resolve={manufacturerProducts}>
-                    {manufacturerProducts => <ProductLine products={manufacturerProducts}>Товары бренда {manufacturer[0].name}</ProductLine>}
-                </Await>
-            }
+          {(manufacturer) => (
+            <Await resolve={manufacturerProducts}>
+              {(manufacturerProducts) => (
+                <ProductLine products={manufacturerProducts}>
+                  Товары бренда {manufacturer[0].name}
+                </ProductLine>
+              )}
+            </Await>
+          )}
         </Await>
-
       </Suspense>
     </Pad>
-  )
-}
+  );
+};
 
-export default Manufacturer
+export default Manufacturer;

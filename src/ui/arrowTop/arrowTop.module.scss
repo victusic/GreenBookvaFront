@@ -1,53 +1,55 @@
 @import '../../styles/colors';
 @import '../../styles/typography';
 
-.arrowPlate{
-    position: sticky;
-    position: -webkit-sticky;
-    bottom: 10px;
-    width: 100%;
-    background: none;
-    pointer-events: none;
-    display: flex;
-    flex-direction: row-reverse;
-    @media (max-width: 520px) {bottom: 5px;}
+.arrowPlate {
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 10px;
+  width: 100%;
+  background: none;
+  pointer-events: none;
+  display: flex;
+  flex-direction: row-reverse;
+  @media (max-width: 520px) {
+    bottom: 5px;
+  }
 }
 
-.arrowButton{ 
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    pointer-events: all;
-    margin-right: 10px;
-    @extend %radius;
-    @extend %shadow;
-    @extend %text2;
-    border: none;
-    background: $primaryBase;
-    @media (max-width: 1024px) {
-        width: 28px;
-        height: 28px;
-    }
-    @media (max-width: 512px) {
-        margin-right: 5px;
-        width: 24px;
-        height: 24px;
-    }
+.arrowButton {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  pointer-events: all;
+  margin-right: 10px;
+  @extend %radius;
+  @extend %shadow;
+  @extend %text2;
+  border: none;
+  background: $primaryBase;
+  @media (max-width: 1024px) {
+    width: 28px;
+    height: 28px;
+  }
+  @media (max-width: 512px) {
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+  }
 }
 
-.arrowButtonText{
-    transform: rotate(90deg);
-    color: $textLight;
+.arrowButtonText {
+  transform: rotate(90deg);
+  color: $textLight;
 }
 
-.arrowButton:hover{ 
-    background: $accentSuper;
+.arrowButton:hover {
+  background: $accentSuper;
 }
 
-.arrowButton:active{ 
-    background: $textDarkL1;
+.arrowButton:active {
+  background: $textDarkL1;
 }
 
-.arrowNone{
-    display: none;
+.arrowNone {
+  display: none;
 }

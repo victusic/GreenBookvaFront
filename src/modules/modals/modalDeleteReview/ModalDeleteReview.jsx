@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import Modal from '../../../ui/modal/Modal'
-import ModalButton from '../ui/ModalButton/ModalButton'
+import React, { useEffect, useState } from 'react';
+import Modal from '../../../ui/modal/Modal';
+import ModalButton from '../ui/ModalButton/ModalButton';
 
 import { useSelector } from 'react-redux';
 import styles from '../modalNone.module.scss';
@@ -9,15 +9,16 @@ import ModalDescription from '../ui/ModalDescription/ModalDescription';
 import { delReview } from '../../../actions/requestActions/review';
 
 const ModalDeleteReview = () => {
-
-  const visible = useSelector(state => state.modalVisible.modalDeleteReviewVisible);
+  const visible = useSelector((state) => state.modalVisible.modalDeleteReviewVisible);
   const [visibleModal, setVisibleModal] = useState(styles.modalNone);
 
-  useEffect(()=>{
-      {visible ? setVisibleModal('') : setVisibleModal(styles.modalNone)}
-  }, [visible])
+  useEffect(() => {
+    {
+      visible ? setVisibleModal('') : setVisibleModal(styles.modalNone);
+    }
+  }, [visible]);
 
-  const reviewId = useSelector(state => state.profile.now_review);
+  const reviewId = useSelector((state) => state.profile.now_review);
 
   function deleteReview() {
     delReview(reviewId);
@@ -32,7 +33,7 @@ const ModalDeleteReview = () => {
         <ModalButton onClick={deleteReview}>Удалить</ModalButton>
       </Modal>
     </div>
-  )
-}
+  );
+};
 
-export default ModalDeleteReview
+export default ModalDeleteReview;

@@ -1,14 +1,14 @@
 @import '../../../../../styles/colors';
 @import '../../../../../styles/typography';
 
-.topLinePlate{
-    width: 100%;
-    display: flex;
-    margin-top: 40px;
-    @media (max-width: 1024px) {
-        margin-top: 35px;
-    }
-    @media (max-width: 520px) {
-        margin-top: 25px;
-    }
+.topLinePlate {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  @media (max-width: 1024px) {
+    margin-top: 35px;
+  }
+  @media (max-width: 520px) {
+    margin-top: 25px;
+  }
 }

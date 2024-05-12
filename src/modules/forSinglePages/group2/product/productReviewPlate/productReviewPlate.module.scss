@@ -1,79 +1,80 @@
 @import '../../../../../styles/colors';
 @import '../../../../../styles/typography';
 
-.plate{
-    margin-top: 40px;
-    width: 65%;
-    @media (max-width: 1460px) {width: 60%;}
-    @media (max-width: 1024px) {
-        margin-top: 35px;
-        width: 100%;
-    }
-    @media (max-width: 520px) {
-        margin-top: 25px;
-    }
-}
-
-.moreReviews{
+.plate {
+  margin-top: 40px;
+  width: 65%;
+  @media (max-width: 1460px) {
+    width: 60%;
+  }
+  @media (max-width: 1024px) {
+    margin-top: 35px;
     width: 100%;
-    text-align: center;
-    color: $textAccent;
-    cursor: pointer;
+  }
+  @media (max-width: 520px) {
+    margin-top: 25px;
+  }
 }
 
-.moreReviews:hover{
-    color: $accentSuper;
+.moreReviews {
+  width: 100%;
+  text-align: center;
+  color: $textAccent;
+  cursor: pointer;
 }
 
-.moreReviews:active{
-    color: $textDarkL1;
+.moreReviews:hover {
+  color: $accentSuper;
 }
 
-.reviewTitlePlate{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 32px;
-    @media (max-width: 1024px) {
-        margin-bottom: 28px;
-    }
-    @media (max-width: 520px) {
-        margin-bottom: 18px;
-    }
+.moreReviews:active {
+  color: $textDarkL1;
 }
 
-.reviewTitle{
-    color: $textDarkL1;
-    cursor: default;
+.reviewTitlePlate {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  @media (max-width: 1024px) {
+    margin-bottom: 28px;
+  }
+  @media (max-width: 520px) {
+    margin-bottom: 18px;
+  }
 }
 
-.buttonTitle{
+.reviewTitle {
+  color: $textDarkL1;
+  cursor: default;
+}
+
+.buttonTitle {
+  margin-top: 5px;
+  margin-left: 40px;
+  @media (max-width: 1024px) {
     margin-top: 5px;
-    margin-left: 40px;
-    @media (max-width: 1024px) {
-        margin-top: 5px;
-        margin-left: 30px;
-    }
-    @media (max-width: 520px) {
-        margin-top: 5px;
-        margin-left: 25px;
-    }
-    
+    margin-left: 30px;
+  }
+  @media (max-width: 520px) {
+    margin-top: 5px;
+    margin-left: 25px;
+  }
 }
 
-.noReviews3{
-    color: $textDarkL1;
-    cursor: default;
+.noReviews3 {
+  color: $textDarkL1;
+  cursor: default;
+  margin-bottom: 20px;
+  @media (max-width: 1024px) {
     margin-bottom: 20px;
-    @media (max-width: 1024px) {
-        margin-bottom: 20px;
-    }
-    @media (max-width: 520px) {
-        margin-bottom: 15px;
-    }
+  }
+  @media (max-width: 520px) {
+    margin-bottom: 15px;
+  }
 }
 
-.noReviews6{
-    color: $textGrayL2;
-    cursor: default;
+.noReviews6 {
+  color: $textGrayL2;
+  cursor: default;
 }

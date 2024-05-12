@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Pad from '../../../ui/pad/Pad';
 
 import AboutTopText from '../../../modules/forSinglePages/group4/about/aboutTopText/AboutTopText';
@@ -7,10 +7,10 @@ import AboutPhrases from '../../../modules/forSinglePages/group4/about/aboutPhra
 const About = () => {
   return (
     <Pad>
-      <AboutTopText/>
-      <AboutPhrases/>
+      <AboutTopText />
+      <AboutPhrases />
     </Pad>
-  )
-}
+  );
+};
 
-export default About
+export default About;

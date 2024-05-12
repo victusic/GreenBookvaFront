@@ -1,211 +1,239 @@
 @import '../../../../../styles/colors';
 @import '../../../../../styles/typography';
 
-.cartPlate{
-    position: relative;
-    width: 100%;
-    height: 200px;
-    @extend %radius;
-    @extend %shadow;
-    margin-bottom: 40px;
-    padding: 15px;
-    @media (max-width: 1024px) {
-        height: 170px;
-        margin-bottom: 25px;
-    }
-    @media (max-width: 520px) {
-        height: 140px;
-        margin-bottom: 15px;
-    }
-}
-
-.cartPlate:last-child{
-    margin-bottom: 0px;
-}
-
-.cartPlateImg{
+.cartPlate {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  @extend %radius;
+  @extend %shadow;
+  margin-bottom: 40px;
+  padding: 15px;
+  @media (max-width: 1024px) {
     height: 170px;
-    @extend %radius;
-    max-width: 150px;
-    @media (max-width: 1024px) {
-        max-width: 120px;
-        height: 140px;
-    }
-    @media (max-width: 520px) {
-        max-width: 87px;
-        height: 110px;
-    }
+    margin-bottom: 25px;
+  }
+  @media (max-width: 520px) {
+    height: 140px;
+    margin-bottom: 15px;
+  }
 }
 
-.cartPlateOther{
-    position: absolute;
-    height: 170px;
+.cartPlate:last-child {
+  margin-bottom: 0px;
+}
+
+.cartPlateImg {
+  height: 170px;
+  @extend %radius;
+  max-width: 150px;
+  @media (max-width: 1024px) {
+    max-width: 120px;
+    height: 140px;
+  }
+  @media (max-width: 520px) {
+    max-width: 87px;
+    height: 110px;
+  }
+}
+
+.cartPlateOther {
+  position: absolute;
+  height: 170px;
+  top: 15px;
+  right: 15px;
+  left: 175px;
+  display: flex;
+  justify-content: end;
+  @media (max-width: 1024px) {
+    height: 140px;
+    left: 145px;
+  }
+  @media (max-width: 520px) {
+    height: 110px;
+    left: 105px;
+  }
+}
+
+.cartPlateText {
+  position: absolute;
+  left: 0;
+  right: 130px;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  @media (max-width: 1024px) {
+    right: 100px;
+  }
+  /////
+  @media (max-width: 520px) {
+    right: 70px;
+  }
+}
+
+.cartPlateName {
+  color: $textDarkL1;
+  @extend %text1;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  overflow: hidden;
+  margin-bottom: 15px;
+  cursor: pointer;
+  @media (max-width: 1024px) {
+    margin-bottom: 11px;
+  }
+  @media (max-width: 520px) {
+    margin-bottom: 7px;
+  }
+}
+
+.cartPlateName:hover {
+  color: $accentSuper;
+}
+
+.cartPlateName:active {
+  color: $textAccent;
+}
+
+.cartPlateAuthor {
+  color: $textGrayL2;
+  @extend %text2;
+  @extend %no-transposition;
+  margin-bottom: 15px;
+  @media (max-width: 1024px) {
+    margin-bottom: 11px;
+  }
+  @media (max-width: 520px) {
+    margin-bottom: 7px;
+  }
+  cursor: pointer;
+}
+
+.cartPlatePublisher {
+  color: $textGrayL3;
+  @extend %text2;
+  margin-bottom: 15px;
+  @extend %no-transposition;
+  cursor: pointer;
+  @media (max-width: 1024px) {
+    margin-bottom: 11px;
+  }
+  @media (max-width: 520px) {
+    margin-bottom: 7px;
+  }
+}
+
+.cartPlateCount {
+  color: $textDarkL1;
+  @extend %text3;
+  @extend %no-transposition;
+  cursor: default;
+}
+
+.cartPlateStars {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  @media (max-width: 520px) {
+    bottom: -4px;
+  }
+}
+
+.cartPlatePrice {
+  position: relative;
+  height: 100%;
+  width: 130px;
+  display: flex;
+  justify-content: end;
+  @media (max-width: 1024px) {
+    width: 100px;
+  }
+  @media (max-width: 520px) {
+    width: 90px;
+  }
+}
+
+.cartPrice {
+  color: $accentSuper;
+  cursor: default;
+}
+
+.cartPriceDiscount {
+  position: absolute;
+  top: 20px;
+  color: $accentSuper;
+  cursor: default;
+  @media (max-width: 520px) {
     top: 15px;
-    right: 15px;
-    left: 175px;
-    display: flex;
-    justify-content: end;
-    @media (max-width: 1024px) {
-        height: 140px;
-        left: 145px;
-    }
-    @media (max-width: 520px) {
-        height: 110px;
-        left: 105px;
-    }
+  }
 }
 
-.cartPlateText{
-    position: absolute;
-    left: 0;
-    right: 130px;
-    height: 100%;
-    display: inline-flex;
-    flex-direction: column;
-    @media (max-width: 1024px) {right: 100px;}
-    /////
-    @media (max-width: 520px) {right: 70px;}
-}
-
-.cartPlateName{
-    color: $textDarkL1;
-    @extend %text1;
-    -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        display: -webkit-box;
-        text-overflow: ellipsis;
-        word-break: break-word;
-        overflow: hidden;
-    margin-bottom: 15px;
-    cursor: pointer;
-    @media (max-width: 1024px) {margin-bottom: 11px;}
-    @media (max-width: 520px) {margin-bottom: 7px;}
-}
-
-.cartPlateName:hover{
-    color: $accentSuper;
-}
-
-.cartPlateName:active{
-    color: $textAccent;
-}
-
-.cartPlateAuthor{
-    color: $textGrayL2;
-    @extend %text2;
-    @extend %no-transposition;
-    margin-bottom: 15px;
-    @media (max-width: 1024px) {margin-bottom: 11px;}
-    @media (max-width: 520px) {margin-bottom: 7px;}
-    cursor: pointer;
-}
-
-.cartPlatePublisher{
-    color: $textGrayL3;
-    @extend %text2;
-    margin-bottom: 15px;
-    @extend %no-transposition;
-    cursor: pointer;
-    @media (max-width: 1024px) {margin-bottom: 11px;}
-    @media (max-width: 520px) {margin-bottom: 7px;}
-}
-
-.cartPlateCount{
-    color: $textDarkL1;
-    @extend %text3;
-    @extend %no-transposition;
-    cursor: default;
-}
-
-.cartPlateStars{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    @media (max-width: 520px) {bottom: -4px;}
-}
-
-.cartPlatePrice{
-    position: relative;
-    height: 100%;
-    width: 130px;
-    display: flex;
-    justify-content: end;
-    @media (max-width: 1024px) {width: 100px;}
-    @media (max-width: 520px) {width: 90px;}
-}
-
-.cartPrice{
-    color: $accentSuper;
-    cursor: default;
-}
-
-.cartPriceDiscount{
-    position: absolute;
-    top: 20px;
-    color: $accentSuper;
-    cursor: default;
-    @media (max-width: 520px) {top: 15px;}
-}
-
-.discountPriceTop{
-    position: relative;
-    color: $textDarkL1;
-    cursor: default;
+.discountPriceTop {
+  position: relative;
+  color: $textDarkL1;
+  cursor: default;
 }
 
 .discountPriceTop:before {
-	content: "";
-	border-bottom: 1px solid $badgeSale;
-	position: absolute;
-	width: 95%;
-    left: 2.5%;
-    top: 5%;
-    transform: rotate(10deg);
-    border-radius: 360px;
+  content: '';
+  border-bottom: 1px solid $badgeSale;
+  position: absolute;
+  width: 95%;
+  left: 2.5%;
+  top: 5%;
+  transform: rotate(10deg);
+  border-radius: 360px;
 }
 
-.countPlate{
-    position: absolute;
-    width: 130px;
-    height: 42px;
-    right: 0;
-    top: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @media (max-width: 1024px) {
-        width: 100px;
-        height: 32px;
-        top: 60px;
-    }
-    @media (max-width: 520px) {
-        top: 45px;
-        width: 90px;
-        height: 28px;
-    }
+.countPlate {
+  position: absolute;
+  width: 130px;
+  height: 42px;
+  right: 0;
+  top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 1024px) {
+    width: 100px;
+    height: 32px;
+    top: 60px;
+  }
+  @media (max-width: 520px) {
+    top: 45px;
+    width: 90px;
+    height: 28px;
+  }
 }
 
-.tileHover:hover{
-    background: $textAccent;
-    color: $textLight;
+.tileHover:hover {
+  background: $textAccent;
+  color: $textLight;
 }
 
-.tileHover:active{
-    background: $accentSuper;
-    color: $textLight;
+.tileHover:active {
+  background: $accentSuper;
+  color: $textLight;
 }
 
-.tileHoverDisabled{
-    opacity: 0.3;
+.tileHoverDisabled {
+  opacity: 0.3;
 }
 
-.buttonsplate{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 95px;
-    @media (max-width: 1024px) {width: 65px;}
-    @media (max-width: 520px) {width: 63px;}
+.buttonsplate {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 95px;
+  @media (max-width: 1024px) {
+    width: 65px;
+  }
+  @media (max-width: 520px) {
+    width: 63px;
+  }
 }

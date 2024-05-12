@@ -1,84 +1,88 @@
 @import '../../../styles/colors';
 @import '../../../styles/typography';
 
-.cardPlate{
-    position: relative;
-    min-width: 250px;
-    height: 150px;
-    background-color: $backgroundBase;
-    cursor: pointer;
-    @extend %radius;
-    @extend %transition;
-    @media (max-width: 1024px) {
-        min-width: 230px;
-        height: 140px;
-    }
-    @media (max-width: 520px) {
-        min-width: 200px;
-        height: 120px;
-    }
+.cardPlate {
+  position: relative;
+  min-width: 250px;
+  height: 150px;
+  background-color: $backgroundBase;
+  cursor: pointer;
+  @extend %radius;
+  @extend %transition;
+  @media (max-width: 1024px) {
+    min-width: 230px;
+    height: 140px;
+  }
+  @media (max-width: 520px) {
+    min-width: 200px;
+    height: 120px;
+  }
 }
 
-.cardPlate:hover{
-    background: $backgroundBasePlus;
+.cardPlate:hover {
+  background: $backgroundBasePlus;
 }
 
-.cardPlate:active{
-    background: $accentSuper;
+.cardPlate:active {
+  background: $accentSuper;
 }
 
-.cardNumber{
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    color: $textLight;
-    @media (max-width: 1024px) {
-        top: 25px;
-        right: 15px;
-    }
-    @media (max-width: 520px) {
-        top: 20px;
-    }
+.cardNumber {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  color: $textLight;
+  @media (max-width: 1024px) {
+    top: 25px;
+    right: 15px;
+  }
+  @media (max-width: 520px) {
+    top: 20px;
+  }
 }
 
-.cardDate{
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: $textLight;
-    @media (max-width: 1024px) {
-        bottom: 15px;
-        right: 15px;
-    }
+.cardDate {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: $textLight;
+  @media (max-width: 1024px) {
+    bottom: 15px;
+    right: 15px;
+  }
 }
 
-.cardMargin{
-    margin-right: 40px;
-    @media (max-width: 1024px) {margin-right: 30px;}
-    @media (max-width: 520px) {margin-right: 20px;}
+.cardMargin {
+  margin-right: 40px;
+  @media (max-width: 1024px) {
+    margin-right: 30px;
+  }
+  @media (max-width: 520px) {
+    margin-right: 20px;
+  }
 }
 
-.cardInputCVV{
-    position: absolute;
-    width: 45px;
-    height: 42px;
-    background: $primaryBase;
-    border: 1px solid $textDarkL1;
-    @extend %radius;
-    @extend %transition;
-    color: $backgroundLight;
-    @extend %text2;
-    margin-bottom: 20px;
-    padding-left: 7px;
-    bottom: 0px;
-    left: 20px;
-    @media (max-width: 1024px) {
-        width: 40px;
-        //bottom: 15px;
-        left: 15px;
-    }
-    @media (max-width: 520px) {
-        width: 35px;
-        height: 34px;
-    }
+.cardInputCVV {
+  position: absolute;
+  width: 45px;
+  height: 42px;
+  background: $primaryBase;
+  border: 1px solid $textDarkL1;
+  @extend %radius;
+  @extend %transition;
+  color: $backgroundLight;
+  @extend %text2;
+  margin-bottom: 20px;
+  padding-left: 7px;
+  bottom: 0px;
+  left: 20px;
+  @media (max-width: 1024px) {
+    width: 40px;
+    //bottom: 15px;
+    left: 15px;
+  }
+  @media (max-width: 520px) {
+    width: 35px;
+    height: 34px;
+  }
 }

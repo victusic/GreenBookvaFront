@@ -1,21 +1,21 @@
 @import '../../styles/colors';
 @import '../../styles/typography';
 
-.starsPlate{
-    width: 85px;
-    height: 26px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+.starsPlate {
+  width: 85px;
+  height: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
-.yellowStar{
-    @extend %text1;
-    color: $primaryStars;
-}  
+.yellowStar {
+  @extend %text1;
+  color: $primaryStars;
+}
 
-.grayStar{
-    @extend %text1;
-    color: $backgroundNoStarsPlate;
+.grayStar {
+  @extend %text1;
+  color: $backgroundNoStarsPlate;
 }

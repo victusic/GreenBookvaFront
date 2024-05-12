@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 
@@ -11,7 +11,6 @@ import ProductFindTemplate from '../../../templates/productFindTemplate/ProductF
 import { useParams } from 'react-router-dom';
 
 const ProductFind = () => {
-
   const { findString } = useParams();
 
   return (
@@ -20,11 +19,11 @@ const ProductFind = () => {
         <NavigateElement>Результаты поиска по запросу: {findString}</NavigateElement>
       </NavigateLine>
       <PagesPlate>
-          <ProductFindBar/>
-          <ProductFindTemplate/>
+        <ProductFindBar />
+        <ProductFindTemplate />
       </PagesPlate>
     </Pad>
-  )
-}
+  );
+};
 
-export default ProductFind
+export default ProductFind;

@@ -1,26 +1,26 @@
 @import '../../../styles/colors';
 @import '../../../styles/typography';
 
-.mobileButton{
-    height: 18px;
-    color: $textLight;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    @extend %radius;
-    @extend %text2;
-    background: $backgroundBase;
+.mobileButton {
+  height: 18px;
+  color: $textLight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  @extend %radius;
+  @extend %text2;
+  background: $backgroundBase;
 }
 
-.mobileButton:active{
-    background: $accentSuper;
+.mobileButton:active {
+  background: $accentSuper;
 }
 
-.buttonSmall{
-    width: 48.5%;
+.buttonSmall {
+  width: 48.5%;
 }
 
-.buttonBig{
-    width: 100%;
+.buttonBig {
+  width: 100%;
 }

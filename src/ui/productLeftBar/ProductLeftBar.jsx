@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 import styles from './productLeftBar.module.scss';
 
-const ProductLeftBar = ({children}) => {
-  return (
-    <div className={styles.leftBar}>{children}</div>
-  )
-}
+const ProductLeftBar = ({ children }) => {
+  return <div className={styles.leftBar}>{children}</div>;
+};
 
-export default ProductLeftBar
+export default ProductLeftBar;

@@ -1,40 +1,40 @@
 @import '../../../../../styles/colors';
 @import '../../../../../styles/typography';
 
-.LeftBarTitle{
-    color: $textDarkL1;
-    cursor: default;
-    margin-top: 36px;
-    margin-bottom: 25px;
-    @extend %no-transposition;
-    @media (max-width: 1024px) {
-        margin-top: 32px;
-        margin-bottom: 20px;
-    }
-    @media (max-width: 520px) {
-        margin-top: 22px;
-        margin-bottom: 15px;
-    }
+.LeftBarTitle {
+  color: $textDarkL1;
+  cursor: default;
+  margin-top: 36px;
+  margin-bottom: 25px;
+  @extend %no-transposition;
+  @media (max-width: 1024px) {
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 520px) {
+    margin-top: 22px;
+    margin-bottom: 15px;
+  }
 }
 
-.LeftBarCategoriesTitle{
-    color: $textGrayL2;
-    cursor: default;
-    @extend %text1;
+.LeftBarCategoriesTitle {
+  color: $textGrayL2;
+  cursor: default;
+  @extend %text1;
 }
 
-.LeftBarCategories{
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 10px;
-    color: $textGrayL2;
-    cursor: pointer;
-    @extend %text2;
-    @extend %no-transposition;
+.LeftBarCategories {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 10px;
+  color: $textGrayL2;
+  cursor: pointer;
+  @extend %text2;
+  @extend %no-transposition;
 }
-.LeftBarCategories:hover{
-    color: $textGrayL3;
+.LeftBarCategories:hover {
+  color: $textGrayL3;
 }
-.LeftBarCategories:active{
-    color: $accentSuper;
+.LeftBarCategories:active {
+  color: $accentSuper;
 }

@@ -1,9 +1,13 @@
 .dots {
-      position: absolute;
-      bottom: 30px;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      @media (max-width: 1024px) {bottom: 25px;}
-      @media (max-width: 520px) {bottom: 18px;}
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  @media (max-width: 1024px) {
+    bottom: 25px;
+  }
+  @media (max-width: 520px) {
+    bottom: 18px;
+  }
 }
