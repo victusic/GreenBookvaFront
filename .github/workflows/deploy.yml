@@ -13,40 +13,23 @@ jobs:
     if: github.event.pull_request.merged == true
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
 
-      - name: Install dependencies
-        run: npm install
+      - name: Remove existing files from FTP
+        run: |
+          lftp -c "open -u ${{ secrets.FTP_USERNAME }}, ${{ secrets.FTP_PASSWORD }} -e 'cd /www/greenbookva.shop/; rm -rf *; exit'"
 
-      - name: Build project
-        run: npm run build
-
-      - name: Clear remote directory via FTP
-        uses: sdras/ftp-action@2.0.0
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          protocol: ftp
-          action: rm
-          remote: ${{ secrets.FTP_PATH }}/*
-
-      - name: Upload build folder via FTP
-        uses: wvbe/lftp-upload-action@v1
-        with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: build
-          remote-dir: ${{ secrets.FTP_PATH }}
-
-      - name: Cleanup
-        run: |
-          rm -rf build
+          local-dir: ./build/
+          server-dir: /www/greenbookva.shop/
