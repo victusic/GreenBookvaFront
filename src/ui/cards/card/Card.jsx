@@ -4,8 +4,6 @@ import styles from './card.module.scss';
 const Card = ({ number, date, margin, cvv, cardCVV, setCardCVV, ...props }) => {
   const [cardMargin, setCardMargin] = useState('');
 
-  const [] = useState('');
-
   useEffect(() => {
     {
       margin ? setCardMargin(styles.cardMargin) : setCardMargin('');

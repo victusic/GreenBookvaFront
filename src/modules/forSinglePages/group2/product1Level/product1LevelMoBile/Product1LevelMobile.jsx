@@ -72,11 +72,9 @@ const Product1LevelMobile = () => {
         <div className={styles.MobileCategoriesPlate + ' categoriesList'}>
           <Await resolve={subcategories}>
             {(resolvedCategory) =>
-              resolvedCategory.map((category, index) => (
-                <Link to={'/subcategory/' + category.id}>
-                  <p className={styles.MobileCategories} key={index}>
-                    {category.name}
-                  </p>
+              resolvedCategory.map((category) => (
+                <Link to={'/subcategory/' + category.id} key={category.id}>
+                  <p className={styles.MobileCategories}>{category.name}</p>
                 </Link>
               ))
             }

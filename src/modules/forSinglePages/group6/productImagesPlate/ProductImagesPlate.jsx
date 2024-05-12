@@ -100,10 +100,9 @@ const ProductImagesPlate = () => {
           </Link>
           <div className={styles.imagesPlate} style={{ left: `${nowPosition * -100}%` }}>
             {imagesList.map((image, index) => (
-              <div className={styles.imagesLineComponent}>
+              <div className={styles.imagesLineComponent} key={index}>
                 <img
                   className={styles.imagesMain}
-                  key={index}
                   src={productRoute + image.image}
                   alt={'Изображение продукта'}
                 ></img>

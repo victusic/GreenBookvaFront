@@ -51,7 +51,7 @@ const OrderPlate = ({ order }) => {
 
       <div className={styles.orderImgPlate}>
         {order.products.map((product) => (
-          <Link to={`/product/${product.product_id}`}>
+          <Link to={`/product/${product.product_id}`} key={product.product_id}>
             <img
               className={styles.orderImg}
               src={productRoute + product.image}
