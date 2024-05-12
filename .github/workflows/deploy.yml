@@ -24,10 +24,6 @@ jobs:
           npm install
           npm run build
 
-      - name: Remove existing files from FTP
-        run: |
-          lftp -c "open -u ${{ secrets.FTP_USERNAME }}, ${{ secrets.FTP_PASSWORD }} -e 'cd /www/greenbookva.shop/; rm -rf *; exit'"
-
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
