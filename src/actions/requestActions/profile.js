@@ -1,5 +1,5 @@
 export const getFavorites = async (index) => {
-  const products = await fetch(`https://db.green-bookva.shop/favorites/${index}`);
+  const products = await fetch(`https://db.greenbookva.shop/favorites/${index}`);
 
   if (!products.ok) {
     throw new Response('', { status: products.status, statusText: products.statusText });
@@ -14,7 +14,7 @@ export const addFavorites = async (product, account) => {
     account_id: account,
   };
 
-  const favorites = await fetch(`https://db.green-bookva.shop/favorites`, {
+  const favorites = await fetch(`https://db.greenbookva.shop/favorites`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ export const delFavorites = async (product, account) => {
     account_id: account,
   };
 
-  const favorites = await fetch(`https://db.green-bookva.shop/favorites`, {
+  const favorites = await fetch(`https://db.greenbookva.shop/favorites`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ export const delFavorites = async (product, account) => {
 };
 
 export const cleanFavorites = async (index) => {
-  const favorites = await fetch(`https://db.green-bookva.shop/favorites/${index}`, { method: 'DELETE' });
+  const favorites = await fetch(`https://db.greenbookva.shop/favorites/${index}`, { method: 'DELETE' });
 
   if (!favorites.ok) {
     throw new Response('', { status: favorites.status, statusText: favorites.statusText });
@@ -61,7 +61,7 @@ export const cleanFavorites = async (index) => {
 };
 
 export const getOrders = async (index) => {
-  const orders = await fetch(`https://db.green-bookva.shop/orders/${index}`);
+  const orders = await fetch(`https://db.greenbookva.shop/orders/${index}`);
 
   if (!orders.ok) {
     throw new Response('', { status: orders.status, statusText: orders.statusText });
@@ -71,7 +71,7 @@ export const getOrders = async (index) => {
 };
 
 export const getOrder = async (index, profileId) => {
-  const order = await fetch(`https://db.green-bookva.shop/order/${index}?profile=${profileId}`);
+  const order = await fetch(`https://db.greenbookva.shop/order/${index}?profile=${profileId}`);
 
   if (!order.ok) {
     throw new Response('', { status: order.status, statusText: order.statusText });
@@ -81,7 +81,7 @@ export const getOrder = async (index, profileId) => {
 };
 
 export const getShoppingCart = async (index) => {
-  const cart = await fetch(`https://db.green-bookva.shop/shopping_cart/${index}`);
+  const cart = await fetch(`https://db.greenbookva.shop/shopping_cart/${index}`);
 
   if (!cart.ok) {
     throw new Response('', { status: cart.status, statusText: cart.statusText });
@@ -96,7 +96,7 @@ export const addShoppingCart = async (product, account) => {
     account_id: account,
   };
 
-  const cart = await fetch(`https://db.green-bookva.shop/shopping_cart`, {
+  const cart = await fetch(`https://db.greenbookva.shop/shopping_cart`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ export const delShoppingCart = async (product, account) => {
     account_id: account,
   };
 
-  const cart = await fetch(`https://db.green-bookva.shop/shopping_cart`, {
+  const cart = await fetch(`https://db.greenbookva.shop/shopping_cart`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ export const delShoppingCart = async (product, account) => {
 };
 
 export const cleanShoppingCart = async (index) => {
-  const cart = await fetch(`https://db.green-bookva.shop/shopping_cart/${index}`, { method: 'DELETE' });
+  const cart = await fetch(`https://db.greenbookva.shop/shopping_cart/${index}`, { method: 'DELETE' });
 
   if (!cart.ok) {
     throw new Response('', { status: cart.status, statusText: cart.statusText });
@@ -143,7 +143,7 @@ export const cleanShoppingCart = async (index) => {
 };
 
 export const getCard = async (index) => {
-  const card = await fetch(`https://db.green-bookva.shop/card/${index}`);
+  const card = await fetch(`https://db.greenbookva.shop/card/${index}`);
 
   if (!card.ok) {
     throw new Response('', { status: card.status, statusText: card.statusText });
@@ -157,7 +157,7 @@ export const patchPoints = async (id, points) => {
     points: points,
   };
 
-  const pointsRequest = await fetch(`https://db.green-bookva.shop/profile/${id}/points`, {
+  const pointsRequest = await fetch(`https://db.greenbookva.shop/profile/${id}/points`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
