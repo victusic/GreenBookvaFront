@@ -1,7 +1,8 @@
 name: Green Bookva init
 on:
   push:
-    branches: [dev, release]
+    branches-ignore:
+      - '*'
   pull_request:
     branches: [dev, release]
 jobs:
