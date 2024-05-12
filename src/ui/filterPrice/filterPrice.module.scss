@@ -1,48 +1,48 @@
 @import '../../styles/colors';
 @import '../../styles/typography';
 
-.filterTitle{
-    color: $textDarkL1;
-    margin-top: 36px;
-    cursor: default;
-    @media (max-width: 624px) {
-        margin-top: 20px;
-    }
+.filterTitle {
+  color: $textDarkL1;
+  margin-top: 36px;
+  cursor: default;
+  @media (max-width: 624px) {
+    margin-top: 20px;
+  }
 }
 
-.priceContext{
-    width: 100%;
-    margin-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-    justify-content: space-between;
+.priceContext {
+  width: 100%;
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.inputPlate{
-    width: 160px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @media (max-width: 1350px) {
-        width: 140px;
-    }
-    @media (max-width: 1150px) {
-        width: 120px;
-    }
-    @media (max-width: 1024px) {
-        width: 110px;
-    }
-    @media (max-width: 825px) {
-        width: 100px;
-    }
-    @media (max-width: 624px) {
-        width: 45%;
-    }
+.inputPlate {
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1350px) {
+    width: 140px;
+  }
+  @media (max-width: 1150px) {
+    width: 120px;
+  }
+  @media (max-width: 1024px) {
+    width: 110px;
+  }
+  @media (max-width: 825px) {
+    width: 100px;
+  }
+  @media (max-width: 624px) {
+    width: 45%;
+  }
 }
 
-.inputPlateText{
-    @extend %text1;
-    color: $textDarkL1;
-    cursor: default;
+.inputPlateText {
+  @extend %text1;
+  color: $textDarkL1;
+  cursor: default;
 }

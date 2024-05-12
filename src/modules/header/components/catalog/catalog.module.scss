@@ -1,134 +1,137 @@
 @import '../../../../styles/colors';
 @import '../../../../styles/typography';
 
-.plate{
-    position: absolute;
-    top: 135px;
-    left: 277px;
-    @media (max-width: 1400px) {left: 207px;}
-    width: 740px;
-    height: 290px;
-    @extend %shadow;
-    @extend %radius;
-    z-index: 1000;
-    background: $backgroundWhite;
-    display: flex;
-    //align-items: center;
-    @media (max-width: 1024px) {
-        top: 108px;
-        width: 480px;
-        height: 260px;
-        left: 185px;
-    }
-    @media (max-width: 695px) {display: none;}
-}
-
-.plateHide{
+.plate {
+  position: absolute;
+  top: 135px;
+  left: 277px;
+  @media (max-width: 1400px) {
+    left: 207px;
+  }
+  width: 740px;
+  height: 290px;
+  @extend %shadow;
+  @extend %radius;
+  z-index: 1000;
+  background: $backgroundWhite;
+  display: flex;
+  //align-items: center;
+  @media (max-width: 1024px) {
+    top: 108px;
+    width: 480px;
+    height: 260px;
+    left: 185px;
+  }
+  @media (max-width: 695px) {
     display: none;
+  }
 }
 
-.typePlate{
-    width: 70px;
-    height: 222px;
-    margin-left: 40px;
-    margin-top: 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media (max-width: 1024px) {
-        left: 20px;
-        top: 20px;
-        width: 60px;
-        height: 200px;
-    }
+.plateHide {
+  display: none;
 }
 
-.typeBox{
-    width: 70px;
-    height: 62px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    @media (max-width: 1024px) {
-        width: 60px;
-        height: 54px;
-    }
-
-    color: $textDarkL1;
-    fill: $textDarkL1;
-    @extend %transition;
+.typePlate {
+  width: 70px;
+  height: 222px;
+  margin-left: 40px;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-width: 1024px) {
+    left: 20px;
+    top: 20px;
+    width: 60px;
+    height: 200px;
+  }
 }
 
-.typeBox:hover{
-    color: $textGrayL3;
-    fill: $textGrayL3;
+.typeBox {
+  width: 70px;
+  height: 62px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  @media (max-width: 1024px) {
+    width: 60px;
+    height: 54px;
+  }
+
+  color: $textDarkL1;
+  fill: $textDarkL1;
+  @extend %transition;
 }
 
-.typeSvg{
-    width: 41px;
-    min-height: 41px;
-    @media (max-width: 1024px) {
-        width: 32px;
-        height: 32px;
-    }
+.typeBox:hover {
+  color: $textGrayL3;
+  fill: $textGrayL3;
+}
+
+.typeSvg {
+  width: 41px;
+  min-height: 41px;
+  @media (max-width: 1024px) {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .typeSvgColor * {
-    fill: inherit;
+  fill: inherit;
 }
 
-
-.typeText{
-    margin-top: 5px;
-    color: inherit;
-    @media (max-width: 1024px) {
-        margin-top: 2px;
-    }
+.typeText {
+  margin-top: 5px;
+  color: inherit;
+  @media (max-width: 1024px) {
+    margin-top: 2px;
+  }
 }
 
-.categoryPlate{
-    width: 580px;
-    height: 257px;
-    margin-left: 30px;
-    margin-top: 35px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    @media (max-width: 1024px) {
-        width: 350px;
-        height: 222px;
-    }
+.categoryPlate {
+  width: 580px;
+  height: 257px;
+  margin-left: 30px;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @media (max-width: 1024px) {
+    width: 350px;
+    height: 222px;
+  }
 }
 
-.categoryText{
-    min-width: 175px;
-    text-align: left;
-    height: 16px;
-    margin-bottom: 35.3px;
-    color: $textGrayL2;
-    @extend %text3;
-    @media (max-width: 1024px) {
-        width: 115px;
-        height: 14px;
-        margin-bottom: 23px;
-    }
-    cursor: pointer;
+.categoryText {
+  min-width: 175px;
+  text-align: left;
+  height: 16px;
+  margin-bottom: 35.3px;
+  color: $textGrayL2;
+  @extend %text3;
+  @media (max-width: 1024px) {
+    width: 115px;
+    height: 14px;
+    margin-bottom: 23px;
+  }
+  cursor: pointer;
 }
 
-.categoryText:hover{
-    min-width: 175px;
-    text-align: left;
-    height: 16px;
-    margin-bottom: 35.3px;
-    color: $textGrayL3;
-    @extend %text3;
-    @media (max-width: 1024px) {
-        width: 115px;
-        height: 14px;
-        margin-bottom: 23px;
-    }
-    cursor: pointer;
-    @extend %transition;
+.categoryText:hover {
+  min-width: 175px;
+  text-align: left;
+  height: 16px;
+  margin-bottom: 35.3px;
+  color: $textGrayL3;
+  @extend %text3;
+  @media (max-width: 1024px) {
+    width: 115px;
+    height: 14px;
+    margin-bottom: 23px;
+  }
+  cursor: pointer;
+  @extend %transition;
 }

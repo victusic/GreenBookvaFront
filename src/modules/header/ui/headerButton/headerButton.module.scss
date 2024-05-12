@@ -1,29 +1,29 @@
 @import '../../../../styles/colors';
 @import '../../../../styles/typography';
 
-.buttonHead{
-    width: 105px;
-    height: 48px;
-    background-color: $accentSuper;
-    @extend %radius;
-    border: none;
-    color: $textLight;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    cursor: pointer;
-    @media (max-width: 1024px) {
-        width: 90px;
-        height: 36px;
-    }
-    @media (max-width: 695px) {
-        display: none;
-    }
-    
-    @extend %transition;
+.buttonHead {
+  width: 105px;
+  height: 48px;
+  background-color: $accentSuper;
+  @extend %radius;
+  border: none;
+  color: $textLight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  @media (max-width: 1024px) {
+    width: 90px;
+    height: 36px;
+  }
+  @media (max-width: 695px) {
+    display: none;
+  }
+
+  @extend %transition;
 }
 
-.buttonHead:hover{
-    background-color: $textDarkL1;
+.buttonHead:hover {
+  background-color: $textDarkL1;
 }

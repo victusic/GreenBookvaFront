@@ -1,58 +1,58 @@
 @import '../../styles/colors';
 @import '../../styles/typography';
 
-.buttonsPlate{
-    width: 100%;
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    @media (max-width: 1024px) {
-        margin-top: 40px;
-    }
+.buttonsPlate {
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 1024px) {
+    margin-top: 40px;
+  }
 }
 
-.leftRightButtons{
-    margin-left: 9px;
-    margin-right: 9px;
+.leftRightButtons {
+  margin-left: 9px;
+  margin-right: 9px;
 }
 
-.pagesButtonsPlate{
-    display: flex;
+.pagesButtonsPlate {
+  display: flex;
 }
 
-.pagesButtons{
-    margin-left: 2px;
-    margin-right: 2px;
+.pagesButtons {
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
-.pagesButtons:hover{
-    color: $textAccent;
+.pagesButtons:hover {
+  color: $textAccent;
 }
 
-.pagesButtons:active{
-    color: $textLight;
-    background: $textAccent;
+.pagesButtons:active {
+  color: $textLight;
+  background: $textAccent;
 }
 
-.pageNow{
-    margin-left: 2px;
-    margin-right: 2px;
-    color: $textLight;
-    background: $textAccent;
+.pageNow {
+  margin-left: 2px;
+  margin-right: 2px;
+  color: $textLight;
+  background: $textAccent;
 }
 
-.menuPoints{
-    display: flex;
-    align-items: end;
-    margin-left: 6px;
-    margin-right: 6px;
-    cursor: default;
-    color: $textDarkL1;
+.menuPoints {
+  display: flex;
+  align-items: end;
+  margin-left: 6px;
+  margin-right: 6px;
+  cursor: default;
+  color: $textDarkL1;
 }
 
-.pagesButtonsDisabled{
-    margin-left: 2px;
-    margin-right: 2px;
-    opacity: 0.3;
-    cursor: default;
+.pagesButtonsDisabled {
+  margin-left: 2px;
+  margin-right: 2px;
+  opacity: 0.3;
+  cursor: default;
 }

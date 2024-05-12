@@ -1,47 +1,47 @@
 @import '../../styles/colors';
 @import '../../styles/typography';
 
-.productDescriptionLine{
-    width: 100%;
-    display: flex;
-    margin-bottom: 10px;
+.productDescriptionLine {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
 }
 
-.productDescriptionTitle{
-    width: 220px;
-    min-width: 220px;
-    @media (max-width: 610px) {
-        width: 160px;
-        min-width: 160px;
-    }
+.productDescriptionTitle {
+  width: 220px;
+  min-width: 220px;
+  @media (max-width: 610px) {
+    width: 160px;
+    min-width: 160px;
+  }
 }
 
-.productDescriptionValue{
-    width: 100%;
+.productDescriptionValue {
+  width: 100%;
 }
 
-.productDescriptionTitleText{
-    @extend %text2;
-    color: $textGrayL3;
-    cursor: default;
+.productDescriptionTitleText {
+  @extend %text2;
+  color: $textGrayL3;
+  cursor: default;
 }
 
-.productDescriptionValueText{
-    @extend %text2;
-    color: $textGrayL3;
+.productDescriptionValueText {
+  @extend %text2;
+  color: $textGrayL3;
 }
 
-.productDescriptionValueLink{
-    @extend %text2;
-    width: fit-content;
-    color: $textAccent;
-    cursor: pointer;
+.productDescriptionValueLink {
+  @extend %text2;
+  width: fit-content;
+  color: $textAccent;
+  cursor: pointer;
 }
 
-.productDescriptionValueLink:hover{
-    color: $accentSuper;
+.productDescriptionValueLink:hover {
+  color: $accentSuper;
 }
 
-.productDescriptionValueLink:active{
-    color: $textDarkL1;
+.productDescriptionValueLink:active {
+  color: $textDarkL1;
 }

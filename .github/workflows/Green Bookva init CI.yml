@@ -1,0 +1,27 @@
+name: Green Bookva init
+on:
+  push:
+    branches-ignore:
+      - '*'
+  pull_request:
+    branches: [dev, release]
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Starting Node.Js ${{ matrix.node-version}}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version}}
+      - name: install modules
+        run: npm install
+      - name: Set CI environment variable
+        run: echo "CI=false" >> $GITHUB_ENV
+      - name: lint check
+        run: npm run lint
+      - name: build project
+        run: npm run build

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 import MainProductsLine from '../../../modules/forSinglePages/group2/main/mainProductsLine/MainProductsLine';
@@ -8,15 +8,14 @@ import Loader from '../../../ui/loader/Loader';
 import MainTopLine from '../../../modules/forSinglePages/group2/main/mainTopLine/MainTopLine';
 
 const Main = () => {
-
   return (
     <Pad>
-      <Suspense fallback={<Loader/>}>
-        <MainTopLine/>
-        <MainProductsLine/>
+      <Suspense fallback={<Loader />}>
+        <MainTopLine />
+        <MainProductsLine />
       </Suspense>
     </Pad>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

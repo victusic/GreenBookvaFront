@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 
@@ -14,28 +14,31 @@ import Product2LevelTemplate from '../../../templates/product2LevelTemplate/Prod
 import NavigateArrow from '../../../ui/navigate/navigateArrow/NavigateArrow';
 
 const Product2Level = () => {
-  
-  const {type, category} = useLoaderData();
+  const { type, category } = useLoaderData();
 
   return (
     <Pad>
-      <Suspense fallback={<Loader/>}>
+      <Suspense fallback={<Loader />}>
         <NavigateLine>
-            <Await resolve={type}>
-                {(typeName)=>(<NavigateElement route={'/type/'+typeName[0].id}>{typeName[0].name}</NavigateElement>)}
-            </Await>
-            <NavigateArrow/>
-            <Await resolve={category}>
-                {(category)=>(<NavigateElement route={'/category/'+category[0].id}>{category[0].name}</NavigateElement>)}
-            </Await>
+          <Await resolve={type}>
+            {(typeName) => (
+              <NavigateElement route={'/type/' + typeName[0].id}>{typeName[0].name}</NavigateElement>
+            )}
+          </Await>
+          <NavigateArrow />
+          <Await resolve={category}>
+            {(category) => (
+              <NavigateElement route={'/category/' + category[0].id}>{category[0].name}</NavigateElement>
+            )}
+          </Await>
         </NavigateLine>
         <PagesPlate>
-            <Product2LevelBar/>
-            <Product2LevelTemplate/>
+          <Product2LevelBar />
+          <Product2LevelTemplate />
         </PagesPlate>
       </Suspense>
     </Pad>
-  )
-}
+  );
+};
 
-export default Product2Level
+export default Product2Level;

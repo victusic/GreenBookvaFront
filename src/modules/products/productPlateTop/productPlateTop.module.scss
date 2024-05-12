@@ -1,57 +1,85 @@
 @import '../../../styles/colors';
 @import '../../../styles/typography';
 
-.topLine{
+.topLine {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 36px;
+  margin-bottom: 35px;
+  @media (max-width: 1024px) {
+    margin-top: 32px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 624px) {
+    margin-top: 22px;
+    margin-bottom: 25px;
+  }
+}
+
+.countProducts {
+  color: $textGrayL3;
+  @extend %text3;
+  cursor: default;
+  @media (max-width: 700px) {
+    display: none;
+  }
+  @media (max-width: 624px) {
+    display: block;
+  }
+  @media (max-width: 370px) {
+    display: none;
+  }
+}
+
+.selectsPlate {
+  display: flex;
+  align-items: center;
+  @media (max-width: 700px) {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 36px;
-    margin-bottom: 35px;
-    @media (max-width: 1024px) {
-        margin-top: 32px;
-        margin-bottom: 30px;
-    }
-    @media (max-width: 624px) {
-        margin-top: 22px;
-        margin-bottom: 25px;
-    }
+  }
+  @media (max-width: 624px) {
+    width: auto;
+  }
+  @media (max-width: 370px) {
+    width: 100%;
+  }
 }
 
-.countProducts{
-    color: $textGrayL3;
-    @extend %text3;
-    cursor: default;
-    @media (max-width: 700px) { display: none;}
-    @media (max-width: 624px) { display: block;}
-    @media (max-width: 370px) { display: none;}
+.selectsList {
+  width: 480px;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1024px) {
+    width: 360px;
+  }
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+  @media (max-width: 624px) {
+    width: 360px;
+  }
+  @media (max-width: 520px) {
+    width: 300px;
+  }
+  @media (max-width: 370px) {
+    width: 100%;
+  }
 }
 
-.selectsPlate{
-    display: flex;
-    align-items: center;
-    @media (max-width: 700px) { width: 100%;}
-    @media (max-width: 624px) { width: auto;}
-    @media (max-width: 370px) { width: 100%;}
-}
-
-.selectsList{
-    width: 480px;
-    display: flex;
-    justify-content: space-between;
-    @media (max-width: 1024px) { width: 360px;}
-    @media (max-width: 700px) { width: 100%;}
-    @media (max-width: 624px) { width: 360px;}
-    @media (max-width: 520px) { width: 300px;}
-    @media (max-width: 370px) { width: 100%;}
-}
-
-.selectsText{
-    color: $textDarkL1;
-    @extend %text2;
-    cursor: default;
-    margin-right: 20px;
-    @media (max-width: 800px) { display: none;}
-    @media (max-width: 624px) { display: block;}
-    @media (max-width: 550px) { display: none;}
+.selectsText {
+  color: $textDarkL1;
+  @extend %text2;
+  cursor: default;
+  margin-right: 20px;
+  @media (max-width: 800px) {
+    display: none;
+  }
+  @media (max-width: 624px) {
+    display: block;
+  }
+  @media (max-width: 550px) {
+    display: none;
+  }
 }

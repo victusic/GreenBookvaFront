@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import styles from './filterPrice.module.scss';
 import Slider from 'rc-slider';
@@ -10,20 +10,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setChangeMaxPriceAction, setChangeMinPriceAction } from '../../store/filterProductsReducer';
 
 const FilterPrice = () => {
-
-  const changeMinPrice = useSelector(state => state.filter.changeMinPrice);
-  const changeMaxPrice = useSelector(state => state.filter.changeMaxPrice);
+  const changeMinPrice = useSelector((state) => state.filter.changeMinPrice);
+  const changeMaxPrice = useSelector((state) => state.filter.changeMaxPrice);
 
   const dispatchFilter = useDispatch();
 
   const [localInputMinPrice, setLocalInputMinPrice] = useState(0);
   const [localInputMaxPrice, setLocalInputMaxPrice] = useState(0);
 
-  const current = useSelector(state => state.current.currentType);
-  const exchangeKZT = useSelector(state => state.exchange.KZT);
-  const exchangeRUB = useSelector(state => state.exchange.RUB);
+  const current = useSelector((state) => state.current.currentType);
+  const exchangeKZT = useSelector((state) => state.exchange.KZT);
+  const exchangeRUB = useSelector((state) => state.exchange.RUB);
 
-  useEffect(()=>{
+  useEffect(() => {
     switch (current) {
       case 0:
         setLocalInputMinPrice(exchangeKZT * changeMinPrice);
@@ -38,9 +37,9 @@ const FilterPrice = () => {
         setLocalInputMaxPrice(changeMaxPrice);
         break;
     }
-  }, [])
+  }, []);
 
-  useEffect(()=>{
+  useEffect(() => {
     switch (current) {
       case 0:
         setLocalInputMinPrice(Math.round(exchangeKZT * changeMinPrice));
@@ -55,12 +54,11 @@ const FilterPrice = () => {
         setLocalInputMaxPrice(changeMaxPrice);
         break;
     }
-    
-  }, [changeMinPrice, changeMaxPrice, current])
-  
+  }, [changeMinPrice, changeMaxPrice, current]);
+
   function sliderChange(value) {
-    dispatchFilter(setChangeMinPriceAction(value[0]))
-    dispatchFilter(setChangeMaxPriceAction(value[1]))
+    dispatchFilter(setChangeMinPriceAction(value[0]));
+    dispatchFilter(setChangeMaxPriceAction(value[1]));
   }
 
   function validateInput(input) {
@@ -68,9 +66,9 @@ const FilterPrice = () => {
     return regex.test(input);
   }
 
-  function inputChangeMin(e){
+  function inputChangeMin(e) {
     const validate = validateInput(e.target.value);
-    if(validate){
+    if (validate) {
       switch (current) {
         case 0:
           dispatchFilter(setChangeMinPriceAction(e.target.value / exchangeKZT));
@@ -86,12 +84,11 @@ const FilterPrice = () => {
           break;
       }
     }
-    
   }
 
-  function inputChangeMax(e){
+  function inputChangeMax(e) {
     const validate = validateInput(e.target.value);
-    if(validate){
+    if (validate) {
       switch (current) {
         case 0:
           dispatchFilter(setChangeMaxPriceAction(e.target.value / exchangeKZT));
@@ -109,19 +106,24 @@ const FilterPrice = () => {
   return (
     <>
       <h4 className={styles.filterTitle}>Стоимость</h4>
-      <Slider range defaultValue={[changeMinPrice, changeMaxPrice]} value={[changeMinPrice, changeMaxPrice]} onChange={sliderChange}/>
+      <Slider
+        range
+        defaultValue={[changeMinPrice, changeMaxPrice]}
+        value={[changeMinPrice, changeMaxPrice]}
+        onChange={sliderChange}
+      />
       <div className={styles.priceContext}>
         <div className={styles.inputPlate}>
           <p className={styles.inputPlateText}>От</p>
-          <PriceInput value={localInputMinPrice} onChange={inputChangeMin}/>
+          <PriceInput value={localInputMinPrice} onChange={inputChangeMin} />
         </div>
         <div className={styles.inputPlate}>
           <p className={styles.inputPlateText}>До</p>
-          <PriceInput value={localInputMaxPrice} onChange={inputChangeMax}/>
+          <PriceInput value={localInputMaxPrice} onChange={inputChangeMax} />
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default FilterPrice
+export default FilterPrice;

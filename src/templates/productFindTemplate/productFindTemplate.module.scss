@@ -1,16 +1,15 @@
 @import '../../styles/colors';
 @import '../../styles/typography';
 
-.mainPlate{
-    width: 100%;
+.mainPlate {
+  width: 100%;
 }
 
-.MobileTitle{
-    display: none;
-    @media (max-width: 624px) {
-        display: block;
-        padding-right: 10px;
-        margin-top: 32px;
-    }
-
+.MobileTitle {
+  display: none;
+  @media (max-width: 624px) {
+    display: block;
+    padding-right: 10px;
+    margin-top: 32px;
+  }
 }

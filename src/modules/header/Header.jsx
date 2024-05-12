@@ -12,14 +12,14 @@ import Menu from './components/menu/Menu';
 const Header = () => {
   return (
     <header className={styles.plate}>
-      <LocationPlate/>
-      <Catalog/>
-      <Menu/>
-      <TopLine/>
-      <CentralLine/>
-      <BottomLine/>
+      <LocationPlate />
+      <Catalog />
+      <Menu />
+      <TopLine />
+      <CentralLine />
+      <BottomLine />
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,121 +1,134 @@
 @import '../../../../../styles/colors';
 @import '../../../../../styles/typography';
 
-%margin{
-    margin-bottom: 40px;
-    @media (max-width: 1024px) {margin-bottom: 35px;}
-    @media (max-width: 520px) {margin-bottom: 25px;}
+%margin {
+  margin-bottom: 40px;
+  @media (max-width: 1024px) {
+    margin-bottom: 35px;
+  }
+  @media (max-width: 520px) {
+    margin-bottom: 25px;
+  }
 }
 
-.profilePlate{
-    width: 100%;
-    height: 240px;
-    @extend %margin;
-    display: flex;
-    justify-content: space-between;
-    @media (max-width: 520px) {
-        height: 200px;
-    }
+.profilePlate {
+  width: 100%;
+  height: 240px;
+  @extend %margin;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 520px) {
+    height: 200px;
+  }
 }
 
-.flexPad{
-    display: flex;
+.flexPad {
+  display: flex;
 }
 
-.profileImg{
-    width: 240px;
-    height: 240px;
-    @extend %radius;
-    cursor: pointer;
-    @media (max-width: 520px) {
-        width: 200px;
-        height: 200px;
-    }
+.profileImg {
+  width: 240px;
+  height: 240px;
+  @extend %radius;
+  cursor: pointer;
+  @media (max-width: 520px) {
+    width: 200px;
+    height: 200px;
+  }
 }
 
-.infoPlate{
-    height: 240px;
-    margin-left: 45px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media (max-width: 1024px) {margin-left: 25px;}
-    @media (max-width: 520px) {
-        margin-left: 10px;
-        height: 200px;
-    }
+.infoPlate {
+  height: 240px;
+  margin-left: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-width: 1024px) {
+    margin-left: 25px;
+  }
+  @media (max-width: 520px) {
+    margin-left: 10px;
+    height: 200px;
+  }
 }
 
-.profileName{
-    cursor: default;
-    margin-bottom: 10px;
-    @media (max-width: 350px) {
-        font-size: 12px;
-    }
+.profileName {
+  cursor: default;
+  margin-bottom: 10px;
+  @media (max-width: 350px) {
+    font-size: 12px;
+  }
 }
-.profileOrders{
-    color: $textAccent;
-    cursor: default;
-    @media (max-width: 350px) {
-        font-size: 8px;
-    }
+.profileOrders {
+  color: $textAccent;
+  cursor: default;
+  @media (max-width: 350px) {
+    font-size: 8px;
+  }
 }
-.profileMail{
-    @extend %text1;
-    color: $textGrayL2;
-    @media (max-width: 500px) {
-        font-size: 8px;
-    }
-}
-
-.profileBirthday{
-    @extend %text3;
-    color: $textAccent;
-    margin-top: 17px;
+.profileMail {
+  @extend %text1;
+  color: $textGrayL2;
+  @media (max-width: 500px) {
+    font-size: 8px;
+  }
 }
 
-.pointsPlate{
-    width: 340px;
-    height: 240px;
-    background: $backgroundLight;
-    @extend %radius;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    @media (max-width: 1024px) {width: 230px;}
-    @media (max-width: 700px) {width: 160px;}
-    @media (max-width: 600px) {display: none;}
+.profileBirthday {
+  @extend %text3;
+  color: $textAccent;
+  margin-top: 17px;
 }
 
-.pointsTitle{
-    color: $textDarkL1;
-    cursor: default;
-    text-align: center;
-}
-
-.pointsCount{
-    color: $accentSuper;
-}
-
-.pointsMobileBlock{
+.pointsPlate {
+  width: 340px;
+  height: 240px;
+  background: $backgroundLight;
+  @extend %radius;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  @media (max-width: 1024px) {
+    width: 230px;
+  }
+  @media (max-width: 700px) {
+    width: 160px;
+  }
+  @media (max-width: 600px) {
     display: none;
-    margin-left: 30px;
-    margin-right: 30px;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    color: $textDarkL1;
-    background: $backgroundLight;
-    @media (max-width: 600px) {display: flex;}
-    @extend %margin;
-    
+  }
 }
 
-.pointsMobileBlockText{
-    color: $textDarkL1;
+.pointsTitle {
+  color: $textDarkL1;
+  cursor: default;
+  text-align: center;
 }
 
-.pointsMobileBlockCount{
-    color: $accentSuper;
+.pointsCount {
+  color: $accentSuper;
+}
+
+.pointsMobileBlock {
+  display: none;
+  margin-left: 30px;
+  margin-right: 30px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  color: $textDarkL1;
+  background: $backgroundLight;
+  @media (max-width: 600px) {
+    display: flex;
+  }
+  @extend %margin;
+}
+
+.pointsMobileBlockText {
+  color: $textDarkL1;
+}
+
+.pointsMobileBlockCount {
+  color: $accentSuper;
 }

@@ -1,18 +1,20 @@
-.pickerBase{
-    position: absolute;
-    top: 312px;
-    right: -200px;
-    @media (max-width: 1024px) {top: 283px;}
-    @media (max-width: 780px) {
-        top: 340px;
-        right: 40px;
-    }
-    @media (max-width: 520px) {
-        top: 310px;
-        right: 25px;
-    }
+.pickerBase {
+  position: absolute;
+  top: 312px;
+  right: -200px;
+  @media (max-width: 1024px) {
+    top: 283px;
+  }
+  @media (max-width: 780px) {
+    top: 340px;
+    right: 40px;
+  }
+  @media (max-width: 520px) {
+    top: 310px;
+    right: 25px;
+  }
 }
 
-.pickerBaseNone{
-    display: none;
+.pickerBaseNone {
+  display: none;
 }

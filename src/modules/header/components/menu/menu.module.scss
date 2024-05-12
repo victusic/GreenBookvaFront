@@ -2,209 +2,215 @@
 @import '../../../../styles/typography';
 
 %margin {
-    margin-bottom: 18px;
-    @media (max-height: 580px) {margin-bottom: 14px;}
+  margin-bottom: 18px;
+  @media (max-height: 580px) {
+    margin-bottom: 14px;
+  }
 }
 %margin-in {
-    margin-bottom: 12px;
-    @media (max-height: 580px) {margin-bottom: 8px;}
+  margin-bottom: 12px;
+  @media (max-height: 580px) {
+    margin-bottom: 8px;
+  }
 }
 %margin-in-list {
-    margin-bottom: 8px;
-    @media (max-height: 580px) {margin-bottom: 6px;}
+  margin-bottom: 8px;
+  @media (max-height: 580px) {
+    margin-bottom: 6px;
+  }
 }
 
-.menuFog{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    @extend %blur;
-    z-index: 200000;
+.menuFog {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  @extend %blur;
+  z-index: 200000;
 }
 
-.plate{
-    position: absolute;
-    z-index: 995;
-    height: 100%;
-    width: 210px;
-    background-color: $backgroundWhite;
-    border-radius: 0px 4px 4px 0px;
-    padding: 20px;
-    z-index: 250000;
+.plate {
+  position: absolute;
+  z-index: 995;
+  height: 100%;
+  width: 210px;
+  background-color: $backgroundWhite;
+  border-radius: 0px 4px 4px 0px;
+  padding: 20px;
+  z-index: 250000;
 }
 
-.currencyPlate{
-    width: 40px;
-    display: flex;
-    justify-content: space-between;
-    @extend %margin;
-    margin-bottom: 20px;
+.currencyPlate {
+  width: 40px;
+  display: flex;
+  justify-content: space-between;
+  @extend %margin;
+  margin-bottom: 20px;
 }
 
-.plate{
-    @extend %text3;
-    color: $textDarkL1;
-    cursor: pointer;
-    @extend %transition;
+.plate {
+  @extend %text3;
+  color: $textDarkL1;
+  cursor: pointer;
+  @extend %transition;
 }
 
-.currencyText:hover{
-    color: $accentSuper;
+.currencyText:hover {
+  color: $accentSuper;
 }
 
-.currencyTextActive{
-    text-decoration: underline;
+.currencyTextActive {
+  text-decoration: underline;
 }
 
-.location{
-    @extend %margin;
-    color: $textGrayL2;
-    fill: $textGrayL2;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+.location {
+  @extend %margin;
+  color: $textGrayL2;
+  fill: $textGrayL2;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
-.location:hover{
-    color: $textDarkL1;
-    fill: $textDarkL1;
-}   
+.location:hover {
+  color: $textDarkL1;
+  fill: $textDarkL1;
+}
 
-.locationSvg{
-    width: 6px;
-    height: 8px;
-    margin-right: 5px;
+.locationSvg {
+  width: 6px;
+  height: 8px;
+  margin-right: 5px;
 }
 
 .locationSvgColor * {
-    fill: inherit;
+  fill: inherit;
 }
 
-.LocationText{
-    color: inherit;
-    @extend %text2;
+.LocationText {
+  color: inherit;
+  @extend %text2;
 }
 
-.line{
-    @extend %margin;
-    width: 100%;
-    border: 1px solid $textGrayL3;
-    opacity: 0.3;
+.line {
+  @extend %margin;
+  width: 100%;
+  border: 1px solid $textGrayL3;
+  opacity: 0.3;
 }
 
-.productPlate{
-    @extend %margin;
+.productPlate {
+  @extend %margin;
 }
 
-.product{
-    @extend %margin-in;
-    color: $textDarkL1;
-    fill: $textDarkL1;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+.product {
+  @extend %margin-in;
+  color: $textDarkL1;
+  fill: $textDarkL1;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
-.product:hover{
-    color: $textGrayL2;
-    fill: $textGrayL2;
+.product:hover {
+  color: $textGrayL2;
+  fill: $textGrayL2;
 }
 
-.linkPlate{
-    @extend %margin;
+.linkPlate {
+  @extend %margin;
 }
 
-.link{
-    color: $textGrayL2;
-    @extend %text3;
-    @extend %margin-in;
+.link {
+  color: $textGrayL2;
+  @extend %text3;
+  @extend %margin-in;
 }
 
-.link:hover{
-    color: $textDarkL1;
+.link:hover {
+  color: $textDarkL1;
 }
 
-.phone{
-    @extend %margin;
-    color: $textDarkL1; 
-    @extend %text3;
+.phone {
+  @extend %margin;
+  color: $textDarkL1;
+  @extend %text3;
 }
 
-.socLinks{
-    width: 90px;
-    display: flex;
-    justify-content: space-between;
+.socLinks {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.socSvg{
-    width: 12px;
-    height: 12px;
+.socSvg {
+  width: 12px;
+  height: 12px;
 }
 
 .socSvgColor * {
-    fill: $textGrayL2;
+  fill: $textGrayL2;
 }
 .socSvgColor:hover * {
-    fill: $textGrayL3;
+  fill: $textGrayL3;
 }
 
-.banner{
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    width: 170px;
-    height: 130px;
-    background-color: coral;
-    @extend %radius;
+.banner {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 170px;
+  height: 130px;
+  background-color: coral;
+  @extend %radius;
 }
 
-.close{
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 10px;
-    height: 10px;
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
 }
 
-.closeColor{
-    fill: $textDarkL1;
+.closeColor {
+  fill: $textDarkL1;
 }
 
-.closeColor:hover{
-    fill: $textGrayL2;
+.closeColor:hover {
+  fill: $textGrayL2;
 }
 
-.productListCard{
-    @extend %margin-in;
-    margin-left: 12px;
+.productListCard {
+  @extend %margin-in;
+  margin-left: 12px;
 }
 
 @keyframes slidein {
-    from {
-        height: 10px;
-    }
-    to {
-        height: 200px;
-    }
+  from {
+    height: 10px;
   }
-
-.productList{
-    @extend %text3;
-    color: $textGrayL2;
-    @extend %margin-in-list;
-    display: flex;
+  to {
+    height: 200px;
+  }
 }
 
-.productList:hover{
-    color: $textGrayL3;
+.productList {
+  @extend %text3;
+  color: $textGrayL2;
+  @extend %margin-in-list;
+  display: flex;
 }
 
-.countriesSvg{
-    width: 7px;
-    height: 9px;
-    margin-right: 4px;
+.productList:hover {
+  color: $textGrayL3;
 }
 
-.countryPlateMargin{
-    @extend %margin;
+.countriesSvg {
+  width: 7px;
+  height: 9px;
+  margin-right: 4px;
+}
+
+.countryPlateMargin {
+  @extend %margin;
 }

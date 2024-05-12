@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import styles from './cartTemplate.module.scss';
 import CartTitle from '../../modules/forSinglePages/group1/cart/cartTitle/CartTitle';
@@ -11,43 +11,47 @@ import { useState } from 'react';
 import CartNoProduct from '../../modules/forSinglePages/group1/cart/cartNoProduct/CartNoProduct';
 
 const CartTemplate = () => {
+  const { products } = useLoaderData();
 
-  const {products} = useLoaderData();
-
-  const profile = useSelector(state => state.profile.id);
+  const profile = useSelector((state) => state.profile.id);
 
   const [firstPriceProducts, setFirstPriceProducts] = useState(0);
   const [discountPriceProducts, setDiscountPriceProducts] = useState(0);
 
   return (
     <div className={styles.cartMainPlate}>
-        {profile
-            ?
-            <Await resolve={products}>
-                {products => 
-                    <>
-                        <div className={styles.cartTwoZones}>
-                            <div className={styles.cartLeftZone}>
-                                <CartTitle/>
-                                <CartGridPlate products={products} 
-                                    setFirstPriceProducts={setFirstPriceProducts} firstPriceProducts={firstPriceProducts}
-                                    setDiscountPriceProducts={setDiscountPriceProducts} discountPriceProducts={discountPriceProducts}
-                                />
-                            </div>
-                            <CartRightPlate firstPriceProducts={firstPriceProducts} discountPriceProducts={discountPriceProducts}/>
-                        </div>
-                        <CartNoProduct products={products}/>
-                    </>
-                }
-            </Await>
-            :
+      {profile ? (
+        <Await resolve={products}>
+          {(products) => (
             <>
-                <CartTitle products={[]}/>
-                <NoProfile/>
+              <div className={styles.cartTwoZones}>
+                <div className={styles.cartLeftZone}>
+                  <CartTitle />
+                  <CartGridPlate
+                    products={products}
+                    setFirstPriceProducts={setFirstPriceProducts}
+                    firstPriceProducts={firstPriceProducts}
+                    setDiscountPriceProducts={setDiscountPriceProducts}
+                    discountPriceProducts={discountPriceProducts}
+                  />
+                </div>
+                <CartRightPlate
+                  firstPriceProducts={firstPriceProducts}
+                  discountPriceProducts={discountPriceProducts}
+                />
+              </div>
+              <CartNoProduct products={products} />
             </>
-        }
+          )}
+        </Await>
+      ) : (
+        <>
+          <CartTitle products={[]} />
+          <NoProfile />
+        </>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default CartTemplate
+export default CartTemplate;

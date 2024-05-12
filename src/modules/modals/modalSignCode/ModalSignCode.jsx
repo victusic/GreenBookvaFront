@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import Modal from '../../../ui/modal/Modal'
-import ModalButton from '../ui/ModalButton/ModalButton'
+import React, { useEffect, useState } from 'react';
+import Modal from '../../../ui/modal/Modal';
+import ModalButton from '../ui/ModalButton/ModalButton';
 
 import { useDispatch, useSelector } from 'react-redux';
 import styles from '../modalNone.module.scss';
@@ -22,8 +22,7 @@ import ModalWarning from '../ui/ModalWarning/ModalWarning';
 import Form from '../ui/Form/Form';
 
 const ModalSignCode = () => {
-
-  const visible = useSelector(state => state.modalVisible.modalSignCodeVisible);
+  const visible = useSelector((state) => state.modalVisible.modalSignCodeVisible);
   const [visibleModal, setVisibleModal] = useState(styles.modalNone);
 
   const [code, setCode] = useState();
@@ -36,76 +35,79 @@ const ModalSignCode = () => {
   const dispatchSign = useDispatch();
   const dispatchProfile = useDispatch();
 
-  const mail = useSelector(state => state.sign.mail);
-  const token = useSelector(state => state.sign.token);
-  const profile = useSelector(state => state.sign.profile);
-  const signState = useSelector(state => state.sign.signState);
+  const mail = useSelector((state) => state.sign.mail);
+  const token = useSelector((state) => state.sign.token);
+  const profile = useSelector((state) => state.sign.profile);
+  const signState = useSelector((state) => state.sign.signState);
 
-  useEffect(()=>{
-      {visible ? setVisibleModal('') : setVisibleModal(styles.modalNone)}
-      setTime(60)
-  }, [visible])
+  useEffect(() => {
+    {
+      visible ? setVisibleModal('') : setVisibleModal(styles.modalNone);
+    }
+    setTime(60);
+  }, [visible]);
 
-  function returnModal(){
-    dispatchModalVisible((refreshModalSIgnVisibleAction(true)));
+  function returnModal() {
+    dispatchModalVisible(refreshModalSIgnVisibleAction(true));
     dispatchModalVisible(refreshModalSIgnCodeVisibleAction(false));
     dispatchSign(refreshSignStateAction(''));
     setCode('');
   }
 
-  function newCode(){
+  function newCode() {
     setTime(60);
     dispatchSign(fetchSignGetCode(mail));
   }
-      
-  function goSign(e){
+
+  function goSign(e) {
     e.preventDefault();
     dispatchSign(fetchSignPostCode(code, mail, token));
   }
 
-  useEffect(()=>{
-    if(profile){
+  useEffect(() => {
+    if (profile) {
       dispatchProfile(fetchProfileBase(profile));
     }
-  }, [profile])
+  }, [profile]);
 
-  useEffect(()=>{
-    if(signState === 0){
-      dispatchModalVisible(refreshModalSIgnCodeVisibleAction(false))
+  useEffect(() => {
+    if (signState === 0) {
+      dispatchModalVisible(refreshModalSIgnCodeVisibleAction(false));
     }
-    if(signState === 1){
-      dispatchModalVisible(refreshModalSIgnCodeVisibleAction(false))
-      dispatchModalVisible(refreshModalSIgnUpVisibleAction(true))
+    if (signState === 1) {
+      dispatchModalVisible(refreshModalSIgnCodeVisibleAction(false));
+      dispatchModalVisible(refreshModalSIgnUpVisibleAction(true));
     }
-    {signState === -5 ? setVisibleWarning(true) : setVisibleWarning(false)}
-  }, [signState])
+    {
+      signState === -5 ? setVisibleWarning(true) : setVisibleWarning(false);
+    }
+  }, [signState]);
 
   //автозаход в профиль
-  useEffect(()=>{
-    setVisibleWarning(false)
+  useEffect(() => {
+    setVisibleWarning(false);
     const profileState = Cookies.get('profileId');
-    if(profileState){
+    if (profileState) {
       dispatchSign(refreshSignStateAction(0));
-      dispatchSign(refreshProfileAction(profileState))
+      dispatchSign(refreshProfileAction(profileState));
     }
-    
-  }, [])
+  }, []);
 
   return (
     <div className={visibleModal}>
       <Modal>
         <Form onSubmit={goSign}>
           <ModalTitle>Вход и регистрация</ModalTitle>
-          <ModalReturn onClick={returnModal}>❮   Указать другой адрес почты</ModalReturn>
+          <ModalReturn onClick={returnModal}>❮ Указать другой адрес почты</ModalReturn>
           <ModalDescription>Код отправлен на почту: {mail}</ModalDescription>
           <ModalWarning visibleWarning={visibleWarning}>Код указан неверно</ModalWarning>
-          <ModalInput type="text" placeholder='Код' value={code} onChange={e=>setCode(e.target.value)}/>
-          <ModalTimer newCode={newCode} setTime={setTime} time={time}/>
+          <ModalInput type="text" placeholder="Код" value={code} onChange={(e) => setCode(e.target.value)} />
+          <ModalTimer newCode={newCode} setTime={setTime} time={time} />
           <ModalButton>Продолжить</ModalButton>
         </Form>
       </Modal>
     </div>
-  )
-}
+  );
+};
 
-export default ModalSignCode
+export default ModalSignCode;

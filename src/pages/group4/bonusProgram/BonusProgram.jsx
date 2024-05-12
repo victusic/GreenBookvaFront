@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 
@@ -7,9 +7,9 @@ import BonusProgramText from '../../../modules/forSinglePages/group4/bonusProgra
 const BonusProgram = () => {
   return (
     <Pad>
-      <BonusProgramText/>
+      <BonusProgramText />
     </Pad>
-  )
-}
+  );
+};
 
-export default BonusProgram
+export default BonusProgram;

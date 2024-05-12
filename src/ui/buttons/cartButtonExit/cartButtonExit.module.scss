@@ -1,45 +1,45 @@
 @import '../../../styles/colors';
 @import '../../../styles/typography';
 
-.button{
-    width: 40px;
-    height: 40px;
-    background-color: $backgroundLight;
-    fill: $primaryBase;
-    @extend %text2;
-    @extend %radius;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    cursor: pointer;
-    @media (max-width: 1024px) {
-        width: 30px;
-        height: 30px;
-    }
-    @media (max-width: 520px) {
-        width: 30px;
-        height: 30px;
-    }
+.button {
+  width: 40px;
+  height: 40px;
+  background-color: $backgroundLight;
+  fill: $primaryBase;
+  @extend %text2;
+  @extend %radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  @media (max-width: 1024px) {
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 520px) {
+    width: 30px;
+    height: 30px;
+  }
 
-    @extend %transition;
+  @extend %transition;
 }
 
-.button:hover{
-    background: $backgroundNoStarsPlate;
-    fill: $textLight;
+.button:hover {
+  background: $backgroundNoStarsPlate;
+  fill: $textLight;
 }
 
-.button:active{
-    background: $warning;
+.button:active {
+  background: $warning;
 }
 
-.buttonSvg{
-    fill: inherit;
-    width: 14px;
-    height: 14px;
-    @media (max-width: 1024px) {
-        width: 10px;
-        height: 10px;
-    }
+.buttonSvg {
+  fill: inherit;
+  width: 14px;
+  height: 14px;
+  @media (max-width: 1024px) {
+    width: 10px;
+    height: 10px;
+  }
 }

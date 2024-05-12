@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import styles from './feedbackLinks.module.scss';
 import FeedbackData from '../feedbackData/FeedbackData';
@@ -12,12 +12,11 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const FeedbackLinks = () => {
-
   //ссылки
-  const tgLink = useSelector(state => state.externalLinks.telegram);
-  const gitLink = useSelector(state => state.externalLinks.github);
-  const linkedLink = useSelector(state => state.externalLinks.linkedIn);
-  const synopsisLink = useSelector(state => state.externalLinks.synopsis);
+  const tgLink = useSelector((state) => state.externalLinks.telegram);
+  const gitLink = useSelector((state) => state.externalLinks.github);
+  const linkedLink = useSelector((state) => state.externalLinks.linkedIn);
+  const synopsisLink = useSelector((state) => state.externalLinks.synopsis);
 
   return (
     <div className={styles.minHeight}>
@@ -25,27 +24,27 @@ const FeedbackLinks = () => {
       <h4 className={styles.feedbackDescription}>Для связи с разработчиком данного проекта есть каналы:</h4>
       <div className={styles.callPlate}>
         <div className={styles.linkCardPlate}>
-          <Link to={tgLink} target='_blank' className={styles.linkCard}>
-            <img src={telegramImg} className={styles.linkCardImage} alt='Telegram'/>
+          <Link to={tgLink} target="_blank" className={styles.linkCard}>
+            <img src={telegramImg} className={styles.linkCardImage} alt="Telegram" />
             <h4 className={styles.linkCardText}>Telegram</h4>
           </Link>
-          <Link to={gitLink} target='_blank' className={styles.linkCard}>
-            <img src={gitImg} className={styles.linkCardImage} alt='Git Hub'/>
+          <Link to={gitLink} target="_blank" className={styles.linkCard}>
+            <img src={gitImg} className={styles.linkCardImage} alt="Git Hub" />
             <h4 className={styles.linkCardText}>Git Hub</h4>
           </Link>
-          <Link to={linkedLink} target='_blank' className={styles.linkCard}>
-            <img src={linkedImg} className={styles.linkCardImage} alt='Linked In'/>
+          <Link to={linkedLink} target="_blank" className={styles.linkCard}>
+            <img src={linkedImg} className={styles.linkCardImage} alt="Linked In" />
             <h4 className={styles.linkCardText}>Linked In</h4>
           </Link>
-          <Link to={synopsisLink} target='_blank' className={styles.linkCard}>
-            <img src={docImg} className={styles.linkCardImage} alt='Резюме'/>
+          <Link to={synopsisLink} target="_blank" className={styles.linkCard}>
+            <img src={docImg} className={styles.linkCardImage} alt="Резюме" />
             <h4 className={styles.linkCardText}>Резюме</h4>
           </Link>
-          <FeedbackData/>
+          <FeedbackData />
         </div>
       </div>
-      </div>
-  )
-}
+    </div>
+  );
+};
 
-export default FeedbackLinks
+export default FeedbackLinks;

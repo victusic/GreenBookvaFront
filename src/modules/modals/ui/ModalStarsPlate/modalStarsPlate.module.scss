@@ -1,31 +1,30 @@
 @import '../../../../styles/colors';
 @import '../../../../styles/typography';
 
-.starsPlate{
-    width: 85px;
-    height: 26px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    margin-bottom: 20px;
-    @media (max-width: 1024px) {
-        margin-top: -5px;
-        margin-bottom: 10px;
-    }
-    @media (max-width: 520px) {
-        margin-top: -10px;
-        margin-bottom: 10px;
-    }
+.starsPlate {
+  width: 85px;
+  height: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  @media (max-width: 1024px) {
+    margin-top: -5px;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 520px) {
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
 }
 
+.yellowStar {
+  @extend %text1;
+  color: $primaryStars;
+}
 
-.yellowStar{
-    @extend %text1;
-    color: $primaryStars;
-}  
-
-.grayStar{
-    @extend %text1;
-    color: $backgroundNoStarsPlate;
+.grayStar {
+  @extend %text1;
+  color: $backgroundNoStarsPlate;
 }

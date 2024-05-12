@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 import styles from './bigButtonTrue.module.scss';
 
-const BigButtonTrue = ({children, ...props}) => {
+const BigButtonTrue = ({ children, ...props }) => {
   return (
-    <button {...props} className={styles.buyButton}><h3>{children}</h3></button>
-  )
-}
+    <button {...props} className={styles.buyButton}>
+      <h3>{children}</h3>
+    </button>
+  );
+};
 
-export default BigButtonTrue
+export default BigButtonTrue;

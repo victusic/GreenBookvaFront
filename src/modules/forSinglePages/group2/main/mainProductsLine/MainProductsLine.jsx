@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 
 import ProductLine from '../../../../products/productLine/ProductLine';
 import { useLoaderData } from 'react-router-dom';
 
 const MainProductsLine = () => {
-  const {booksNew} = useLoaderData();
-  const {booksArt} = useLoaderData();
-  const {booksScience} = useLoaderData();
-  const {booksBestsellers} = useLoaderData();
-  const {bookHistory} = useLoaderData();
-  const {bookPhilosophy} = useLoaderData();
-  const {booksBest} = useLoaderData();
+  const { booksNew } = useLoaderData();
+  const { booksArt } = useLoaderData();
+  const { booksScience } = useLoaderData();
+  const { booksBestsellers } = useLoaderData();
+  const { bookHistory } = useLoaderData();
+  const { bookPhilosophy } = useLoaderData();
+  const { booksBest } = useLoaderData();
   return (
     <>
       <ProductLine products={booksNew}>Новинки литературы</ProductLine>
@@ -21,7 +21,7 @@ const MainProductsLine = () => {
       <ProductLine products={bookPhilosophy}>Философия и религия</ProductLine>
       <ProductLine products={booksBest}>Лучшие из лучших</ProductLine>
     </>
-  )
-}
+  );
+};
 
-export default MainProductsLine
+export default MainProductsLine;

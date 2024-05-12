@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import styles from '../topLine/topLine.module.scss';
@@ -7,23 +7,22 @@ import { refreshLocationAction } from '../../../../store/locationReducer';
 import { refreshHeadersLocationAction } from '../../../../store/headerElementsReducer';
 import { refreshKztAction, refreshRubAction } from '../../../../store/exchangeRateReducer';
 
-const Location = ({changeCurrency}) => {
-
+const Location = ({ changeCurrency }) => {
   //store локации
   const dispatchLocation = useDispatch();
-  const location = useSelector(state => state.location.location);
+  const location = useSelector((state) => state.location.location);
 
   //видимость
   const dispatchLocationVisible = useDispatch();
-  const locationVisible = useSelector(state => state.headersElements.location);
-  
+  const locationVisible = useSelector((state) => state.headersElements.location);
+
   //location
 
   const country = ['RU', 'KZ'];
 
   //города
-  const townKz = useSelector(state => state.townsList.KZ);
-  const townRu = useSelector(state => state.townsList.RU);
+  const townKz = useSelector((state) => state.townsList.KZ);
+  const townRu = useSelector((state) => state.townsList.RU);
 
   const town = townKz.concat(townRu);
 
@@ -38,35 +37,37 @@ const Location = ({changeCurrency}) => {
   const fetchIpAddress = async () => {
     try {
       const response = await axios.get('http://api.sypexgeo.net/json');
-      response.data.country ? setIndexCountry(country.indexOf(response.data.country.iso)) : setIndexCountry(2)
-      response.data.city ? setIndexTown(town.indexOf(response.data.city.name_ru)) : setIndexTown(-1)
-      setFindIndex(findIndex+1);
+      response.data.country
+        ? setIndexCountry(country.indexOf(response.data.country.iso))
+        : setIndexCountry(2);
+      response.data.city ? setIndexTown(town.indexOf(response.data.city.name_ru)) : setIndexTown(-1);
+      setFindIndex(findIndex + 1);
     } catch (error) {
       console.error(error);
     }
-
   };
 
   const fetchExchange = async () => {
     try {
-      const response = await axios.get('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usdt.json');
+      const response = await axios.get(
+        'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usdt.json',
+      );
       dispatchExchangeReducer(refreshKztAction(Math.ceil(response.data.usdt.kzt)));
       dispatchExchangeReducer(refreshRubAction(Math.ceil(response.data.usdt.rub)));
     } catch (error) {
       console.error(error);
     }
-
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchIpAddress();
     fetchExchange();
-  }, [])
+  }, []);
 
-  useEffect(()=>{
-    if(findIndex > 0){
+  useEffect(() => {
+    if (findIndex > 0) {
       let textLocation = '';
-      switch(indexCountry){
+      switch (indexCountry) {
         case 0:
           textLocation = 'Россия';
           changeCurrency(2);
@@ -81,17 +82,21 @@ const Location = ({changeCurrency}) => {
           break;
       }
 
-      if(indexTown !== -1){
-        (textLocation += ', ' + town[indexTown]);
+      if (indexTown !== -1) {
+        textLocation += ', ' + town[indexTown];
       }
-      dispatchLocation(refreshLocationAction(textLocation))
+      dispatchLocation(refreshLocationAction(textLocation));
     }
-    
-  }, [findIndex])
+  }, [findIndex]);
 
   return (
-    <span className={styles.topTextLeft} onClick={() => dispatchLocationVisible(refreshHeadersLocationAction(!locationVisible))}>{location}</span>
-  )
-}
+    <span
+      className={styles.topTextLeft}
+      onClick={() => dispatchLocationVisible(refreshHeadersLocationAction(!locationVisible))}
+    >
+      {location}
+    </span>
+  );
+};
 
-export default Location
+export default Location;

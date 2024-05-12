@@ -1,345 +1,356 @@
 @keyframes openList208 {
-    0%{
-        height: 0px;
-        opacity: 0;
-    }
-    40%{
-        height: 208px;
-        opacity: 0;
-    }
-    100%{
-        height: 208px;
-        opacity: 1;
-    }
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+  40% {
+    height: 208px;
+    opacity: 0;
+  }
+  100% {
+    height: 208px;
+    opacity: 1;
+  }
 }
 
 @keyframes openList64 {
-    0%{
-        height: 0px;
-        opacity: 0;
-    }
-    40%{
-        height: 64px;
-        opacity: 0;
-    }
-    100%{
-        height: 64px;
-        opacity: 1;
-    }
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+  40% {
+    height: 64px;
+    opacity: 0;
+  }
+  100% {
+    height: 64px;
+    opacity: 1;
+  }
 }
 
 @keyframes openList60 {
-    0%{
-        height: 0px;
-        opacity: 0;
-    }
-    40%{
-        height: 60px;
-        opacity: 0;
-    }
-    100%{
-        height: 60px;
-        opacity: 1;
-    }
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+  40% {
+    height: 60px;
+    opacity: 0;
+  }
+  100% {
+    height: 60px;
+    opacity: 1;
+  }
 }
 
 @keyframes openList172 {
-    0%{
-        height: 0px;
-        opacity: 0;
-    }
-    40%{
-        height: 172px;
-        opacity: 0;
-    }
-    100%{
-        height: 172px;
-        opacity: 1;
-    }
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+  40% {
+    height: 172px;
+    opacity: 0;
+  }
+  100% {
+    height: 172px;
+    opacity: 1;
+  }
 }
 
 /*Книги*/
-.productListCardBook{
+.productListCardBook {
+  display: none;
+  height: 0px;
+  .productListCard {
     display: none;
-    height: 0px;
-    .productListCard{
-        display: none;
-    }
+  }
 }
 
-.productListCardBook-enter-active{
-    display: block;
-    animation: openList208 .6s forwards;
+.productListCardBook-enter-active {
+  display: block;
+  animation: openList208 0.6s forwards;
 }
 
-.productListCardBook-enter-done{
-    display: block;
-    height: auto;
+.productListCardBook-enter-done {
+  display: block;
+  height: auto;
 }
 
-.productListCardBook-exit-active{
-    display: block;
-    animation: openList208 .6s reverse;
+.productListCardBook-exit-active {
+  display: block;
+  animation: openList208 0.6s reverse;
 }
 
-.productListCardBook-exit-done{
-    display: none;
-    height: 0px;
+.productListCardBook-exit-done {
+  display: none;
+  height: 0px;
 }
 
 /*Канцелярия*/
 
-.productListCardChancery{
-    display: none;
-    height: 0px;
+.productListCardChancery {
+  display: none;
+  height: 0px;
 }
 
-.productListCardChancery-enter-active{
-    display: block;
-    animation: openList64 .6s forwards;
+.productListCardChancery-enter-active {
+  display: block;
+  animation: openList64 0.6s forwards;
 }
 
-.productListCardChancery-enter-done{
-    display: block;
-    height: auto;
+.productListCardChancery-enter-done {
+  display: block;
+  height: auto;
 }
 
-.productListCardChancery-exit-active{
-    display: block;
-    animation: openList64 .6s reverse;
+.productListCardChancery-exit-active {
+  display: block;
+  animation: openList64 0.6s reverse;
 }
 
-.productListCardChancery-exit-done{
-    display: none;
-    height: 0px;
+.productListCardChancery-exit-done {
+  display: none;
+  height: 0px;
 }
 
 /*Акессуары*/
 
-.productListCardAccessory{
-    display: none;
-    height: 0px;
+.productListCardAccessory {
+  display: none;
+  height: 0px;
 }
 
-.productListCardAccessory-enter-active{
-    display: block;
-    animation: openList64 .6s forwards;
+.productListCardAccessory-enter-active {
+  display: block;
+  animation: openList64 0.6s forwards;
 }
 
-.productListCardAccessory-enter-done{
-    display: block;
-    height: auto;
+.productListCardAccessory-enter-done {
+  display: block;
+  height: auto;
 }
 
-.productListCardAccessory-exit-active{
-    display: block;
-    animation: openList64 .6s reverse;
+.productListCardAccessory-exit-active {
+  display: block;
+  animation: openList64 0.6s reverse;
 }
 
-.productListCardAccessory-exit-done{
-    display: none;
-    height: 0px;
+.productListCardAccessory-exit-done {
+  display: none;
+  height: 0px;
 }
 
 /*страны*/
 
-.countryPlate{
-    display: none;
-    height: 0px;
+.countryPlate {
+  display: none;
+  height: 0px;
 }
 
-.countryPlate-enter-active{
-    display: block;
-    animation: openList60 .6s forwards;
+.countryPlate-enter-active {
+  display: block;
+  animation: openList60 0.6s forwards;
 }
 
-.countryPlate-enter-done{
-    display: block;
-    height: auto;
+.countryPlate-enter-done {
+  display: block;
+  height: auto;
 }
 
-.countryPlate-exit-active{
-    display: block;
-    animation: openList60 .6s reverse;
+.countryPlate-exit-active {
+  display: block;
+  animation: openList60 0.6s reverse;
 }
 
-.countryPlate-exit-done{
-    display: none;
-    height: 0px;
+.countryPlate-exit-done {
+  display: none;
+  height: 0px;
 }
 
 /*города*/
 
-.townsListKz{
-    display: none;
-    height: 0px;
+.townsListKz {
+  display: none;
+  height: 0px;
 }
 
-.townsListKz-enter-active{
-    display: block;
-    animation: openList172 .6s forwards;
+.townsListKz-enter-active {
+  display: block;
+  animation: openList172 0.6s forwards;
 }
 
-.townsListKz-enter-done{
-    display: block;
-    height: 172px;
+.townsListKz-enter-done {
+  display: block;
+  height: 172px;
 }
 
-.townsListKz-exit-active{
-    display: block;
-    animation: openList172 .6s reverse;
+.townsListKz-exit-active {
+  display: block;
+  animation: openList172 0.6s reverse;
 }
 
-.townsListKz-exit-done{
-    display: none;
-    height: 0px;
+.townsListKz-exit-done {
+  display: none;
+  height: 0px;
 }
 
-.townsListRu{
-    display: none;
-    height: 0px;
+.townsListRu {
+  display: none;
+  height: 0px;
 }
 
-.townsListRu-enter-active{
-    display: block;
-    animation: openList172 .6s forwards;
+.townsListRu-enter-active {
+  display: block;
+  animation: openList172 0.6s forwards;
 }
 
-.townsListRu-enter-done{
-    display: block;
-    height: 172px;
+.townsListRu-enter-done {
+  display: block;
+  height: 172px;
 }
 
-.townsListRu-exit-active{
-    display: block;
-    animation: openList172 .6s reverse;
+.townsListRu-exit-active {
+  display: block;
+  animation: openList172 0.6s reverse;
 }
 
-.townsListRu-exit-done{
-    display: none;
-    height: 0px;
+.townsListRu-exit-done {
+  display: none;
+  height: 0px;
 }
 
 /*bannerState*/
 
 @keyframes bannerOpacity {
-    0%{
-        opacity: 1;
-    }
-    80%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes bannerOpacityRev {
-    0%{
-        opacity: 0;
-    }
-    80%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-
-.bannerState{
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
-    display: block;
+  }
 }
 
-.bannerState-enter-active{
-    animation: bannerOpacity .6s forwards;
+.bannerState {
+  opacity: 1;
+  display: block;
 }
 
-.bannerState-enter-done{
-    display: none;
+.bannerState-enter-active {
+  animation: bannerOpacity 0.6s forwards;
 }
 
-.bannerState-exit-active{
-    animation: bannerOpacityRev .6s forwards;
+.bannerState-enter-done {
+  display: none;
 }
 
-.bannerState-exit-done{
-    display: block;
+.bannerState-exit-active {
+  animation: bannerOpacityRev 0.6s forwards;
+}
+
+.bannerState-exit-done {
+  display: block;
 }
 
 /*окно*/
 
 @keyframes fogOpacity {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-.fogVisible{
+  from {
     opacity: 0;
-    display: none;
-    @media (min-width: 521px) {display: none;}
-}
-
-.fogVisible-enter-active{
-    display: flex;
-    animation: fogOpacity .2s forwards;
-}
-
-.fogVisible-enter-done{
-    display: flex;
+  }
+  to {
     opacity: 1;
-    @media (min-width: 521px) {display: none;}
+  }
 }
 
-.fogVisible-exit-active{
-    display: flex;
-    animation: fogOpacity .2s reverse;
-}
-
-.fogVisible-exit-done{
+.fogVisible {
+  opacity: 0;
+  display: none;
+  @media (min-width: 521px) {
     display: none;
-    opacity: 0;
-    @media (min-width: 521px) {display: none;}
+  }
+}
+
+.fogVisible-enter-active {
+  display: flex;
+  animation: fogOpacity 0.2s forwards;
+}
+
+.fogVisible-enter-done {
+  display: flex;
+  opacity: 1;
+  @media (min-width: 521px) {
+    display: none;
+  }
+}
+
+.fogVisible-exit-active {
+  display: flex;
+  animation: fogOpacity 0.2s reverse;
+}
+
+.fogVisible-exit-done {
+  display: none;
+  opacity: 0;
+  @media (min-width: 521px) {
+    display: none;
+  }
 }
 
 @keyframes plateLeft {
-    from{
-        left: -210px;
-    }
-    to{
-        left: 0px;
-    }
-}
-
-.plateVisible{
-    display: block;
+  from {
     left: -210px;
-    @media (min-width: 521px) {display: none;}
-}
-
-.plateVisible-enter-active{
-    display: block;
-    animation: plateLeft .2s forwards;
-}
-
-.plateVisible-enter-done{
-    display: block;
+  }
+  to {
     left: 0px;
-    @media (min-width: 521px) {display: none;}
+  }
 }
 
-.plateVisible-exit-active{
-    display: block;
-    animation: plateLeft .2s reverse;
-}
-
-.plateVisible-exit-done{
+.plateVisible {
+  display: block;
+  left: -210px;
+  @media (min-width: 521px) {
     display: none;
-    left: -210px;
-    @media (min-width: 521px) {display: none;}
+  }
+}
+
+.plateVisible-enter-active {
+  display: block;
+  animation: plateLeft 0.2s forwards;
+}
+
+.plateVisible-enter-done {
+  display: block;
+  left: 0px;
+  @media (min-width: 521px) {
+    display: none;
+  }
+}
+
+.plateVisible-exit-active {
+  display: block;
+  animation: plateLeft 0.2s reverse;
+}
+
+.plateVisible-exit-done {
+  display: none;
+  left: -210px;
+  @media (min-width: 521px) {
+    display: none;
+  }
 }

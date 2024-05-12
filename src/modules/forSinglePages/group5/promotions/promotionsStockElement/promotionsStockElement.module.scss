@@ -1,113 +1,127 @@
 @import '../../../../../styles/colors';
 @import '../../../../../styles/typography';
 
-.stockBlock{
-    height: 420px;
-    @extend %radius;
-    @extend %shadow;
-    border: 1px solid $textGrayL3;
-    width: 49%;
-    margin-bottom: 40px;
-    cursor: pointer;
-    @media (max-width: 1024px) {
-        height: 310px;
-        margin-bottom: 35px;
-    }
-    @media (max-width: 755px) {
-        margin-left: 12.5%;
-        width: 75%;
-        height: 270px;
-        margin-bottom: 25px;
-    }
-    @media (max-width: 520px) {
-        width: 100%;
-        margin-left: 0;
-    }
-
+.stockBlock {
+  height: 420px;
+  @extend %radius;
+  @extend %shadow;
+  border: 1px solid $textGrayL3;
+  width: 49%;
+  margin-bottom: 40px;
+  cursor: pointer;
+  @media (max-width: 1024px) {
+    height: 310px;
+    margin-bottom: 35px;
+  }
+  @media (max-width: 755px) {
+    margin-left: 12.5%;
+    width: 75%;
+    height: 270px;
+    margin-bottom: 25px;
+  }
+  @media (max-width: 520px) {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
-.stockImg{
-    width: 100%;
-    height: 310px;
-    @media (max-width: 1024px) {height: 210px;}
-    @media (max-width: 755px) {height: 170px;}
+.stockImg {
+  width: 100%;
+  height: 310px;
+  @media (max-width: 1024px) {
+    height: 210px;
+  }
+  @media (max-width: 755px) {
+    height: 170px;
+  }
 }
 
 .stockImg img {
-    width: 100%;
-    height: 310px;
-    object-fit: cover;
-    object-position: 50% 50%;
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  object-position: 50% 50%;
 
-    @media (max-width: 1350px) {
-        object-position: 35% 50%;
-    }
-
-    @media (max-width: 1024px) {
-        height: 210px;
-        object-position: 50% 50%;
-    }
-
-    @media (max-width: 890px) {
-        object-position: 40% 50%;
-    }
-
-    @media (max-width: 755px) {
-        height: 170px;
-        object-position: 50% 50%;
-    }
-
-    @media (max-width: 365px) {
-        object-position: 40% 50%;
-    }
-    
+  @media (max-width: 1350px) {
+    object-position: 35% 50%;
   }
 
-.stockTextPlate{
-    width: 100%;
-    height: 110px;
-    @media (max-width: 1024px) {height: 100px;}
-    display: flex;
-    justify-content: space-between;
+  @media (max-width: 1024px) {
+    height: 210px;
+    object-position: 50% 50%;
+  }
+
+  @media (max-width: 890px) {
+    object-position: 40% 50%;
+  }
+
+  @media (max-width: 755px) {
+    height: 170px;
+    object-position: 50% 50%;
+  }
+
+  @media (max-width: 365px) {
+    object-position: 40% 50%;
+  }
 }
 
-.stockTextPlateLeft{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-right: 25px;
-    @media (max-width: 1024px) {margin-right: 15px;}
-    @media (max-width: 755px) {margin-right: 10px;}
+.stockTextPlate {
+  width: 100%;
+  height: 110px;
+  @media (max-width: 1024px) {
+    height: 100px;
+  }
+  display: flex;
+  justify-content: space-between;
 }
 
-.stockTextDate{
-    color: $textGrayL2;
-    margin-left: 20px;
-    @extend %text2;
-    margin-top: 10px;
-    @media (max-width: 1024px) {margin-left: 15px;}
-    white-space: nowrap;
+.stockTextPlateLeft {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 25px;
+  @media (max-width: 1024px) {
+    margin-right: 15px;
+  }
+  @media (max-width: 755px) {
+    margin-right: 10px;
+  }
 }
 
-.stockTextTitle{
-    color: $textDarkL1;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    @media (max-width: 1024px) {margin-left: 15px;}
+.stockTextDate {
+  color: $textGrayL2;
+  margin-left: 20px;
+  @extend %text2;
+  margin-top: 10px;
+  @media (max-width: 1024px) {
+    margin-left: 15px;
+  }
+  white-space: nowrap;
 }
 
-.stockTextPlateRight{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
+.stockTextTitle {
+  color: $textDarkL1;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  @media (max-width: 1024px) {
+    margin-left: 15px;
+  }
 }
 
-.stockTextDescription{
-    color: $textGrayL3;
-    margin-right: 20px;
-    text-align: right;
-    @extend %text3;
-    @media (max-width: 1024px) {margin-right: 15px;}
+.stockTextPlateRight {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.stockTextDescription {
+  color: $textGrayL3;
+  margin-right: 20px;
+  text-align: right;
+  @extend %text3;
+  @media (max-width: 1024px) {
+    margin-right: 15px;
+  }
 }

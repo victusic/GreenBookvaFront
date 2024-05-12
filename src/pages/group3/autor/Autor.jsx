@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 import Loader from '../../../ui/loader/Loader';
@@ -13,39 +13,42 @@ import NoAuthor from '../../../assets/img/no-author.png';
 import ProductLine from '../../../modules/products/productLine/ProductLine';
 
 const Autor = () => {
-
-  const {author, authorSlides, authorImages, authorProducts} = useLoaderData();
+  const { author, authorSlides, authorImages, authorProducts } = useLoaderData();
 
   return (
     <Pad>
-      <Suspense fallback={<Loader/>}>
+      <Suspense fallback={<Loader />}>
         <SingleTitle>Автор</SingleTitle>
 
         <Await resolve={author}>
-            {author => <TitleApm info={author[0]} imagePath='authors' image={NoAuthor}/>}
+          {(author) => <TitleApm info={author[0]} imagePath="authors" image={NoAuthor} />}
         </Await>
 
         <Await resolve={authorSlides}>
-            {authorSlides => authorSlides.map((slide, index)=> 
-                <SlideApm key={index} imagePath='authors' info={slide}/>
-            )}
+          {(authorSlides) =>
+            authorSlides.map((slide, index) => <SlideApm key={index} imagePath="authors" info={slide} />)
+          }
         </Await>
 
         <Await resolve={authorImages}>
-            {authorImages => <ImagesApm imagePath='authors' info={authorImages}/>}
+          {(authorImages) => <ImagesApm imagePath="authors" info={authorImages} />}
         </Await>
 
         <Await resolve={author}>
-            {author => 
-                <Await resolve={authorProducts}>
-                    {authorProducts => <ProductLine products={authorProducts}>Книги автора {author[0].name + ' '}{author[0].surname && author[0].surname}</ProductLine>}
-                </Await>
-            }
+          {(author) => (
+            <Await resolve={authorProducts}>
+              {(authorProducts) => (
+                <ProductLine products={authorProducts}>
+                  Книги автора {author[0].name + ' '}
+                  {author[0].surname && author[0].surname}
+                </ProductLine>
+              )}
+            </Await>
+          )}
         </Await>
-
       </Suspense>
     </Pad>
-  )
-}
+  );
+};
 
-export default Autor
+export default Autor;

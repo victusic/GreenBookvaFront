@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 import Loader from '../../../ui/loader/Loader';
@@ -12,35 +12,37 @@ import NoPublisher from '../../../assets/img/no-publisher.png';
 import ProductLine from '../../../modules/products/productLine/ProductLine';
 
 const Publisher = () => {
-
-  const {publisher, publisherSlides, publisherProducts} = useLoaderData();
+  const { publisher, publisherSlides, publisherProducts } = useLoaderData();
 
   return (
     <Pad>
-      <Suspense fallback={<Loader/>}>
+      <Suspense fallback={<Loader />}>
         <SingleTitle>Издательство</SingleTitle>
 
         <Await resolve={publisher}>
-            {publisher => <TitleApm info={publisher[0]} imagePath='publishers' image={NoPublisher}/>}
+          {(publisher) => <TitleApm info={publisher[0]} imagePath="publishers" image={NoPublisher} />}
         </Await>
 
         <Await resolve={publisherSlides}>
-            {publisherSlides => publisherSlides.map((slide, index)=> 
-                <SlideApm key={index} imagePath='publishers' info={slide}/>
-            )}
+          {(publisherSlides) =>
+            publisherSlides.map((slide, index) => (
+              <SlideApm key={index} imagePath="publishers" info={slide} />
+            ))
+          }
         </Await>
 
         <Await resolve={publisher}>
-            {publisher => 
-                <Await resolve={publisherProducts}>
-                    {publisherProducts => <ProductLine products={publisherProducts}>Книги издательсва {publisher[0].name}</ProductLine>}
-                </Await>
-            }
+          {(publisher) => (
+            <Await resolve={publisherProducts}>
+              {(publisherProducts) => (
+                <ProductLine products={publisherProducts}>Книги издательсва {publisher[0].name}</ProductLine>
+              )}
+            </Await>
+          )}
         </Await>
-        
       </Suspense>
     </Pad>
-  )
-}
+  );
+};
 
-export default Publisher
+export default Publisher;

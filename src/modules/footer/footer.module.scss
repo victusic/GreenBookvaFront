@@ -1,187 +1,198 @@
 @import '../../styles/colors.scss';
 @import '../../styles/typography.scss';
 
-.plate{
-    width: 100%;
-    height: 426px;
-    background: $backgroundLight;
+.plate {
+  width: 100%;
+  height: 426px;
+  background: $backgroundLight;
 
-    margin-top: 24px;
-    @media (max-width: 1024px) {
-        height: 365px;
-        margin-top: 12px;
-    }
-    @media (max-width: 760px) {
-        height: 340px;
-    }
-    @media (max-width: 760px) {
-        margin-top: 16px;
-    }
+  margin-top: 24px;
+  @media (max-width: 1024px) {
+    height: 365px;
+    margin-top: 12px;
+  }
+  @media (max-width: 760px) {
+    height: 340px;
+  }
+  @media (max-width: 760px) {
+    margin-top: 16px;
+  }
 }
 
-.topLine{
-    width: 100%;
+.topLine {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 760px) {
     display: flex;
-    justify-content: center;
-    @media (max-width: 760px) {
-        display: flex;
-        flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
+  }
 }
 
-.topTitle{
-    margin-top: 40px;
-    margin-bottom: 25px;
-    cursor: default;
-    @media (max-width: 1024px) {
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
-    @media (max-width: 760px) {
-        display: none;
-    }
+.topTitle {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  cursor: default;
+  @media (max-width: 1024px) {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 760px) {
+    display: none;
+  }
 }
 
-.mobileTitle{
-    @media (min-width: 761px) {display: none;}
-    width: 100%;
-    text-align: center;
-    margin-top: 28px;
-    margin-bottom: 22px;
-    cursor: default;
+.mobileTitle {
+  @media (min-width: 761px) {
+    display: none;
+  }
+  width: 100%;
+  text-align: center;
+  margin-top: 28px;
+  margin-bottom: 22px;
+  cursor: default;
 }
 
-.textBlock{
-    width: 45%;
-    margin-right: 5%;
-    height: 330px;
-    @media (max-width: 1024px) {
-        height: 293px;
-        width: 75%;
-    }
-    @media (max-width: 760px) {display: none;}
+.textBlock {
+  width: 45%;
+  margin-right: 5%;
+  height: 330px;
+  @media (max-width: 1024px) {
+    height: 293px;
+    width: 75%;
+  }
+  @media (max-width: 760px) {
+    display: none;
+  }
 }
 
-.aboutText{
-    @extend %text2;
-    color: $textGrayL3;
+.aboutText {
+  @extend %text2;
+  color: $textGrayL3;
 }
 
-.linksPlate{
-    width: 140px;
-    margin-top: 35px;
-    @media (max-width: 1024px) {
-        margin-top: 20px;
-    }
-    @media (max-width: 820px) {
-        display: none;
-    }
-    display: flex;
-    justify-content: space-between;
+.linksPlate {
+  width: 140px;
+  margin-top: 35px;
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+  }
+  @media (max-width: 820px) {
+    display: none;
+  }
+  display: flex;
+  justify-content: space-between;
 }
 
-.linksSvg{
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
+.linksSvg {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
 }
 
 .linksSvg * {
-    fill: $textGrayL2;
+  fill: $textGrayL2;
 }
 .linksSvg:hover * {
-    fill: $textGrayL3;
+  fill: $textGrayL3;
 }
 
-.mobilePadPlate{
-    @media (min-width: 761px) {display: none;}
-    width: 100%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: center;
+.mobilePadPlate {
+  @media (min-width: 761px) {
+    display: none;
+  }
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
 }
 
-.mobileLinksPlate{
-    @media (min-width: 761px) {display: none;}
-    width: 120px;
-    display: flex;
-    justify-content: space-between;
+.mobileLinksPlate {
+  @media (min-width: 761px) {
+    display: none;
+  }
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.mobileLinksSvg{
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+.mobileLinksSvg {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
 
 .mobileLinksSvg * {
-    fill: $textGrayL2;
+  fill: $textGrayL2;
 }
 .mobileLinksSvg:hover * {
-    fill: $textGrayL3;
+  fill: $textGrayL3;
 }
 
-.navBlock{
-    width: 25%;
-    height: 330px;
-    @media (max-width: 1024px) {
-        min-width: 200px;
-        width: 200px;
-        height: 293px;
-    }
-    @media (max-width: 760px) {
-        height: 140px;
-        min-width: 0;
-        width: 50%;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-.navBlockLinks{
-    width: 100%;
-    height: 160px;
-    @media (max-width: 1024px) {
-        height: 140px;
-    }
+.navBlock {
+  width: 25%;
+  height: 330px;
+  @media (max-width: 1024px) {
+    min-width: 200px;
+    width: 200px;
+    height: 293px;
+  }
+  @media (max-width: 760px) {
+    height: 140px;
+    min-width: 0;
+    width: 50%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media (max-width: 760px) {
-        width: 70%;
-        height: 140px;
-    }
+    justify-content: center;
+  }
 }
 
-.navLink{
-    @extend %text2;
-    color: $textGrayL3;
-    cursor: pointer;
+.navBlockLinks {
+  width: 100%;
+  height: 160px;
+  @media (max-width: 1024px) {
+    height: 140px;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-width: 760px) {
+    width: 70%;
+    height: 140px;
+  }
 }
 
-.navLink:hover{
-    color: $textGrayL2;
+.navLink {
+  @extend %text2;
+  color: $textGrayL3;
+  cursor: pointer;
 }
 
-.line{
-    width: 100%;
-    border: 1px solid $textGrayL3;
-    opacity: 0.3;
+.navLink:hover {
+  color: $textGrayL2;
 }
 
-.bottomLine{
-    width: 100%;
-    height: 94px;
-    display: flex;
-    align-items: center;
-    @media (max-width: 1024px) {height: 70px;}
-    @media (max-width: 760px) {height: 61px;}
+.line {
+  width: 100%;
+  border: 1px solid $textGrayL3;
+  opacity: 0.3;
 }
 
-.bottomLineText{
-    @extend %text2;
-    color: $textGrayL3;
-    cursor: default;
+.bottomLine {
+  width: 100%;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 1024px) {
+    height: 70px;
+  }
+  @media (max-width: 760px) {
+    height: 61px;
+  }
 }
 
+.bottomLineText {
+  @extend %text2;
+  color: $textGrayL3;
+  cursor: default;
+}

@@ -1,37 +1,47 @@
 @import '../../../../styles/colors';
 @import '../../../../styles/typography';
 
-.bottomLine{
-    width: 100%;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    @media (max-width: 1024px) {height: 40px;}
-    @media (max-width: 520px) {
-        height: 31px;
-        margin-top: 3px;
-    }
+.bottomLine {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 1024px) {
+    height: 40px;
+  }
+  @media (max-width: 520px) {
+    height: 31px;
+    margin-top: 3px;
+  }
 }
 
-.bottomText{
-    color: $textLight;
-    cursor: pointer;
-    white-space: nowrap;
-    @extend %transition;
+.bottomText {
+  color: $textLight;
+  cursor: pointer;
+  white-space: nowrap;
+  @extend %transition;
 }
 
-.bottomText:hover{
-    color: $textGrayL2;
+.bottomText:hover {
+  color: $textGrayL2;
 }
 
-.bottomLink{
-    margin-right: 40px;
-    @media (max-width: 1024px) {margin-right: 35px;}
-    @media (max-width: 545px) {margin-right: 20px;}
+.bottomLink {
+  margin-right: 40px;
+  @media (max-width: 1024px) {
+    margin-right: 35px;
+  }
+  @media (max-width: 545px) {
+    margin-right: 20px;
+  }
 }
 
-.bottomLink:last-child{
+.bottomLink:last-child {
+  margin-right: 0px;
+  @media (max-width: 1024px) {
     margin-right: 0px;
-    @media (max-width: 1024px) {margin-right: 0px;}
-    @media (max-width: 520px) {margin-right: 0px;}
+  }
+  @media (max-width: 520px) {
+    margin-right: 0px;
+  }
 }

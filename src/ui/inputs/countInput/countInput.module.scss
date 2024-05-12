@@ -1,23 +1,22 @@
 @import '../../../styles/colors';
 @import '../../../styles/typography';
 
-.base{
-    width: 38px;
-    height: 42px;
-    background: $backgroundWhite;
-    border: 1px solid $textGrayL3;
-    text-align: center;
-    @extend %radius;
-    @extend %transition;
-    color: $textDarkL1;
-    @extend %text2;
-    @media (max-width: 1024px) {
-        width: 32px;
-        height: 32px;
-    }
-    @media (max-width: 520px) {
-        width: 26px;
-        height: 28px;
-    }
-    
+.base {
+  width: 38px;
+  height: 42px;
+  background: $backgroundWhite;
+  border: 1px solid $textGrayL3;
+  text-align: center;
+  @extend %radius;
+  @extend %transition;
+  color: $textDarkL1;
+  @extend %text2;
+  @media (max-width: 1024px) {
+    width: 32px;
+    height: 32px;
+  }
+  @media (max-width: 520px) {
+    width: 26px;
+    height: 28px;
+  }
 }

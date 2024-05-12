@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 import styles from './modalReturn.module.scss';
 
-const ModalReturn = ({children, ...props}) => {
+const ModalReturn = ({ children, ...props }) => {
   return (
-    <span {...props} className={styles.return}>{children}</span>
-  )
-}
+    <span {...props} className={styles.return}>
+      {children}
+    </span>
+  );
+};
 
-export default ModalReturn
+export default ModalReturn;

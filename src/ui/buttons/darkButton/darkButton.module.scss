@@ -1,33 +1,33 @@
 @import '../../../styles/colors';
 @import '../../../styles/typography';
 
-.button{
-    width: 36px;
-    height: 36px;
-    
-    background-color: $accentSuper;
-    color: $textLight;
-    @extend %text2;
-    @extend %radius;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    cursor: pointer;
-    @media (max-width: 1024px) {
-        width: 28px;
-        height: 28px;
-        padding: 7px;
-    }
-    @media (max-width: 520px) {
-        width: 22px;
-        height: 22px;
-        padding: 5px;
-    }
+.button {
+  width: 36px;
+  height: 36px;
 
-    @extend %transition;
+  background-color: $accentSuper;
+  color: $textLight;
+  @extend %text2;
+  @extend %radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  @media (max-width: 1024px) {
+    width: 28px;
+    height: 28px;
+    padding: 7px;
+  }
+  @media (max-width: 520px) {
+    width: 22px;
+    height: 22px;
+    padding: 5px;
+  }
+
+  @extend %transition;
 }
 
-.button:hover{
-    background: $textDarkL1;
+.button:hover {
+  background: $textDarkL1;
 }

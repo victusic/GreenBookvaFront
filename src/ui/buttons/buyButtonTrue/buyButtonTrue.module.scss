@@ -1,37 +1,37 @@
 @import '../../../styles/colors';
 @import '../../../styles/typography';
 
-.buyButton{
-    height: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    align-items: center;
-    background: $backgroundLight;
-    color: $textAccent;
-    @extend %text3;
-    border: none;
-    @extend %radius;
-    @extend %transition;
-    cursor: pointer;
-    //border: 1px solid $textAccent;
-    @media (max-width: 1024px) {
-        padding-left: 12px;
-        padding-right: 12px;
-        height: 30px;
-    }
-    @media (max-width: 520px) {
-        padding-left: 15px;
-        padding-right: 15px;
-        height: 30px;
-    }
+.buyButton {
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  background: $backgroundLight;
+  color: $textAccent;
+  @extend %text3;
+  border: none;
+  @extend %radius;
+  @extend %transition;
+  cursor: pointer;
+  //border: 1px solid $textAccent;
+  @media (max-width: 1024px) {
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 30px;
+  }
+  @media (max-width: 520px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 30px;
+  }
 }
 
-.buyButton:hover{
-    color: $accentSuper;
+.buyButton:hover {
+  color: $accentSuper;
 }
 
-.buyButton:active{
-    background: $backgroundBase;
-    color: $textLight;
+.buyButton:active {
+  background: $backgroundBase;
+  color: $textLight;
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 
@@ -9,11 +9,11 @@ import ProfileCardsLine from '../../../modules/forSinglePages/group1/profile/pro
 const Profile = () => {
   return (
     <Pad>
-      <ProfilePlate/>
-      <ProfileButtonsLine/>
-      <ProfileCardsLine/>
+      <ProfilePlate />
+      <ProfileButtonsLine />
+      <ProfileCardsLine />
     </Pad>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

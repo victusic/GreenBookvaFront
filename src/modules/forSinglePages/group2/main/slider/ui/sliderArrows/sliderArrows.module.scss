@@ -1,4 +1,4 @@
-.arrowsPlate{
+.arrowsPlate {
   position: absolute;
   left: 10px;
   right: 10px;
@@ -20,16 +20,16 @@
   pointer-events: none;
 }
 
-.arrowOpacity{
+.arrowOpacity {
   opacity: 0.2;
   z-index: 200;
   pointer-events: all;
 }
 
-.arrowOpacity:hover{
+.arrowOpacity:hover {
   opacity: 0.7;
 }
 
-.arrowOpacity:active{
+.arrowOpacity:active {
   opacity: 1;
 }

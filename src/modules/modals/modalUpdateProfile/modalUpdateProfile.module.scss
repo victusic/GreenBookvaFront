@@ -1,32 +1,32 @@
 @import '../../../styles/colors.scss';
 @import '../../../styles/typography.scss';
 
-.inputSvg{
-    position: absolute;
-    right: 10px;
-    width: 20px;
-    height: 20px;
+.inputSvg {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  cursor: pointer;
+  @media (max-width: 1024px) {
     top: 10px;
-    cursor: pointer;
-    @media (max-width: 1024px) {
-        top: 10px;
-        right: 8px;
-    }
-    @media (max-width: 520px) {
-        width: 16px;
-        height: 16px;
-        right: 8px;
-        top: 9px;
-    }
+    right: 8px;
+  }
+  @media (max-width: 520px) {
+    width: 16px;
+    height: 16px;
+    right: 8px;
+    top: 9px;
+  }
 }
 
 .inputSvg * {
-    fill: $textGrayL3;
+  fill: $textGrayL3;
 }
 .inputSvg:hover * {
-    fill: $textGrayL2;
+  fill: $textGrayL2;
 }
 
-.svgPlate{
-    position: relative;
+.svgPlate {
+  position: relative;
 }
