@@ -1,7 +1,10 @@
 name: Green Bookva deploy
 
 on:
-  workflow_dispatch:
+  pull_request:
+    types: [closed]
+    branches:
+      - master
 
 jobs:
   deploy:
