@@ -1,98 +1,98 @@
 @import '../../../../styles/colors';
 @import '../../../../styles/typography';
 
-.findPlate{
-    position: absolute;
+.findPlate {
+  position: absolute;
+  top: 10px;
+  left: 416px;
+  z-index: 20000;
+  width: 601px;
+  max-width: 601px;
+  padding: 20px;
+  background: $backgroundWhite;
+  @extend %radius;
+  @extend %shadow;
+  @media (max-width: 1625px) {
+    left: 411px;
+  }
+  @media (max-width: 1400px) {
+    left: 341px;
+    width: 431px;
+    max-width: 431px;
+  }
+  @media (max-width: 1160px) {
+    width: 296px;
+    max-width: 296px;
+  }
+  @media (max-width: 1024px) {
+    width: 196px;
+    max-width: 196px;
+    left: 300px;
+    top: 5px;
+  }
+  @media (max-width: 950px) {
+    left: 295px;
+  }
+  @media (max-width: 695px) {
+    width: 196px;
+    max-width: 196px;
+    left: 181px;
+  }
+  @media (max-width: 580px) {
+    width: auto;
+    max-width: none;
+    left: 181px;
+    right: 0;
+  }
+  @media (max-width: 524px) {
+    left: 0;
     top: 10px;
-    left: 416px;
-    z-index: 20000;
-    width: 601px;
-    max-width: 601px;
-    padding: 20px;
-    background: $backgroundWhite;
-    @extend %radius;
-    @extend %shadow;
-    @media (max-width: 1625px) {
-        left: 411px;
-    }
-    @media (max-width: 1400px) {
-        left: 341px;
-        width: 431px;
-        max-width: 431px;
-    }
-    @media (max-width: 1160px) {
-        width: 296px;
-        max-width: 296px;
-    }
-    @media (max-width: 1024px) {
-        width: 196px;
-        max-width: 196px;
-        left: 300px;
-        top: 5px;
-    }
-    @media (max-width: 950px) {
-        left: 295px;
-    }
-    @media (max-width: 695px) {
-        width: 196px;
-        max-width: 196px;
-        left: 181px;
-    }
-    @media (max-width: 580px) {
-        width: auto;
-        max-width: none;
-        left: 181px;
-        right: 0;
-    }
-    @media (max-width: 524px) {
-        left: 0;
-        top: 10px;
-        right: 0;
-        max-width: none;
-    }
+    right: 0;
+    max-width: none;
+  }
 }
 
-.findTextPlate{
-    margin-bottom: 10px;
-    display: flex;
+.findTextPlate {
+  margin-bottom: 10px;
+  display: flex;
 }
 
-.findTextPlate:last-child{
-    margin-bottom: 0px;
+.findTextPlate:last-child {
+  margin-bottom: 0px;
 }
 
-.findText{
-    width: 100%;
-    @extend %text2;
-    color: $textDarkL1;
-    cursor: pointer;
-    @extend %radius;
+.findText {
+  width: 100%;
+  @extend %text2;
+  color: $textDarkL1;
+  cursor: pointer;
+  @extend %radius;
 }
 
-.findText:hover{
-    background-color: $backgroundLight;
+.findText:hover {
+  background-color: $backgroundLight;
 }
 
-.findText:active{
-    color: $accentSuper;
+.findText:active {
+  color: $accentSuper;
 }
 
-.exitSvg{
-    margin-top: 3px;
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-    fill: $textDarkL1;
+.exitSvg {
+  margin-top: 3px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  fill: $textDarkL1;
 }
 
-.exitSvg:hover{
-    fill: $textGrayL2;
+.exitSvg:hover {
+  fill: $textGrayL2;
 }
 
-.exitSvg:active{
-    fill: $warning;
+.exitSvg:active {
+  fill: $warning;
 }
 
-.visibleNone{
-    display: none;
+.visibleNone {
+  display: none;
 }

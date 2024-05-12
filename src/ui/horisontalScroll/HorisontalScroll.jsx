@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import styles from './horisontalScroll.module.scss';
 
-const HorisontalScroll = ({ children, addClass, setScrollWidth, scrollWidth, ...props}) => {
+const HorisontalScroll = ({ children, addClass, setScrollWidth, scrollWidth, ...props }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const HorisontalScroll = ({ children, addClass, setScrollWidth, scrollWidth, ...
       event.preventDefault();
 
       container.scrollTo({
-        left: container.scrollLeft + event.deltaY*3,
+        left: container.scrollLeft + event.deltaY * 3,
         behavior: 'smooth',
       });
     };
@@ -23,9 +23,8 @@ const HorisontalScroll = ({ children, addClass, setScrollWidth, scrollWidth, ...
     };
   }, []);
 
-
-  useEffect(()=>{
-    if(scrollWidth){
+  useEffect(() => {
+    if (scrollWidth) {
       containerRef.current.scrollLeft += scrollWidth;
       setScrollWidth(0);
     }

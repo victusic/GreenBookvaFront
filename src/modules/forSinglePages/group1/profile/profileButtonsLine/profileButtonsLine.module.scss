@@ -1,20 +1,26 @@
 @import '../../../../../styles/colors';
 @import '../../../../../styles/typography';
 
-%margin{
-    margin-bottom: 40px;
-    @media (max-width: 1024px) {margin-bottom: 35px;}
-    @media (max-width: 520px) {margin-bottom: 25px;}
+%margin {
+  margin-bottom: 40px;
+  @media (max-width: 1024px) {
+    margin-bottom: 35px;
+  }
+  @media (max-width: 520px) {
+    margin-bottom: 25px;
+  }
 }
 
-.buttonLine{
-    display: flex;
-    width: 460px;
-    justify-content: space-between;
-    @media (max-width: 1024px) {width: 400px;}
-    @media (max-width: 520px) {
-        width: 100%;
-        justify-content: space-around;
-    }
-    @extend %margin;
+.buttonLine {
+  display: flex;
+  width: 460px;
+  justify-content: space-between;
+  @media (max-width: 1024px) {
+    width: 400px;
+  }
+  @media (max-width: 520px) {
+    width: 100%;
+    justify-content: space-around;
+  }
+  @extend %margin;
 }

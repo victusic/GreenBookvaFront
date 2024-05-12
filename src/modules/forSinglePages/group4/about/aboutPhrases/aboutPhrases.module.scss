@@ -1,41 +1,41 @@
 @import '../../../../../styles/colors';
 @import '../../../../../styles/typography';
 
-.titleColumnText{
-    width: 100%;
-    text-align: center;
-    color: $textAccent;
-    cursor: default;
-    @media (min-width: 1024px) {
-        margin-top: 75px;
-    }
+.titleColumnText {
+  width: 100%;
+  text-align: center;
+  color: $textAccent;
+  cursor: default;
+  @media (min-width: 1024px) {
+    margin-top: 75px;
+  }
 }
 
-.arrowColumnText{
-    width: 100%;
-    text-align: center;
-    color: $textGrayL2;
-    cursor: default;
-    margin-top: 120px;
-    margin-bottom: 120px;
-    @media (max-width: 1024px) {
-        margin-top: 90px;
-        margin-bottom: 90px;
-    }
-    @media (max-width: 520px) {
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
+.arrowColumnText {
+  width: 100%;
+  text-align: center;
+  color: $textGrayL2;
+  cursor: default;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  @media (max-width: 1024px) {
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+  @media (max-width: 520px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 
-.mainColumnText{
-    width: 100%;
-    text-align: center;
-    color: $accentSuper;
-    cursor: default;
+.mainColumnText {
+  width: 100%;
+  text-align: center;
+  color: $accentSuper;
+  cursor: default;
 }
 
-.refLine{
-    width: 100%;
-    height: 1px;
+.refLine {
+  width: 100%;
+  height: 1px;
 }

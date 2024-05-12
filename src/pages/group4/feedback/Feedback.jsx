@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Pad from '../../../ui/pad/Pad';
 
 import FeedbackLinks from '../../../modules/forSinglePages/group4/feedback/feedbackLinks/FeedbackLinks';
@@ -6,9 +6,9 @@ import FeedbackLinks from '../../../modules/forSinglePages/group4/feedback/feedb
 const Feedback = () => {
   return (
     <Pad>
-      <FeedbackLinks/>
+      <FeedbackLinks />
     </Pad>
-  )
-}
+  );
+};
 
-export default Feedback
+export default Feedback;

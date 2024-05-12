@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import ModalSign from '../../modules/modals/modalSign/ModalSign';
 import ModalSignCode from '../../modules/modals/modalSignCode/ModalSignCode';
@@ -21,25 +21,25 @@ import ModalInfoCookie from '../../modules/modals/modalInfoCookie/ModalInfoCooki
 const Modals = () => {
   return (
     <>
-        <ModalSign/>
-        <ModalSignCode/>
-        <ModalSignUp/>
-        <ModalSignUpFinish/>
-        <ModalUpdateProfile/>
-        <ModalDeleteProfile/>
-        <ModalViewCard/>
-        <ModalDeleteCard/>
-        <ModalAddCard/>
-        <ModalCheckCode/>
-        <ModalPay/>
-        <ModalOrder/>
-        <ModalProductLimit/>
-        <ModalAddReview/>
-        <ModalUpdateReview/>
-        <ModalDeleteReview/>
-        <ModalInfoCookie/>
+      <ModalSign />
+      <ModalSignCode />
+      <ModalSignUp />
+      <ModalSignUpFinish />
+      <ModalUpdateProfile />
+      <ModalDeleteProfile />
+      <ModalViewCard />
+      <ModalDeleteCard />
+      <ModalAddCard />
+      <ModalCheckCode />
+      <ModalPay />
+      <ModalOrder />
+      <ModalProductLimit />
+      <ModalAddReview />
+      <ModalUpdateReview />
+      <ModalDeleteReview />
+      <ModalInfoCookie />
     </>
-  )
-}
+  );
+};
 
-export default Modals
+export default Modals;

@@ -1,28 +1,28 @@
 @import '../../../../../styles/colors';
 @import '../../../../../styles/typography';
 
-.orderPlate{
-    width: 100%;
+.orderPlate {
+  width: 100%;
 
-    min-height: calc(100vh - 800px);
-    @media (max-width: 1024px) {
-        min-height: calc(100vh - 640px);
-    }
-    @media (max-width: 520px) {
-        min-height: calc(100vh - 575px);
-    }
+  min-height: calc(100vh - 800px);
+  @media (max-width: 1024px) {
+    min-height: calc(100vh - 640px);
+  }
+  @media (max-width: 520px) {
+    min-height: calc(100vh - 575px);
+  }
 }
 
-.bottomText{
-    width: 70%;
-    color: $textGrayL3;
-    margin-left: 15%;
-    text-align: center;
-    @media (max-width: 1024px) {
-        width: 100%;
-        margin-left: 0;
-    }
-    @media (max-width: 520px) {
-        margin-top: 30px;
-    }
+.bottomText {
+  width: 70%;
+  color: $textGrayL3;
+  margin-left: 15%;
+  text-align: center;
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin-left: 0;
+  }
+  @media (max-width: 520px) {
+    margin-top: 30px;
+  }
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Pad from '../../../ui/pad/Pad';
 import { Suspense } from 'react';
 import Loader from '../../../ui/loader/Loader';
@@ -11,33 +11,33 @@ import OrdersGridPlate from '../../../modules/forSinglePages/group1/orders/order
 import { useState } from 'react';
 
 const Orders = () => {
+  const { orders } = useLoaderData();
+  const profile = useSelector((state) => state.profile.id);
 
-    const {orders} = useLoaderData();
-    const profile = useSelector(state => state.profile.id);
-
-    const [typeSort, setTypeSort] = useState(0);
+  const [typeSort, setTypeSort] = useState(0);
 
   return (
     <Pad>
-      <Suspense fallback={<Loader/>}>
-        {profile 
-            ?<Await resolve={orders}>
-                {orders=>
-                    <>
-                        <OrdersTitle orders={orders} setTypeSort={setTypeSort}/>
-                        <OrdersGridPlate orders={orders} typeSort={typeSort}/>
-                        <OrdersNoOrder orders={orders}/>
-                    </>
-                }
-            </Await>
-            :<>
-                <OrdersTitle orders={[]}/>
-                <NoProfile/>
-            </>
-        }
+      <Suspense fallback={<Loader />}>
+        {profile ? (
+          <Await resolve={orders}>
+            {(orders) => (
+              <>
+                <OrdersTitle orders={orders} setTypeSort={setTypeSort} />
+                <OrdersGridPlate orders={orders} typeSort={typeSort} />
+                <OrdersNoOrder orders={orders} />
+              </>
+            )}
+          </Await>
+        ) : (
+          <>
+            <OrdersTitle orders={[]} />
+            <NoProfile />
+          </>
+        )}
       </Suspense>
     </Pad>
-  )
-}
+  );
+};
 
-export default Orders
+export default Orders;

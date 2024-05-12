@@ -1,9 +1,13 @@
 @import '../../styles/colors.scss';
 
-.plate{
-    width: 100%;
-    height: 194px;
-    background: $primaryBase;
-    @media (max-width: 1024px) {height: 160px;}
-    @media (max-width: 520px) {height: 115px;}
+.plate {
+  width: 100%;
+  height: 194px;
+  background: $primaryBase;
+  @media (max-width: 1024px) {
+    height: 160px;
+  }
+  @media (max-width: 520px) {
+    height: 115px;
+  }
 }

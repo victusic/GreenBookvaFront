@@ -1,53 +1,54 @@
 @import '../../styles/colors';
 @import '../../styles/typography';
 
-.fog{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    @extend %blur;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.fog {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  @extend %blur;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.base{
-    position: relative;
-    padding: 40px;
-    background: $backgroundWhite;
-    @extend %radius;
-    @media (max-width: 520px) {padding: 25px;}
-    z-index: 10000;
-    display: flex;
-    @extend %transition;
-    flex-direction: column;
-}
-
-.close{
-    position: absolute;
-    right: 12px;
-    top: 16px;
-    width: 14px;
-    height: 14px;
-    @media (max-width: 520px) {
-        top: 12px;
-    }
-    cursor: pointer;
+.base {
+  position: relative;
+  padding: 40px;
+  background: $backgroundWhite;
+  @extend %radius;
+  @media (max-width: 520px) {
+    padding: 25px;
+  }
+  z-index: 10000;
+  display: flex;
+  @extend %transition;
+  flex-direction: column;
 }
 
-.closeColor{
-    fill: $textDarkL1;
-    @extend %transition;
+.close {
+  position: absolute;
+  right: 12px;
+  top: 16px;
+  width: 14px;
+  height: 14px;
+  @media (max-width: 520px) {
+    top: 12px;
+  }
+  cursor: pointer;
 }
 
-.closeColor:hover{
-    fill: $textGrayL2;
+.closeColor {
+  fill: $textDarkL1;
+  @extend %transition;
 }
 
-.scroll{
-    overflow-y: auto;
-    height: 100%;
+.closeColor:hover {
+  fill: $textGrayL2;
+}
+
+.scroll {
+  overflow-y: auto;
+  height: 100%;
 }

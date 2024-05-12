@@ -1,22 +1,24 @@
 @import '../../../styles/colors';
 @import '../../../styles/typography';
 
-.BarArrow{
-    width: auto;
-    color: $textGrayL2;
-    cursor: pointer;
-    @extend %text1;
-    margin-bottom: 20px;
+.BarArrow {
+  width: auto;
+  color: $textGrayL2;
+  cursor: pointer;
+  @extend %text1;
+  margin-bottom: 20px;
 }
 
-.BarArrow:hover{
-    color: $textGrayL3;
+.BarArrow:hover {
+  color: $textGrayL3;
 }
-.BarArrow:active{
-    color: $accentSuper;
+.BarArrow:active {
+  color: $accentSuper;
 }
 
-.BarArrowMargin{
-    margin-right: 10px;
-    @media (max-width: 1024px) {margin-right: 7px;}
+.BarArrowMargin {
+  margin-right: 10px;
+  @media (max-width: 1024px) {
+    margin-right: 7px;
+  }
 }

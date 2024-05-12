@@ -1,16 +1,16 @@
 @import '../../../styles/colors';
 @import '../../../styles/typography';
 
-.textElement{
-    cursor: pointer;
-    @extend %text3;
-    color: $textGrayL3;
+.textElement {
+  cursor: pointer;
+  @extend %text3;
+  color: $textGrayL3;
 }
 
-.textElement:hover{
-    color: $textGrayL2;
+.textElement:hover {
+  color: $textGrayL2;
 }
 
-.textElement:active{
-    color: $accentSuper;
+.textElement:active {
+  color: $accentSuper;
 }

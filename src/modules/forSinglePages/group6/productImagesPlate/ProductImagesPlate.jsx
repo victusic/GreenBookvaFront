@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 
 import styles from './productImagesPlate.module.scss';
 import { HandySvg } from 'handy-svg';
@@ -12,10 +12,9 @@ import { useRef } from 'react';
 import { useSelector } from 'react-redux';
 
 const ProductImagesPlate = () => {
+  const productRoute = useSelector((state) => state.imagesRoutes.product);
 
-  const productRoute = useSelector(state => state.imagesRoutes.product);
-
-  const {imagesList} = useLoaderData();
+  const { imagesList } = useLoaderData();
 
   const [nowPosition, setNowPosition] = useState(0);
   const [position, setPosition] = useState(0);
@@ -24,22 +23,26 @@ const ProductImagesPlate = () => {
   const { id } = useParams();
 
   //загрузка количества изображений
-  getProductOneImagesList(id).then((data)=>setCountImages(data.length - 1));
+  getProductOneImagesList(id).then((data) => setCountImages(data.length - 1));
 
-  useEffect(()=>{
-    {position <= countImages ? setNowPosition(position) : setPosition(0)}
-    {position < 0 && setPosition(countImages)}
-  }, [position])
+  useEffect(() => {
+    {
+      position <= countImages ? setNowPosition(position) : setPosition(0);
+    }
+    {
+      position < 0 && setPosition(countImages);
+    }
+  }, [position]);
 
   //классические свайпы
 
-  const [touchPosition, setTouchPosition] = useState(null)
+  const [touchPosition, setTouchPosition] = useState(null);
 
   const handleTouchStart = (e) => {
     const touchDown = e.touches[0].clientX;
 
     setTouchPosition(touchDown);
-  }
+  };
 
   const handleTouchMove = (e) => {
     if (touchPosition === null) {
@@ -50,21 +53,20 @@ const ProductImagesPlate = () => {
     const direction = touchPosition - currentPosition;
 
     if (direction > 10) {
-      setPosition(position + 1)
+      setPosition(position + 1);
     }
 
     if (direction < -10) {
-      setPosition(position - 1)
+      setPosition(position - 1);
     }
 
     setTouchPosition(null);
-  }
-  
+  };
 
   //свайвы курсором
   const elementRef = useRef(null);
 
-  let startX; 
+  let startX;
 
   const handleMouseDown = (event) => {
     startX = event.clientX;
@@ -76,42 +78,65 @@ const ProductImagesPlate = () => {
     const deltaX = endX - startX;
 
     if (deltaX > 0) {
-      setPosition(position - 1)
+      setPosition(position - 1);
     } else if (deltaX < 0) {
-      setPosition(position + 1)
+      setPosition(position + 1);
     }
   };
 
   return (
-    <Await resolve={imagesList}>{
-      (imagesList)=>(
-        <div className={styles.mainPlate} ref={elementRef} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} >
-          <Link to={`/product/${id}`}><HandySvg src={ExitSvg} className={styles.exitSvg}/></Link>
-          <div className={styles.imagesPlate} style={{left: `${nowPosition * (-100)}%`}}>
-            {imagesList.map((image, index)=>
+    <Await resolve={imagesList}>
+      {(imagesList) => (
+        <div
+          className={styles.mainPlate}
+          ref={elementRef}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
+          <Link to={`/product/${id}`}>
+            <HandySvg src={ExitSvg} className={styles.exitSvg} />
+          </Link>
+          <div className={styles.imagesPlate} style={{ left: `${nowPosition * -100}%` }}>
+            {imagesList.map((image, index) => (
               <div className={styles.imagesLineComponent}>
-                <img className={styles.imagesMain} key={index} src={productRoute + image.image}  alt={'Изображение продукта'}></img>
+                <img
+                  className={styles.imagesMain}
+                  key={index}
+                  src={productRoute + image.image}
+                  alt={'Изображение продукта'}
+                ></img>
               </div>
-            )}
+            ))}
           </div>
           <div className={styles.imagesListPlate}>
-              {imagesList.map((image, index)=>
-                <img className={styles.bottomImage} key={index} src={productRoute + image.image} onClick={() => setPosition(index)} alt={'Изображение продукта'}></img>
-              )}
+            {imagesList.map((image, index) => (
+              <img
+                className={styles.bottomImage}
+                key={index}
+                src={productRoute + image.image}
+                onClick={() => setPosition(index)}
+                alt={'Изображение продукта'}
+              ></img>
+            ))}
           </div>
           <div className={styles.navigateButtons}>
-            {countImages > 0 &&
+            {countImages > 0 && (
               <>
-              <WhiteTile addStyle={styles.tileHover} onClick={() => setPosition(position - 1)}>❮</WhiteTile>
-              <WhiteTile addStyle={styles.tileHover} onClick={() => setPosition(position + 1)}>❯</WhiteTile>
+                <WhiteTile addStyle={styles.tileHover} onClick={() => setPosition(position - 1)}>
+                  ❮
+                </WhiteTile>
+                <WhiteTile addStyle={styles.tileHover} onClick={() => setPosition(position + 1)}>
+                  ❯
+                </WhiteTile>
               </>
-            }
+            )}
           </div>
         </div>
-      )
-    }
+      )}
     </Await>
-  )
-}
+  );
+};
 
-export default ProductImagesPlate
+export default ProductImagesPlate;

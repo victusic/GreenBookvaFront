@@ -1,35 +1,35 @@
 @import '../../../styles/colors';
 @import '../../../styles/typography';
 
-.buyButton{
-    height: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-    align-items: center;
-    background: $backgroundBase;
-    color: $textLight;
-    @extend %text3;
-    border: none;
-    @extend %radius;
-    @extend %transition;
-    cursor: pointer;
-    @media (max-width: 1024px) {
-        height: 30px;
-    }
+.buyButton {
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  background: $backgroundBase;
+  color: $textLight;
+  @extend %text3;
+  border: none;
+  @extend %radius;
+  @extend %transition;
+  cursor: pointer;
+  @media (max-width: 1024px) {
+    height: 30px;
+  }
 }
 
-.buyButton:hover{
-    background: $backgroundBasePlus;
+.buyButton:hover {
+  background: $backgroundBasePlus;
 }
 
-.buyButton:active{
-    background: $accentSuper;
+.buyButton:active {
+  background: $accentSuper;
 }
 
-.buyButton:disabled{
-    background: $backgroundNoStarsPlate;
-    cursor: default;
-    width: 100%;
-    justify-content: center;
+.buyButton:disabled {
+  background: $backgroundNoStarsPlate;
+  cursor: default;
+  width: 100%;
+  justify-content: center;
 }

@@ -1,62 +1,61 @@
 @import '../../../../styles/colors';
 @import '../../../../styles/typography';
 
-.input{
-    width: 100%;
-    height: 48px;
-    border: 1px solid $textGrayL3;
-    @extend %radius;
-    @extend %text1;
-    color: $textDarkL1;
-    text-indent: 6px;
-    @media (max-width: 1024px) {
-        height: 36px;
-    }
-    @media (max-width: 520px) {
-        height: 28px;
-    }
-}
-
-.findPlate{
-    position: relative;
-    min-width: 200px;
-    width: 855px;
-    flex-shrink: 1;
-    margin-left: 32px;
-    margin-right: 32px;
-    @media (max-width: 1024px) {
-        margin-left: 24px;
-        margin-right: 0px;
-    }
-    @media (max-width: 520px) {
-        margin-left: 0px;
-    }
-}
-
-.inputButton{
-    position: absolute;
-    top: 6px;
-    right: 7px;
-    @media (max-width: 1024px) {
-        top: 3px;
-        right: 3px;
-    }
-}
-
-
-.visibleNone{
-    display: none;
-}
-
-.magnifierSvg{
-    width: 36px;
+.input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid $textGrayL3;
+  @extend %radius;
+  @extend %text1;
+  color: $textDarkL1;
+  text-indent: 6px;
+  @media (max-width: 1024px) {
     height: 36px;
-    @media (max-width: 1024px) {
-        width: 24px;
-        height: 24px;
-    }
-    @media (max-width: 520px) {
-        width: 12px;
-        height: 12px;
-    }
+  }
+  @media (max-width: 520px) {
+    height: 28px;
+  }
+}
+
+.findPlate {
+  position: relative;
+  min-width: 200px;
+  width: 855px;
+  flex-shrink: 1;
+  margin-left: 32px;
+  margin-right: 32px;
+  @media (max-width: 1024px) {
+    margin-left: 24px;
+    margin-right: 0px;
+  }
+  @media (max-width: 520px) {
+    margin-left: 0px;
+  }
+}
+
+.inputButton {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  @media (max-width: 1024px) {
+    top: 3px;
+    right: 3px;
+  }
+}
+
+.visibleNone {
+  display: none;
+}
+
+.magnifierSvg {
+  width: 36px;
+  height: 36px;
+  @media (max-width: 1024px) {
+    width: 24px;
+    height: 24px;
+  }
+  @media (max-width: 520px) {
+    width: 12px;
+    height: 12px;
+  }
 }

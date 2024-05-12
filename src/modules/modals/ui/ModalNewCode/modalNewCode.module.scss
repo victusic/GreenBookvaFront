@@ -1,28 +1,28 @@
 @import '../../../../styles/colors';
 @import '../../../../styles/typography';
 
-.newCode{
-    width: 320px;
-    @extend %text2;
-    color: $accentSuper;
-    margin-bottom: 20px;
-    line-height: 20px;
-    text-align: center;
-    cursor: pointer;
-    @extend %transition;
-    @media (max-width: 1024px) {
-        width: 295px;
-    }
-    @media (max-width: 520px) {
-        width: 240px;
-        line-height: 14px;
-    }
+.newCode {
+  width: 320px;
+  @extend %text2;
+  color: $accentSuper;
+  margin-bottom: 20px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  @extend %transition;
+  @media (max-width: 1024px) {
+    width: 295px;
+  }
+  @media (max-width: 520px) {
+    width: 240px;
+    line-height: 14px;
+  }
 }
 
-.newCode:hover{
-    color: $backgroundBasePlus;
+.newCode:hover {
+  color: $backgroundBasePlus;
 }
 
-.newCode:active{
-    color: $textDarkL1;
+.newCode:active {
+  color: $textDarkL1;
 }

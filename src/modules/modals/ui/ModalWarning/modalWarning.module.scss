@@ -1,16 +1,20 @@
 @import '../../../../styles/colors';
 @import '../../../../styles/typography';
 
-.Warning{
-    width: 320px;
-    @extend %text3;
-    color: $warning;
-    cursor: default;
-    @extend %transition;
-    @media (max-width: 1024px) {width: 295px;}
-    @media (max-width: 520px) {width: 240px;}
+.Warning {
+  width: 320px;
+  @extend %text3;
+  color: $warning;
+  cursor: default;
+  @extend %transition;
+  @media (max-width: 1024px) {
+    width: 295px;
+  }
+  @media (max-width: 520px) {
+    width: 240px;
+  }
 }
 
-.WarningNone{
-    display: none;
+.WarningNone {
+  display: none;
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 import FavoritesGridPlate from '../../../modules/forSinglePages/group1/favorites/favoritesGridPlate/FavoritesGridPlate';
@@ -11,33 +11,31 @@ import { useSelector } from 'react-redux';
 import NoProfile from '../../../modules/FCONoData/noProfile/NoProfile';
 
 const Favorites = () => {
+  const { products } = useLoaderData();
+  const profile = useSelector((state) => state.profile.id);
 
-    const {products} = useLoaderData();
-    const profile = useSelector(state => state.profile.id);
-    
   return (
     <Pad>
-        <Suspense fallback={<Loader/>}>
-            {profile
-                ?
-                <Await resolve={products}>
-                    {products => 
-                        <>
-                            <FavoritesTitle products={products}/>
-                            <FavoritesGridPlate products={products}/>
-                            <FavoritesNoProduct products={products}/>
-                        </>
-                    }
-                </Await>
-                :
-                <>
-                    <FavoritesTitle products={[]}/>
-                    <NoProfile/>
-                </>
-            }
-        </Suspense>
+      <Suspense fallback={<Loader />}>
+        {profile ? (
+          <Await resolve={products}>
+            {(products) => (
+              <>
+                <FavoritesTitle products={products} />
+                <FavoritesGridPlate products={products} />
+                <FavoritesNoProduct products={products} />
+              </>
+            )}
+          </Await>
+        ) : (
+          <>
+            <FavoritesTitle products={[]} />
+            <NoProfile />
+          </>
+        )}
+      </Suspense>
     </Pad>
-  )
-}
+  );
+};
 
-export default Favorites
+export default Favorites;

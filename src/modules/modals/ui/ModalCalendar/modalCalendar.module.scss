@@ -1,29 +1,29 @@
-.calendarBase{
-    width: 320px;
-    margin-bottom: 20px;
-    @media (max-width: 1024px) {
-        width: 295px;
-    }
+.calendarBase {
+  width: 320px;
+  margin-bottom: 20px;
+  @media (max-width: 1024px) {
+    width: 295px;
+  }
+  @media (max-width: 520px) {
+    width: 240px;
+  }
+  @media (max-height: 820px) {
+    position: absolute;
+    right: 40px;
+    top: 115px;
+    width: 240px;
     @media (max-width: 520px) {
-        width: 240px;
+      right: auto;
     }
-    @media (max-height: 820px) {
-        position: absolute;
-        right: 40px;
-        top: 115px;
-        width: 240px;
-        @media (max-width: 520px) {
-            right: auto;
-        }
-        @media (min-width: 520px) {
-            top: 155px;
-        }
-        @media (min-width: 1024px) {
-            top: 185px;
-        }
+    @media (min-width: 520px) {
+      top: 155px;
     }
+    @media (min-width: 1024px) {
+      top: 185px;
+    }
+  }
 }
 
-.calendarBaseNone{
-    display: none;
+.calendarBaseNone {
+  display: none;
 }

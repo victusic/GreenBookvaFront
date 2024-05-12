@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense } from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 
@@ -9,18 +9,17 @@ import Product0LevelBar from '../../../modules/forSinglePages/group2/product0Lev
 import Product0LevelMobile from '../../../modules/forSinglePages/group2/product0Level/product0LevelMoBile/Product0LevelMobile';
 
 const Product0Level = () => {
-
   return (
     <Pad>
-      <Suspense fallback={<Loader/>}>
-        <Product0LevelMobile/>
+      <Suspense fallback={<Loader />}>
+        <Product0LevelMobile />
         <PagesPlate>
-          <Product0LevelBar/>
-          <Product0LevelPlate/>
+          <Product0LevelBar />
+          <Product0LevelPlate />
         </PagesPlate>
       </Suspense>
     </Pad>
-  )
-}
+  );
+};
 
-export default Product0Level
+export default Product0Level;

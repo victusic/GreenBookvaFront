@@ -1,13 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 import styles from './pagesPlate.module.scss';
 
-const PagesPlate = ({children}) => {
-  return (
-    <div className={styles.pagesPlate}>
-      {children}
-    </div>
-  )
-}
+const PagesPlate = ({ children }) => {
+  return <div className={styles.pagesPlate}>{children}</div>;
+};
 
-export default PagesPlate
+export default PagesPlate;

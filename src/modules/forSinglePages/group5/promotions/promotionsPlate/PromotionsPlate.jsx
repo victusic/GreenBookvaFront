@@ -1,4 +1,4 @@
-import React, { Suspense }  from 'react'
+import React, { Suspense } from 'react';
 
 import styles from './promotionsPlate.module.scss';
 
@@ -8,25 +8,22 @@ import SingleTitle from '../../../../../ui/titles/singleTitle/SingleTitle';
 import PromotionsStockElement from '../promotionsStockElement/PromotionsStockElement';
 
 const PromotionsPlate = () => {
-
-  const {promotions} = useLoaderData();
+  const { promotions } = useLoaderData();
 
   return (
-    <Suspense fallback={<Loader/>}>
-        <SingleTitle>Акции</SingleTitle>
-        <Await resolve={promotions}>
-          {
-            (resolvedPromotions)=>(<div className={styles.stocksBlockPlate}>
-              {
-              resolvedPromotions.map((resolvedPromotion, index)=>
-                <PromotionsStockElement resolvedPromotion={resolvedPromotion} key={index}/>
-            )
-            }
-            </div>)
-          }
-        </Await>
+    <Suspense fallback={<Loader />}>
+      <SingleTitle>Акции</SingleTitle>
+      <Await resolve={promotions}>
+        {(resolvedPromotions) => (
+          <div className={styles.stocksBlockPlate}>
+            {resolvedPromotions.map((resolvedPromotion, index) => (
+              <PromotionsStockElement resolvedPromotion={resolvedPromotion} key={index} />
+            ))}
+          </div>
+        )}
+      </Await>
     </Suspense>
-  )
-}
+  );
+};
 
-export default PromotionsPlate
+export default PromotionsPlate;

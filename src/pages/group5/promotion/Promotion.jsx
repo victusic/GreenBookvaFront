@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 import Loader from '../../../ui/loader/Loader';
@@ -11,15 +11,15 @@ import NavigateArrow from '../../../ui/navigate/navigateArrow/NavigateArrow';
 const Promotion = () => {
   return (
     <Pad>
-      <Suspense fallback={<Loader/>}>
+      <Suspense fallback={<Loader />}>
         <NavigateLine>
-          <NavigateElement route='/promotions' >Акции</NavigateElement>
+          <NavigateElement route="/promotions">Акции</NavigateElement>
         </NavigateLine>
-        
-        <PromotionPlate/>
+
+        <PromotionPlate />
       </Suspense>
     </Pad>
-  )
-}
+  );
+};
 
-export default Promotion
+export default Promotion;

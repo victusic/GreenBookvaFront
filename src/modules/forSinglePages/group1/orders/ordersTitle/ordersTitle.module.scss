@@ -1,24 +1,28 @@
 @import '../../../../../styles/colors';
 @import '../../../../../styles/typography';
 
-.titlePlate{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.titlePlate {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.countOrders{
-    cursor: default;
-    white-space: nowrap;
-    color: $textGrayL3;
-    @extend %text3;
-    margin-top: 8px;
-    margin-left: 40px;
-    @media (max-width: 1024px) {margin-left: 25px;}
-    @media (max-width: 520px) {margin-left: 15px;}
+.countOrders {
+  cursor: default;
+  white-space: nowrap;
+  color: $textGrayL3;
+  @extend %text3;
+  margin-top: 8px;
+  margin-left: 40px;
+  @media (max-width: 1024px) {
+    margin-left: 25px;
+  }
+  @media (max-width: 520px) {
+    margin-left: 15px;
+  }
 }
 
-.margin{
-    margin-top: 6px;
+.margin {
+  margin-top: 6px;
 }

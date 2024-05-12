@@ -1,37 +1,42 @@
 @import '../../../../../styles/colors';
 @import '../../../../../styles/typography';
 
-.titlePlate{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.titlePlate {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.cleanAll{
-    margin-top: 4px;
-    cursor: pointer;
-    white-space: nowrap;
-    color: $textAccent;
+.cleanAll {
+  margin-top: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: $textAccent;
 }
 
-.cleanAll:hover{
-    color: $textDarkL1;
+.cleanAll:hover {
+  color: $textDarkL1;
 }
 
-.cleanAll:active{
-    color: $accentSuper;
+.cleanAll:active {
+  color: $accentSuper;
 }
 
-.countProducts{
-    cursor: default;
-    white-space: nowrap;
-    color: $textGrayL3;
-    @extend %text3;
-    margin-top: 8px;
-    margin-left: 40px;
-    @media (max-width: 1024px) {margin-left: 25px;}
-    @media (max-width: 520px) {margin-left: 15px;}
-    @media (max-width: 360px) {display: none;}
+.countProducts {
+  cursor: default;
+  white-space: nowrap;
+  color: $textGrayL3;
+  @extend %text3;
+  margin-top: 8px;
+  margin-left: 40px;
+  @media (max-width: 1024px) {
+    margin-left: 25px;
+  }
+  @media (max-width: 520px) {
+    margin-left: 15px;
+  }
+  @media (max-width: 360px) {
+    display: none;
+  }
 }
-

@@ -1,18 +1,32 @@
 @import '../../../../../styles/colors';
 
-.sliderBase{
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 400px;
-    margin-right: 0;
-    @media (max-width: 1325px) {height: 305px;}
-    @media (max-width: 1024px) {height: 250px;}
-    @media (max-width: 840px) {height: 225px;}
-    @media (max-width: 520px) {height: 170px;}
-    @media (max-width: 360px) {height: 150px;}
-    @media (max-width: 320px) {height: 145px;}
+.sliderBase {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-right: 0;
+  @media (max-width: 1325px) {
+    height: 305px;
+  }
+  @media (max-width: 1024px) {
+    height: 250px;
+  }
+  @media (max-width: 840px) {
+    height: 225px;
+  }
+  @media (max-width: 520px) {
+    height: 170px;
+  }
+  @media (max-width: 360px) {
+    height: 150px;
+  }
+  @media (max-width: 320px) {
+    height: 145px;
+  }
 
-    @media (max-width: 750px) {width: 100%;}
-    @extend %radius;
+  @media (max-width: 750px) {
+    width: 100%;
+  }
+  @extend %radius;
 }

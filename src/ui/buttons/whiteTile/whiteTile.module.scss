@@ -1,20 +1,20 @@
 @import '../../../styles/colors';
 @import '../../../styles/typography';
 
-.tilePlate{
-    width: 36px;
-    height: 36px;
-    background-color: $backgroundWhite;
-    @extend %shadow;
-    @extend %radius;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $textDarkL1;
-    cursor: pointer;
-    @extend %no-select-text;
-    @media (max-width: 1024px) {
-        width: 28px;
-        height: 28px;
-    }
+.tilePlate {
+  width: 36px;
+  height: 36px;
+  background-color: $backgroundWhite;
+  @extend %shadow;
+  @extend %radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $textDarkL1;
+  cursor: pointer;
+  @extend %no-select-text;
+  @media (max-width: 1024px) {
+    width: 28px;
+    height: 28px;
+  }
 }

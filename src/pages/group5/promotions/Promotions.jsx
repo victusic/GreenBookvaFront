@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Pad from '../../../ui/pad/Pad';
 import PromotionsPlate from '../../../modules/forSinglePages/group5/promotions/promotionsPlate/PromotionsPlate';
@@ -6,9 +6,9 @@ import PromotionsPlate from '../../../modules/forSinglePages/group5/promotions/p
 const Promotions = () => {
   return (
     <Pad>
-      <PromotionsPlate/>
+      <PromotionsPlate />
     </Pad>
-  )
-}
+  );
+};
 
-export default Promotions
+export default Promotions;
