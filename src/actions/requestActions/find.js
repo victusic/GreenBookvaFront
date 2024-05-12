@@ -12,7 +12,7 @@ export const getFindProductsList = async (
   minPrice,
   maxPrice,
 ) => {
-  const url = new URL('https://db.green-bookva.shop/find');
+  const url = new URL('https://db.greenbookva.shop/find');
   const params = {
     findstring: findString,
     limit: limit,
@@ -94,7 +94,7 @@ export const getFindCountProductsList = async (
   minPrice,
   maxPrice,
 ) => {
-  const url = new URL('https://db.green-bookva.shop/find/info');
+  const url = new URL('https://db.greenbookva.shop/find/info');
 
   const params = {
     findstring: findString,
@@ -153,7 +153,7 @@ export const getFindCountProductsList = async (
 };
 
 export const getFindInfoProductsList = async (findString, isStock, bindings, minPrice, maxPrice) => {
-  const url = new URL('https://db.green-bookva.shop/find/info');
+  const url = new URL('https://db.greenbookva.shop/find/info');
   const params = {
     findstring: findString,
     min_price: minPrice,

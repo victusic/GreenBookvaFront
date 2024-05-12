@@ -6,7 +6,7 @@ export const sendOrder = async (product, account, date, code) => {
     order_code: code,
   };
 
-  const order = await fetch(`https://db.green-bookva.shop/order`, {
+  const order = await fetch(`https://db.greenbookva.shop/order`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ export const sendOrder = async (product, account, date, code) => {
 };
 
 export const newProductCount = async (index) => {
-  const product = await fetch(`https://db.green-bookva.shop/order/product/count/${index}`, {
+  const product = await fetch(`https://db.greenbookva.shop/order/product/count/${index}`, {
     method: 'PATCH',
   });
 

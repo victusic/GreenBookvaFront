@@ -1,9 +1,9 @@
 const defaultState = {
-  avatar: 'https://db.green-bookva.shop/avatar/',
-  product: 'https://db.green-bookva.shop/product/',
-  apm: 'https://db.green-bookva.shop/',
-  banner: 'https://db.green-bookva.shop/banner/',
-  recommendation: 'https://db.green-bookva.shop/recommendations/',
+  avatar: 'https://db.greenbookva.shop/avatar/',
+  product: 'https://db.greenbookva.shop/product/',
+  apm: 'https://db.greenbookva.shop/',
+  banner: 'https://db.greenbookva.shop/banner/',
+  recommendation: 'https://db.greenbookva.shop/recommendations/',
 };
 
 export const imagesRoutesReducer = (state = defaultState) => {

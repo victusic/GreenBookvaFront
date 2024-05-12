@@ -5,7 +5,7 @@ import { loadCategoriesMenu3Action } from '../../store/categoriesReducer';
 
 export const fetchCategoriesCatalog = (type) => {
   return function (dispatchCategories) {
-    fetch('https://db.green-bookva.shop/category?type=' + type)
+    fetch('https://db.greenbookva.shop/category?type=' + type)
       .then((response) => response.json())
       .then((json) => dispatchCategories(loadCategoriesCatalogAction(json)));
   };
@@ -13,7 +13,7 @@ export const fetchCategoriesCatalog = (type) => {
 
 export const fetchCategoriesBottomLine = () => {
   return function (dispatchCategories) {
-    fetch('https://db.green-bookva.shop/category?type=1')
+    fetch('https://db.greenbookva.shop/category?type=1')
       .then((response) => response.json())
       .then((json) => dispatchCategories(loadCategoriesBottomLineAction(json)));
   };
@@ -21,7 +21,7 @@ export const fetchCategoriesBottomLine = () => {
 
 export const fetchCategoriesMenu2 = () => {
   return function (dispatchCategories) {
-    fetch('https://db.green-bookva.shop/category?type=2')
+    fetch('https://db.greenbookva.shop/category?type=2')
       .then((response) => response.json())
       .then((json) => dispatchCategories(loadCategoriesMenu2Action(json)));
   };
@@ -29,7 +29,7 @@ export const fetchCategoriesMenu2 = () => {
 
 export const fetchCategoriesMenu3 = () => {
   return function (dispatchCategories) {
-    fetch('https://db.green-bookva.shop/category?type=3')
+    fetch('https://db.greenbookva.shop/category?type=3')
       .then((response) => response.json())
       .then((json) => dispatchCategories(loadCategoriesMenu3Action(json)));
   };

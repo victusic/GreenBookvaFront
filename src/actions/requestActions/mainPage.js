@@ -1,5 +1,5 @@
 export const getRecommendationBanner = async () => {
-  const banner = await fetch('https://db.green-bookva.shop/recommendation_banner');
+  const banner = await fetch('https://db.greenbookva.shop/recommendation_banner');
 
   if (!banner.ok) {
     throw new Response('', { status: banner.status, statusText: banner.statusText });
@@ -9,7 +9,7 @@ export const getRecommendationBanner = async () => {
 };
 
 export const getPromotionsSlider = async () => {
-  const promotions = await fetch('https://db.green-bookva.shop/promotions_slider');
+  const promotions = await fetch('https://db.greenbookva.shop/promotions_slider');
 
   if (!promotions.ok) {
     throw new Response('', { status: promotions.status, statusText: promotions.statusText });
@@ -19,7 +19,7 @@ export const getPromotionsSlider = async () => {
 };
 
 export const getPromotions = async () => {
-  const promotion = await fetch('https://db.green-bookva.shop/promotions');
+  const promotion = await fetch('https://db.greenbookva.shop/promotions');
 
   if (!promotion.ok) {
     throw new Response('', { status: promotion.status, statusText: promotion.statusText });
@@ -29,7 +29,7 @@ export const getPromotions = async () => {
 };
 
 export const getPromotion = async (index) => {
-  const promotion = await fetch(`https://db.green-bookva.shop/promotions/${index}`);
+  const promotion = await fetch(`https://db.greenbookva.shop/promotions/${index}`);
 
   if (!promotion.ok) {
     throw new Response('', { status: promotion.status, statusText: promotion.statusText });
