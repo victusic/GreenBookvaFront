@@ -56,8 +56,10 @@ const ModalSign = () => {
           <ModalWarning visibleWarning={visibleWarning}>
             Убедитесь, в правильности ввода адреса почты
           </ModalWarning>
+
           <ModalInput
             type="email"
+            name="email"
             placeholder="Адрес почты"
             value={mail}
             onChange={(e) => setMail(e.target.value)}
