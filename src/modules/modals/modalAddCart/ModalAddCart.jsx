@@ -6,7 +6,7 @@ import styles from '../modalNone.module.scss';
 import ModalTitle from '../ui/ModalTitle/ModalTitle';
 import ModalCard from '../ui/ModalCard/ModalCard';
 import ModalWarning from '../ui/ModalWarning/ModalWarning';
-import { fetchAddCard } from '../../../actions/storeActions/profile.js';
+import { fetchAddCard } from '../../../actions/storeActions/profile.ts';
 
 const ModalAddCard = () => {
   const dispathProfile = useDispatch();

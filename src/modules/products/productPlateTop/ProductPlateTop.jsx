@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import Select from '../../../ui/select/Select';
-
 import styles from './productPlateTop.module.scss';
 import { useTextCount } from '../../../hooks/useTextCount';
 import { useSelector } from 'react-redux';
+import { Select } from '../../../ui/select/Select';
 
 const ProductPlateTop = ({ totalCount, setLimit, setSort }) => {
   //параметры количества и сортировки
