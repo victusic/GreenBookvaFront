@@ -1,10 +1,11 @@
 import React from 'react';
-import HorisontalScroll from '../../../../../ui/horisontalScroll/HorisontalScroll';
+
 import ProductCard from '../../../../../ui/productCard/ProductCard';
 
 import styles from './productLineLocal.module.scss';
 import WhiteTile from '../../../../../ui/buttons/whiteTile/WhiteTile';
 import { useState } from 'react';
+import { HorizontalScroll } from '../../../../../ui/horizontalScroll/HorisontalScroll';
 
 const ProductLineLocal = ({ products, children }) => {
   const [scrollWidth, setScrollWidth] = useState(0);
@@ -18,11 +19,11 @@ const ProductLineLocal = ({ products, children }) => {
           <WhiteTile onClick={() => setScrollWidth(274)}>❯</WhiteTile>
         </div>
       </div>
-      <HorisontalScroll setScrollWidth={setScrollWidth} scrollWidth={scrollWidth}>
+      <HorizontalScroll setScrollWidth={setScrollWidth} scrollWidth={scrollWidth}>
         {products.map((product, index) => (
           <ProductCard product={product} addClass={styles.productMargin} key={index} />
         ))}
-      </HorisontalScroll>
+      </HorizontalScroll>
     </div>
   );
 };

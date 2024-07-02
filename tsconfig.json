@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    //"allowJs": true, // Разрешить компиляцию JavaScript файлов - убрать
+    "checkJs": false // Разрешить компиляцию JavaScript файлов - убрать
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "build", "src"]
+}

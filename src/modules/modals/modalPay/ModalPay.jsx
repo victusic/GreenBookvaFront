@@ -6,15 +6,15 @@ import styles from '../modalNone.module.scss';
 import ModalTitle from '../ui/ModalTitle/ModalTitle';
 import ModalDescription from '../ui/ModalDescription/ModalDescription';
 import { fetchAddCard, fetchProfileCardsList } from '../../../actions/storeActions/profile';
-import Select from '../../../ui/select/Select';
 import styleForModal from '../ui/ModalSelectStyle/modalSelectStyle.module.scss';
-import Card from '../../../ui/cards/card/Card';
 import { cleanShoppingCart, getCard, getOrders, patchPoints } from '../../../actions/requestActions/profile';
 import ModalCard from '../ui/ModalCard/ModalCard';
 import Checkbox from '../../../ui/checkbox/Checkbox';
 import ModalButton from '../ui/ModalButton/ModalButton';
 import { newProductCount, sendOrder } from '../../../actions/requestActions/order';
 import ModalWarning from '../ui/ModalWarning/ModalWarning';
+import { Card } from '../../../ui/cards/card/Card';
+import { Select } from '../../../ui/select/Select';
 
 const ModalPay = () => {
   const visible = useSelector((state) => state.modalVisible.modalPayVisible);

@@ -2,8 +2,6 @@ import React from 'react';
 
 import styles from './profileCardsLine.module.scss';
 
-import HorisontalScroll from '../../../../../ui/horisontalScroll/HorisontalScroll';
-import Card from '../../../../../ui/cards/card/Card';
 import AddCard from '../../../../../ui/cards/addCard/AddCard';
 
 import Cookies from 'js-cookie';
@@ -15,6 +13,8 @@ import {
   refreshModalViewCartAction,
 } from '../../../../../store/modalVisibleReducer';
 import { refreshProfileCardAction } from '../../../../../store/profileReducer';
+import { Card } from '../../../../../ui/cards/card/Card';
+import { HorizontalScroll } from '../../../../../ui/horizontalScroll/HorisontalScroll';
 
 const ProfileCardsLine = () => {
   const dispathModalVisible = useDispatch();
@@ -45,7 +45,7 @@ const ProfileCardsLine = () => {
     <>
       <h3 className={styles.cardTitle}>Сохранённые карты:</h3>
 
-      <HorisontalScroll>
+      <HorizontalScroll>
         {cards.map((card) => (
           <Card
             number={card.code}
@@ -53,10 +53,10 @@ const ProfileCardsLine = () => {
             margin={true}
             key={card.id}
             onClick={() => getCard(card.id)}
-          ></Card>
+          />
         ))}
         <AddCard onClick={addCard} />
-      </HorisontalScroll>
+      </HorizontalScroll>
     </>
   );
 };

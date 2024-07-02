@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useTextCount } from '../../../../../hooks/useTextCount';
-import Select from '../../../../../ui/select/Select';
+import { Select } from '../../../../../ui/select/Select';
 
 const OrdersTitle = ({ orders, setTypeSort }) => {
   const countOrders = useSelector((state) => state.profile.orders);

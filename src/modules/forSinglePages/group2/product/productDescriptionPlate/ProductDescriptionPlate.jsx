@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import styles from './productDescriptionPlate.module.scss';
-import ProductDescriptionLine from '../../../../../ui/productDescriptionLine/ProductDescriptionLine';
+import ProductDescriptionLine from '../../../../../ui/productDescriptionLine/ProductDescriptionLine.tsx';
 import { Link, useLocation } from 'react-router-dom';
 import StarsPlate from '../../../../../ui/starsPlate/StarsPlate';
 import SalesLederBadge from '../../../../../ui/badges/salesLederBadge/SalesLederBadge';
