@@ -11,16 +11,17 @@ import { useSelector } from 'react-redux';
 import ProductFindMobile from '../../modules/forSinglePages/group2/productFind/productFindMoBile/ProductFindMobile';
 import ProductFindPlate from '../../modules/forSinglePages/group2/productFind/productFindPlate/ProductFindPlate';
 import ProductPlateTop from '../../modules/products/productPlateTop/ProductPlateTop';
+import { RootState } from '../../store';
 
 const ProductFindTemplate: React.FC = () => {
-  const isStock = useSelector((state) => state.filter.isStock);
-  const changeBindings = useSelector((state) => state.filter.changeBindings);
-  const changeBadges = useSelector((state) => state.filter.changeBadges);
-  const changeAutors = useSelector((state) => state.filter.changeAutors);
-  const changePublishers = useSelector((state) => state.filter.changePublishers);
-  const changeManufacturers = useSelector((state) => state.filter.changeManufacturers);
-  const changeMinPrice = useSelector((state) => state.filter.changeMinPrice);
-  const changeMaxPrice = useSelector((state) => state.filter.changeMaxPrice);
+  const isStock = useSelector((state: RootState) => state.filter.isStock);
+  const changeBindings = useSelector((state: RootState) => state.filter.changeBindings);
+  const changeBadges = useSelector((state: RootState) => state.filter.changeBadges);
+  const changeAuthors = useSelector((state: RootState) => state.filter.changeAuthors);
+  const changePublishers = useSelector((state: RootState) => state.filter.changePublishers);
+  const changeManufacturers = useSelector((state: RootState) => state.filter.changeManufacturers);
+  const changeMinPrice = useSelector((state: RootState) => state.filter.changeMinPrice);
+  const changeMaxPrice = useSelector((state: RootState) => state.filter.changeMaxPrice);
 
   const [limit, setLimit] = useState(12);
   const [sort, setSort] = useState(0);
@@ -35,7 +36,7 @@ const ProductFindTemplate: React.FC = () => {
     isStock,
     changeBindings,
     changeBadges,
-    changeAutors,
+    changeAuthors,
     changePublishers,
     changeManufacturers,
     changeMinPrice,
@@ -45,7 +46,12 @@ const ProductFindTemplate: React.FC = () => {
   return (
     <div className={styles.mainPlate}>
       <h2 className={styles.MobileTitle}>Поиск</h2>
-      <ProductPlateTop totalCount={totalCount} limit={limit} setLimit={setLimit} setSort={setSort} />
+      <ProductPlateTop
+        totalCount={totalCount}
+        // limit={limit}
+        setLimit={setLimit}
+        setSort={setSort}
+      />
       <ProductFindMobile />
       <ProductFindPlate setTotalCount={setTotalCount} limit={limit} currentPage={currentPage} sort={sort} />
       <ProductPagesNavigate

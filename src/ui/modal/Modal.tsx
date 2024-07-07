@@ -8,6 +8,7 @@ import styles from './modal.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { refreshModalVisibleAction } from '../../store/modalVisibleReducer';
 import { useEffect } from 'react';
+import { RootState } from '../../store';
 
 interface ModalProps {
   children: ReactNode;
@@ -43,7 +44,7 @@ const Modal: React.FC<ModalProps> = ({ children }) => {
     };
   }, [sizeRef]);
 
-  const modalVisible = useSelector((state) => state.modalVisible.modalVisible);
+  const modalVisible = useSelector((state: RootState) => state.modalVisible.modalVisible);
 
   //высота окна
   useEffect(() => {
@@ -81,9 +82,9 @@ const Modal: React.FC<ModalProps> = ({ children }) => {
   }, [modalVisible]);
 
   return (
-    <div className={styles.fog} onClick={() => dispatchCategories(refreshModalVisibleAction(false))}>
+    <div className={styles.fog} onClick={() => dispatchCategories(refreshModalVisibleAction(/*false */))}>
       <div className={styles.base + ' ' + scrollStyle} onClick={(e) => e.stopPropagation()} ref={sizeRef}>
-        <div onClick={() => dispatchCategories(refreshModalVisibleAction(false))}>
+        <div onClick={() => dispatchCategories(refreshModalVisibleAction(/*false */))}>
           <HandySvg src={CloseSvg} className={styles.close + ' ' + styles.closeColor} />
         </div>
 

@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 
 interface NavigateElementProps {
   children: ReactNode;
-  route: string;
+  route?: string;
 }
 
 const NavigateElement: React.FC<NavigateElementProps> = ({ children, route }) => {
   return (
-    <Link className={styles.textElement} to={route}>
+    <Link className={styles.textElement} to={route || ''}>
       {children}
     </Link>
   );

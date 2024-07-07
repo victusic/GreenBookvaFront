@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
 
 import styles from './countInput.module.scss';
 
-const CountInput: React.FC = ({ ...props }) => {
+const CountInput: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({ ...props }) => {
   return <input {...props} className={styles.base} />;
 };
 

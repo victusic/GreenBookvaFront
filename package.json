@@ -6,6 +6,8 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/react-calendar": "^4.1.0",
+    "@types/react-color": "^3.0.12",
     "axios": "^1.4.0",
     "binking": "^1.0.3",
     "handy-svg": "^1.0.8",

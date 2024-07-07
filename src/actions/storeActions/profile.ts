@@ -113,11 +113,11 @@ export const fetchDeleteCard = (id) => {
   };
 };
 
-export const fetchAddCard = (id, number, date, account_id) => {
+export const fetchAddCard = (id: string, number: string, date: string, accountId: string) => {
   const requestData = {
     code: number,
-    monthyear: date,
-    account_id: account_id,
+    monthYear: date,
+    accountId: accountId,
   };
 
   return function () {

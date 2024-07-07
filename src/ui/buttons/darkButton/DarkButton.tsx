@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
+import React, { ButtonHTMLAttributes, ReactNode } from 'react';
 import styles from './darkButton.module.scss';
 
-interface DarkButtonProps {
+interface DarkButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 

@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
+import React, { ButtonHTMLAttributes, ReactNode } from 'react';
 import styles from './highPaddingButton.module.scss';
 
-interface HighPaddingButtonProps {
+interface HighPaddingButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 

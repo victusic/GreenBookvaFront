@@ -9,10 +9,12 @@ import FavoritesTitle from '../../../modules/forSinglePages/group1/favorites/fav
 import FavoritesNoProduct from '../../../modules/forSinglePages/group1/favorites/favoritesNoProduct/FavoritesNoProduct';
 import { useSelector } from 'react-redux';
 import NoProfile from '../../../modules/FCONoData/noProfile/NoProfile';
+import { RootState } from '../../../store';
+import { Product } from '../../../utils/types';
 
 const Favorites: React.FC = () => {
-  const { products } = useLoaderData();
-  const profile = useSelector((state) => state.profile.id);
+  const products: Product[] = useLoaderData() as Product[];
+  const profile = useSelector((state: RootState) => state.profile.id);
 
   return (
     <Pad>

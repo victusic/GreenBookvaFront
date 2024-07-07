@@ -22,22 +22,22 @@ import {
   info2LevelPage,
   productPage,
   productImages,
-} from '../actions/pageAcrions/group2';
-import { promotionPage, promotionsPage } from '../actions/pageAcrions/group5';
+} from '../actions/pageActions/group2';
+import { promotionPage, promotionsPage } from '../actions/pageActions/group5.ts';
 import Promotion from '../pages/group5/promotion/Promotion';
 import Product1Level from '../pages/group2/product1Level/Product1Level';
 import Product2Level from '../pages/group2/product2Level/Product2Level';
 import ProductFind from '../pages/group2/productFind/ProductFind';
-import Autor from '../pages/group3/autor/Autor';
-import { authorPage, manufacturerPage, publisherPage } from '../actions/pageAcrions/group3';
+import { authorPage, manufacturerPage, publisherPage } from '../actions/pageActions/group3.ts';
 import Manufacturer from '../pages/group3/manufacturer/Manufacturer';
 import Publisher from '../pages/group3/publisher/Publisher';
 import Favorites from '../pages/group1/favorites/Favorites';
-import { cartPage, favoritesPage, ordersPage } from '../actions/pageAcrions/group1';
+import { cartPage, favoritesPage, ordersPage } from '../actions/pageActions/group1.ts';
 import Orders from '../pages/group1/orders/Orders';
 import Cart from '../pages/group1/cart/Cart';
 import Product from '../pages/group2/product/Product';
 import ProductImages from '../pages/group6/productImages/ProductImages';
+import Author from '../pages/group3/author/Author.tsx';
 
 const Routes: React.FC = () => {
   const router = createBrowserRouter(
@@ -72,7 +72,7 @@ const Routes: React.FC = () => {
           <Route path="find/:findString" element={<ProductFind />} />
           <Route path="product/:id" element={<Product />} loader={productPage} errorElement={<Error />} />
 
-          <Route path="author/:id" element={<Autor />} loader={authorPage} errorElement={<Error />} />
+          <Route path="author/:id" element={<Author />} loader={authorPage} errorElement={<Error />} />
           <Route
             path="manufacturer/:id"
             element={<Manufacturer />}

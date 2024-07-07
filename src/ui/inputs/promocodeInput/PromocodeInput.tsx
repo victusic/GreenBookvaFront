@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
 
 import styles from './promocodeInput.module.scss';
 
-const PromocodeInput: React.FC = ({ ...props }) => {
+const PromocodeInput: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({ ...props }) => {
   return <input {...props} className={styles.base} />;
 };
 

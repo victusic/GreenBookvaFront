@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import React, { ButtonHTMLAttributes, ReactNode } from 'react';
 
 import styles from './bigButtonTrue.module.scss';
 
-interface BigButtonTrueProps {
+interface BigButtonTrueProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 

@@ -10,18 +10,20 @@ import { useSelector } from 'react-redux';
 import Product2LevelMobile from '../../modules/forSinglePages/group2/product2Level/product2LevelMoBile/Product2LevelMobile';
 import { Await, useLoaderData } from 'react-router-dom';
 import ProductPlateTop from '../../modules/products/productPlateTop/ProductPlateTop';
+import { RootState } from '../../store';
+import { ProductSubcategoryName } from '../../utils/types';
 
 const Product2LevelTemplate: React.FC = () => {
-  const { subcategoryName } = useLoaderData();
+  const subcategoryName: ProductSubcategoryName[] = useLoaderData() as ProductSubcategoryName[];
 
-  const isStock = useSelector((state) => state.filter.isStock);
-  const changeBindings = useSelector((state) => state.filter.changeBindings);
-  const changeBadges = useSelector((state) => state.filter.changeBadges);
-  const changeAutors = useSelector((state) => state.filter.changeAutors);
-  const changePublishers = useSelector((state) => state.filter.changePublishers);
-  const changeManufacturers = useSelector((state) => state.filter.changeManufacturers);
-  const changeMinPrice = useSelector((state) => state.filter.changeMinPrice);
-  const changeMaxPrice = useSelector((state) => state.filter.changeMaxPrice);
+  const isStock = useSelector((state: RootState) => state.filter.isStock);
+  const changeBindings = useSelector((state: RootState) => state.filter.changeBindings);
+  const changeBadges = useSelector((state: RootState) => state.filter.changeBadges);
+  const changeAuthors = useSelector((state: RootState) => state.filter.changeAuthors);
+  const changePublishers = useSelector((state: RootState) => state.filter.changePublishers);
+  const changeManufacturers = useSelector((state: RootState) => state.filter.changeManufacturers);
+  const changeMinPrice = useSelector((state: RootState) => state.filter.changeMinPrice);
+  const changeMaxPrice = useSelector((state: RootState) => state.filter.changeMaxPrice);
 
   const [limit, setLimit] = useState(12);
   const [sort, setSort] = useState(0);
@@ -36,7 +38,7 @@ const Product2LevelTemplate: React.FC = () => {
     isStock,
     changeBindings,
     changeBadges,
-    changeAutors,
+    changeAuthors,
     changePublishers,
     changeManufacturers,
     changeMinPrice,
@@ -48,7 +50,12 @@ const Product2LevelTemplate: React.FC = () => {
       <Await resolve={subcategoryName}>
         {(subcategoryName) => <h2 className={styles.MobileTitle}>{subcategoryName[0].name}</h2>}
       </Await>
-      <ProductPlateTop totalCount={totalCount} limit={limit} setLimit={setLimit} setSort={setSort} />
+      <ProductPlateTop
+        totalCount={totalCount}
+        // limit={limit}
+        setLimit={setLimit}
+        setSort={setSort}
+      />
       <Product2LevelMobile />
       <ProductPlate
         requestType={'subcategory'}

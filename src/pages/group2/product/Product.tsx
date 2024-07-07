@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { MutableRefObject, useRef } from 'react';
 import Pad from '../../../ui/pad/Pad';
 import { Suspense } from 'react';
 import Loader from '../../../ui/loader/Loader';
@@ -25,7 +25,7 @@ const Product: React.FC = () => {
     product3LineName,
   } = useLoaderData();
 
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<MutableRefObject<HTMLDivElement | null>>(null);
 
   return (
     <Pad>
