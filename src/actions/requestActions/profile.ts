@@ -74,7 +74,7 @@ export const getOrders = async (index: number): Promise<AnyResponse<OrderDTO>> =
   }
 };
 
-export const getOrder = async (index: number, profileId: number): Promise<AnyResponse<OrderProductDTO>> => {
+export const getOrder = async (index: number, profileId: number): Promise<AnyResponse<OrderProductDTO[]>> => {
   try {
     const resp = await fetch(`https://db.greenbookva.shop/order/${index}?profile=${profileId}`);
     return await resp.json();

@@ -1,16 +1,25 @@
-import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import React, { Dispatch, HTMLAttributes, SetStateAction, useEffect, useState } from 'react';
 import styles from './card.module.scss';
 
-interface CardProps {
+interface CardProps extends HTMLAttributes<HTMLDivElement> {
   number: string;
   date: string;
   margin?: boolean;
-  cvv: boolean;
-  cardCVV: string;
-  setCardCVV: Dispatch<SetStateAction<string>>;
+  cvv?: boolean;
+  cardCVV?: string;
+  setCardCVV?: Dispatch<SetStateAction<string>>;
 }
 
-export const Card: React.FC<CardProps> = ({ number, date, margin, cvv, cardCVV, setCardCVV, ...props }) => {
+export const Card: React.FC<CardProps> = ({
+  number,
+  date,
+  margin,
+  cvv,
+  cardCVV,
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  setCardCVV = () => {},
+  ...props
+}) => {
   const [cardMargin, setCardMargin] = useState('');
 
   useEffect(() => {

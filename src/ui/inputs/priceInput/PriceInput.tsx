@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
 import styles from './priceInput.module.scss';
 
-const PriceInput: React.FC = ({ ...props }) => {
+const PriceInput: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({ ...props }) => {
   return <input {...props} className={styles.base} />;
 };
 

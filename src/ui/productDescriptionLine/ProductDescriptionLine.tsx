@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 interface ProductDescriptionLineProps {
   children: ReactNode;
-  value?: string;
-  link: string;
+  value?: string | number;
+  link?: string;
 }
 
 const ProductDescriptionLine: React.FC<ProductDescriptionLineProps> = ({ children, value, link }) => {

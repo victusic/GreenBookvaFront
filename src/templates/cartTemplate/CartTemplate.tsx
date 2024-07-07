@@ -9,11 +9,13 @@ import CartGridPlate from '../../modules/forSinglePages/group1/cart/cartGridPlat
 import CartRightPlate from '../../modules/forSinglePages/group1/cart/cartRightPlate/CartRightPlate';
 import { useState } from 'react';
 import CartNoProduct from '../../modules/forSinglePages/group1/cart/cartNoProduct/CartNoProduct';
+import { RootState } from '../../store';
+import { Product } from '../../utils/types';
 
 const CartTemplate: React.FC = () => {
-  const { products } = useLoaderData();
+  const products: Product[] = useLoaderData() as Product[];
 
-  const profile = useSelector((state) => state.profile.id);
+  const profile = useSelector((state: RootState) => state.profile.id);
 
   const [firstPriceProducts, setFirstPriceProducts] = useState(0);
   const [discountPriceProducts, setDiscountPriceProducts] = useState(0);
@@ -46,7 +48,9 @@ const CartTemplate: React.FC = () => {
         </Await>
       ) : (
         <>
-          <CartTitle products={[]} />
+          <CartTitle
+          // products={[]}
+          />
           <NoProfile />
         </>
       )}

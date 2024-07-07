@@ -8,19 +8,20 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setChangeMaxPriceAction, setChangeMinPriceAction } from '../../store/filterProductsReducer';
+import { RootState } from '../../store';
 
 const FilterPrice: React.FC = () => {
-  const changeMinPrice = useSelector((state) => state.filter.changeMinPrice);
-  const changeMaxPrice = useSelector((state) => state.filter.changeMaxPrice);
+  const changeMinPrice = useSelector((state: RootState) => state.filter.changeMinPrice);
+  const changeMaxPrice = useSelector((state: RootState) => state.filter.changeMaxPrice);
 
   const dispatchFilter = useDispatch();
 
   const [localInputMinPrice, setLocalInputMinPrice] = useState(0);
   const [localInputMaxPrice, setLocalInputMaxPrice] = useState(0);
 
-  const current = useSelector((state) => state.current.currentType);
-  const exchangeKZT = useSelector((state) => state.exchange.KZT);
-  const exchangeRUB = useSelector((state) => state.exchange.RUB);
+  const current = useSelector((state: RootState) => state.current.currentType);
+  const exchangeKZT = useSelector((state: RootState) => state.exchange.KZT);
+  const exchangeRUB = useSelector((state: RootState) => state.exchange.RUB);
 
   useEffect(() => {
     switch (current) {

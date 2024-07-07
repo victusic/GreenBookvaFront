@@ -10,9 +10,12 @@ import SlideApm from '../../../modules/forSinglePages/group3/apm/slideApm/SlideA
 
 import NoPublisher from '../../../assets/img/no-publisher.png';
 import ProductLine from '../../../modules/products/productLine/ProductLine';
+import { Product, Publisher as PublisherType, Slides } from '../../../utils/types';
 
 const Publisher: React.FC = () => {
-  const { publisher, publisherSlides, publisherProducts } = useLoaderData();
+  const publisher: PublisherType = useLoaderData() as PublisherType;
+  const publisherSlides: Slides[] = useLoaderData() as Slides[];
+  const publisherProducts: Product[] = useLoaderData() as Product[];
 
   return (
     <Pad>

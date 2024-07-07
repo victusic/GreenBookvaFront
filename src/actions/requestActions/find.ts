@@ -6,17 +6,17 @@ export const getFindProductsList = async (
   limit: number,
   page: number,
   sort: number,
-  isStock: any,
-  bindings: string[],
+  isStock: boolean,
+  bindings: number[],
   badges: number[],
-  authors: string[],
-  publishers: string[],
-  manufacturers: string[],
+  authors: number[],
+  publishers: number[],
+  manufacturers: number[],
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<ProductDTO[]>> => {
   const url = new URL('https://db.greenbookva.shop/find');
-  const params: { [key: string]: string | number } = {
+  const params: { [key: string]: string | number | boolean } = {
     findString,
     limit,
     page,
@@ -56,19 +56,19 @@ export const getFindProductsList = async (
 
 export const getFindCountProductsList = async (
   findString: string,
-  isStock: any,
-  bindings: string[],
+  isStock: boolean,
+  bindings: number[],
   badges: number[],
-  authors: string[],
-  publishers: string[],
-  manufacturers: string[],
+  authors: number[],
+  publishers: number[],
+  manufacturers: number[],
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<string>> => {
   const url = new URL('https://db.greenbookva.shop/find/info');
 
-  const params: { [key: string]: string | number } = {
-    findstring: findString,
+  const params: { [key: string]: string | number | boolean } = {
+    findString: findString,
     min_price: minPrice,
     max_price: maxPrice,
   };
@@ -103,13 +103,13 @@ export const getFindCountProductsList = async (
 
 export const getFindInfoProductsList = async (
   findString: string,
-  isStock: any,
-  bindings: string[],
+  isStock: boolean,
+  bindings: number[],
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<ProductDTO[]>> => {
   const url = new URL('https://db.greenbookva.shop/find/info');
-  const params: { [key: string]: string | number } = {
+  const params: { [key: string]: string | number | boolean } = {
     findString,
     minPrice,
     maxPrice,

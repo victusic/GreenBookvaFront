@@ -10,9 +10,12 @@ import SlideApm from '../../../modules/forSinglePages/group3/apm/slideApm/SlideA
 
 import NoManufacturer from '../../../assets/img/no-manufacturer.png';
 import ProductLine from '../../../modules/products/productLine/ProductLine';
+import { Manufacturer as ManufacturerType, Product, Slides } from '../../../utils/types';
 
 const Manufacturer: React.FC = () => {
-  const { manufacturer, manufacturerSlides, manufacturerProducts } = useLoaderData();
+  const manufacturer: ManufacturerType = useLoaderData() as ManufacturerType;
+  const manufacturerSlides: Slides[] = useLoaderData() as Slides[];
+  const manufacturerProducts: Product[] = useLoaderData() as Product[];
 
   return (
     <Pad>

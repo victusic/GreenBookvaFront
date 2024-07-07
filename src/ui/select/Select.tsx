@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { SelectHTMLAttributes, useEffect, useState } from 'react';
 
 import styles from './select.module.scss';
 
-interface SelectProps {
-  options: any;
-  addStyle: string;
+interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
+  options: { name: string; value: number | string }[];
+  addStyle?: string;
 }
 
 export const Select: React.FC<SelectProps> = ({ options, addStyle, ...props }) => {

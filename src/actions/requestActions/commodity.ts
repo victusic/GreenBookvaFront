@@ -79,17 +79,17 @@ export const getProductsList = async (
   limit: number,
   page: number,
   sort: number,
-  isStock: any,
-  bindings: string[],
+  isStock: boolean,
+  bindings: number[],
   badges: number[],
-  authors: string[],
-  publishers: string[],
-  manufacturers: string[],
+  authors: number[],
+  publishers: number[],
+  manufacturers: number[],
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<ProductDTO[]>> => {
   const url = new URL('https://db.greenbookva.shop/commodity/list/product');
-  const params: { [key: string]: string | number } = {
+  const params: { [key: string]: string | number | boolean } = {
     limit,
     page,
     minPrice,
@@ -130,18 +130,18 @@ export const getProductsList = async (
 export const getCountProductsList = async (
   requestType: string,
   id: number,
-  isStock: any,
-  bindings: string[],
+  isStock: boolean,
+  bindings: number[],
   badges: number[],
-  authors: string[],
-  publishers: string[],
-  manufacturers: string[],
+  authors: number[],
+  publishers: number[],
+  manufacturers: number[],
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<string>> => {
   const url = new URL('https://db.greenbookva.shop/commodity/info/list/product?');
 
-  const params: { [key: string]: string | number } = {
+  const params: { [key: string]: string | number | boolean } = {
     minPrice,
     maxPrice,
   };
@@ -179,13 +179,13 @@ export const getCountProductsList = async (
 export const getInfoProductsList = async (
   requestType: string,
   id: number,
-  isStock: number,
+  isStock: boolean,
   bindings: number[],
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<ProductDTO[]>> => {
   const url = new URL('https://db.greenbookva.shop/commodity/info/list/product?');
-  const params: { [key: string]: string | number } = {
+  const params: { [key: string]: string | number | boolean } = {
     minPrice,
     maxPrice,
   };

@@ -1,6 +1,7 @@
 import Cookies from 'js-cookie';
 
 import { refreshTokenAction, refreshSignStateAction, refreshProfileAction } from '../../store/signReducer';
+import { AnyAction } from 'redux';
 
 export const fetchSignGetCode = (mail) => {
   return function (dispatchSign) {
@@ -39,7 +40,7 @@ export const fetchSignPostCode = (code, mail, token) => {
           }
         } else {
           //неправильный код
-          dispatchSign(refreshSignStateAction(-5));
+          dispatchSign(refreshSignStateAction(String(-5)) as unknown as AnyAction);
         }
       })
       .catch((error) => {
@@ -65,7 +66,7 @@ export const fetchSignUp = (name, surname, mail) => {
     })
       .then((response) => response.json())
       .then((json) => {
-        dispatchSign(refreshSignStateAction(2));
+        dispatchSign(refreshSignStateAction(String(2)));
         dispatchSign(refreshProfileAction(json.id));
         Cookies.set('profileId', json.id, { expires: 30 });
         Cookies.set('realCheck', true, { expires: 0.2 });
@@ -108,10 +109,10 @@ export const fetchCheckPostCode = (code, mail, token) => {
           dispatchSign(refreshSignStateAction(json.signState));
           Cookies.set('realCheck', true, { expires: 0.2 });
           //закрытие окна
-          dispatchSign(refreshSignStateAction(-4));
+          dispatchSign(refreshSignStateAction(String(-4)));
         } else {
           //неправильный код
-          dispatchSign(refreshSignStateAction(-5));
+          dispatchSign(refreshSignStateAction(String(-5)));
         }
       })
       .catch((error) => {

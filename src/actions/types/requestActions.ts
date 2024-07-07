@@ -5,9 +5,14 @@ export interface ProductDTO {
   name: string;
   typeId: number;
   authorId?: number;
+  authorName?: string;
+  authorSurname?: string;
   publisherId?: number;
+  publisher?: string;
   manufacturerId?: number;
+  manufacturer?: string;
   bindingId?: number;
+  binding?: string;
   numberOfPages?: number;
   yearOfPublication?: number;
   circulation?: number;
@@ -16,7 +21,7 @@ export interface ProductDTO {
   weight: number;
   ageRestrictionsId?: number;
   price: string;
-  discountId?: number;
+  discount?: number;
   promotionId?: number;
   badgeSalesLeader: boolean;
   badgeDiscount: boolean;
@@ -25,6 +30,7 @@ export interface ProductDTO {
   subcategoryId: number;
   image: string;
   count: number;
+  review?: string;
 }
 
 export interface ReviewDTO {

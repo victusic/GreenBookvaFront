@@ -5,28 +5,34 @@ import StarsPlate from '../starsPlate/StarsPlate';
 import { useDispatch, useSelector } from 'react-redux';
 import { refreshModalUpdateReviewAction } from '../../store/modalVisibleReducer';
 import { refreshNowReviewAction } from '../../store/profileReducer';
+import { RootState } from '../../store';
+import { Review } from '../../utils/types';
 
-const ProductReview: React.FC = ({ review }) => {
-  const profileId = useSelector((state) => state.profile.id);
+interface ProductReviewProps {
+  review: Review;
+}
+
+const ProductReview: React.FC<ProductReviewProps> = ({ review }) => {
+  const profileId = useSelector((state: RootState) => state.profile.id);
 
   const dispatchModalVisible = useDispatch();
   const dispatchProfile = useDispatch();
 
   function updateReview() {
-    if (review.account_id === profileId) {
+    if (review.accountId === Number(profileId)) {
       dispatchModalVisible(refreshModalUpdateReviewAction(true));
-      dispatchProfile(refreshNowReviewAction(review.id));
+      dispatchProfile(refreshNowReviewAction(String(review.id)));
     }
   }
 
   return (
     <div
-      className={review.account_id === profileId ? styles.reviewMyPlate : styles.reviewPlate}
+      className={review.accountId === Number(profileId) ? styles.reviewMyPlate : styles.reviewPlate}
       onClick={updateReview}
     >
-      <h6 className={styles.reviewName}>{review.user_name}</h6>
+      <h6 className={styles.reviewName}>{review.userName}</h6>
       <h5 className={styles.reviewHeader}>{review.header}</h5>
-      <p className={styles.reviewText}>{review.review_text}</p>
+      <p className={styles.reviewText}>{review.reviewText}</p>
       <StarsPlate rate={review.evaluation} />
     </div>
   );

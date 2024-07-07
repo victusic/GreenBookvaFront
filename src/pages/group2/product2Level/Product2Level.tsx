@@ -12,9 +12,11 @@ import NavigateElement from '../../../ui/navigate/navigateElement/NavigateElemen
 import { Await, useLoaderData } from 'react-router-dom';
 import Product2LevelTemplate from '../../../templates/product2LevelTemplate/Product2LevelTemplate';
 import NavigateArrow from '../../../ui/navigate/navigateArrow/NavigateArrow';
+import { ProductCategory, ProductType } from '../../../utils/types';
 
 const Product2Level: React.FC = () => {
-  const { type, category } = useLoaderData();
+  const type: ProductType[] = useLoaderData() as ProductType[];
+  const category: ProductCategory[] = useLoaderData() as ProductCategory[];
 
   return (
     <Pad>

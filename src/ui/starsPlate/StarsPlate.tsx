@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 
 import styles from './starsPlate.module.scss';
 
-interface StarsPlateProps {
+interface StarsPlateProps extends HTMLAttributes<HTMLDivElement> {
   rate: number;
 }
 

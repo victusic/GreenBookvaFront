@@ -1,16 +1,23 @@
-import React, { ReactNode } from 'react';
+import React, { ButtonHTMLAttributes, ReactNode } from 'react';
 
 import styles from './mobileProductButton.module.scss';
 
-interface MobileProductButtonProps {
+interface MobileProductButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  type: string;
+  typeButton: string;
+  widthButton?: number;
 }
 
-const MobileProductButton: React.FC<MobileProductButtonProps> = ({ children, type, ...props }) => {
+const MobileProductButton: React.FC<MobileProductButtonProps> = ({
+  children,
+  typeButton,
+  widthButton,
+  ...props
+}) => {
   return (
     <button
-      className={styles.mobileButton + ' ' + (type === 'small' ? styles.buttonSmall : styles.buttonBig)}
+      className={styles.mobileButton + ' ' + (typeButton === 'small' ? styles.buttonSmall : styles.buttonBig)}
+      style={{ width: String(widthButton) }}
       {...props}
     >
       {children}
