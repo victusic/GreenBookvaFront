@@ -8,6 +8,7 @@
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended"
   ],
   "parserOptions": {
@@ -15,10 +16,11 @@
     "sourceType": "module",
     "parser": "@babel/eslint-parser"
   },
-  "plugins": ["import", "react", "prettier"],
+  "plugins": ["import", "react", "prettier", "@typescript-eslint"],
   "rules": {
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "react/prop-types": "off",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "react-hooks/exhaustive-deps": "off"
   }
 }
