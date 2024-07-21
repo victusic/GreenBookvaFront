@@ -4,4 +4,5 @@ export interface ExternalLinksState {
   linkedIn: string;
   synopsis: string;
   passphrase: string;
+  api: string;
 }

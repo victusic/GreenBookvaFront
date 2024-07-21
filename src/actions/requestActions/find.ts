@@ -1,5 +1,7 @@
+import { useSelector } from 'react-redux';
 import { ProductDTO } from '../types/requestActions';
 import { AnyResponse } from '../types/types';
+import { RootState } from '../../store';
 
 export const getFindProductsList = async (
   findString: string,
@@ -15,7 +17,8 @@ export const getFindProductsList = async (
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<ProductDTO[]>> => {
-  const url = new URL('https://db.greenbookva.shop/find');
+  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+  const url = new URL(`${apiUrl}find`);
   const params: { [key: string]: string | number | boolean } = {
     findString,
     limit,
@@ -65,7 +68,8 @@ export const getFindCountProductsList = async (
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<string>> => {
-  const url = new URL('https://db.greenbookva.shop/find/info');
+  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+  const url = new URL(`${apiUrl}find/info`);
 
   const params: { [key: string]: string | number | boolean } = {
     findString: findString,
@@ -108,7 +112,8 @@ export const getFindInfoProductsList = async (
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<ProductDTO[]>> => {
-  const url = new URL('https://db.greenbookva.shop/find/info');
+  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+  const url = new URL(`${apiUrl}find/info`);
   const params: { [key: string]: string | number | boolean } = {
     findString,
     minPrice,
