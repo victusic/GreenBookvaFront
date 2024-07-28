@@ -1,9 +1,9 @@
 import { ProductDTO, ProductImageDTO, ProductImageListDTO, ReviewDTO } from '../types/requestActions';
-import { AnyResponse } from '../types/types';
+import { AnyResponse, apiUrl } from '../types/types';
 
 export const getProductsNew = async (): Promise<AnyResponse<ProductDTO[]>> => {
   try {
-    const resp = await fetch('https://db.greenbookva.shop/commodity/product/new');
+    const resp = await fetch(`${apiUrl}commodity/product/new`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -12,7 +12,7 @@ export const getProductsNew = async (): Promise<AnyResponse<ProductDTO[]>> => {
 
 export const getProductsBestsellers = async (): Promise<AnyResponse<ProductDTO[]>> => {
   try {
-    const resp = await fetch('https://db.greenbookva.shop/commodity/product/bestseller');
+    const resp = await fetch(`${apiUrl}commodity/product/bestseller`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -21,7 +21,7 @@ export const getProductsBestsellers = async (): Promise<AnyResponse<ProductDTO[]
 
 export const getProductsBest = async (): Promise<AnyResponse<ProductDTO[]>> => {
   try {
-    const resp = await fetch('https://db.greenbookva.shop/commodity/product/best');
+    const resp = await fetch(`${apiUrl}commodity/product/best`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -30,7 +30,7 @@ export const getProductsBest = async (): Promise<AnyResponse<ProductDTO[]>> => {
 
 export const getProductsByCategory = async (index): Promise<AnyResponse<ProductDTO[]>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/commodity/product?category=${index}`);
+    const resp = await fetch(`${apiUrl}commodity/product?category=${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -39,7 +39,7 @@ export const getProductsByCategory = async (index): Promise<AnyResponse<ProductD
 
 export const getProductsBySubcategory = async (index: number): Promise<AnyResponse<ProductDTO[]>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/commodity/product?subcategory=${index}`);
+    const resp = await fetch(`${apiUrl}commodity/product?subcategory=${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -48,7 +48,7 @@ export const getProductsBySubcategory = async (index: number): Promise<AnyRespon
 
 export const getProductsByType = async (index: number): Promise<AnyResponse<ProductDTO[]>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/commodity/product/types?type=${index}`);
+    const resp = await fetch(`${apiUrl}commodity/product/types?type=${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -57,7 +57,7 @@ export const getProductsByType = async (index: number): Promise<AnyResponse<Prod
 
 export const getProductsByPromotion = async (index: number): Promise<AnyResponse<ProductDTO[]>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/commodity/product?promotion=${index}`);
+    const resp = await fetch(`${apiUrl}commodity/product?promotion=${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -66,7 +66,7 @@ export const getProductsByPromotion = async (index: number): Promise<AnyResponse
 
 export const getProductsNoPromotion = async (index: number): Promise<AnyResponse<ProductDTO[]>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/commodity/product?no_promotion=${index}`);
+    const resp = await fetch(`${apiUrl}commodity/product?no_promotion=${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -88,7 +88,7 @@ export const getProductsList = async (
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<ProductDTO[]>> => {
-  const url = new URL('https://db.greenbookva.shop/commodity/list/product');
+  const url = new URL(`${apiUrl}commodity/list/product`);
   const params: { [key: string]: string | number | boolean } = {
     limit,
     page,
@@ -139,7 +139,7 @@ export const getCountProductsList = async (
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<string>> => {
-  const url = new URL('https://db.greenbookva.shop/commodity/info/list/product?');
+  const url = new URL(`${apiUrl}commodity/info/list/product?`);
 
   const params: { [key: string]: string | number | boolean } = {
     minPrice,
@@ -184,7 +184,7 @@ export const getInfoProductsList = async (
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<ProductDTO[]>> => {
-  const url = new URL('https://db.greenbookva.shop/commodity/info/list/product?');
+  const url = new URL(`${apiUrl}commodity/info/list/product?`);
   const params: { [key: string]: string | number | boolean } = {
     minPrice,
     maxPrice,
@@ -211,7 +211,7 @@ export const getInfoProductsList = async (
 
 export const getProductsByAuthor = async (index: number): Promise<AnyResponse<ProductDTO[]>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/commodity/product?author=${index}`);
+    const resp = await fetch(`${apiUrl}commodity/product?author=${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -220,7 +220,7 @@ export const getProductsByAuthor = async (index: number): Promise<AnyResponse<Pr
 
 export const getProductsByManufacturer = async (index: number): Promise<AnyResponse<ProductDTO[]>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/commodity/product?manufacturer=${index}`);
+    const resp = await fetch(`${apiUrl}commodity/product?manufacturer=${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -229,7 +229,7 @@ export const getProductsByManufacturer = async (index: number): Promise<AnyRespo
 
 export const getProductsByPublisher = async (index: number): Promise<AnyResponse<ProductDTO[]>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/commodity/product?publisher=${index}`);
+    const resp = await fetch(`${apiUrl}commodity/product?publisher=${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -238,7 +238,7 @@ export const getProductsByPublisher = async (index: number): Promise<AnyResponse
 
 export const getProductOne = async (index: number): Promise<AnyResponse<ProductDTO>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/commodity/one/product/${index}`);
+    const resp = await fetch(`${apiUrl}commodity/one/product/${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -247,7 +247,7 @@ export const getProductOne = async (index: number): Promise<AnyResponse<ProductD
 
 export const getProductOneImages = async (index: number): Promise<AnyResponse<ProductImageDTO>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/commodity/one/product/${index}/images`);
+    const resp = await fetch(`${apiUrl}commodity/one/product/${index}/images`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -256,7 +256,7 @@ export const getProductOneImages = async (index: number): Promise<AnyResponse<Pr
 
 export const getProductOneImagesList = async (index: number): Promise<AnyResponse<ProductImageListDTO>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/commodity/one/product/${index}/images/list`);
+    const resp = await fetch(`${apiUrl}commodity/one/product/${index}/images/list`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -265,7 +265,7 @@ export const getProductOneImagesList = async (index: number): Promise<AnyRespons
 
 export const getProductOneReviews = async (index: number): Promise<AnyResponse<ReviewDTO>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/commodity/one/product/${index}/reviews`);
+    const resp = await fetch(`${apiUrl}commodity/one/product/${index}/reviews`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };

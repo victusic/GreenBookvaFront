@@ -1,9 +1,9 @@
 import { ReviewDTO } from '../types/requestActions';
-import { AnyResponse } from '../types/types';
+import { AnyResponse, apiUrl } from '../types/types';
 
 export const getReview = async (index: number): Promise<AnyResponse<ReviewDTO>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/review/${index}`);
+    const resp = await fetch(`${apiUrl}review/${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -26,7 +26,7 @@ export const addReview = async (
   };
 
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/review `, {
+    const resp = await fetch(`${apiUrl}review `, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ export const updateReview = async (
   };
 
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/review/${id}`, {
+    const resp = await fetch(`${apiUrl}review/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ export const updateReview = async (
 
 export const delReview = async (index: number): Promise<AnyResponse<unknown>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/review/${index}`, { method: 'DELETE' });
+    const resp = await fetch(`${apiUrl}review/${index}`, { method: 'DELETE' });
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };

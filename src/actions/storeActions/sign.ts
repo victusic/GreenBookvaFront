@@ -2,10 +2,11 @@ import Cookies from 'js-cookie';
 
 import { refreshTokenAction, refreshSignStateAction, refreshProfileAction } from '../../store/signReducer';
 import { AnyAction } from 'redux';
+import { apiUrl } from '../types/types';
 
 export const fetchSignGetCode = (mail) => {
   return function (dispatchSign) {
-    fetch('https://db.greenbookva.shop/sign?mail=' + mail)
+    fetch(`${apiUrl}sign?mail=` + mail)
       .then((response) => response.json())
       .then((json) => dispatchSign(refreshTokenAction(json.token)))
       .catch((error) => {
@@ -22,7 +23,7 @@ export const fetchSignPostCode = (code, mail, token) => {
       mail: mail,
     };
 
-    fetch('https://db.greenbookva.shop/sign', {
+    fetch(`${apiUrl}sign`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -57,7 +58,7 @@ export const fetchSignUp = (name, surname, mail) => {
       mail: mail,
     };
 
-    fetch('https://db.greenbookva.shop/signUp', {
+    fetch(`${apiUrl}signUp`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -79,7 +80,7 @@ export const fetchSignUp = (name, surname, mail) => {
 
 export const fetchCheckGetCode = (id) => {
   return function (dispatchSign) {
-    fetch('https://db.greenbookva.shop/check/' + id)
+    fetch(`${apiUrl}check/` + id)
       .then((response) => response.json())
       .then((json) => dispatchSign(refreshTokenAction(json.token)))
       .catch((error) => {
@@ -96,7 +97,7 @@ export const fetchCheckPostCode = (code, mail, token) => {
       mail: mail,
     };
 
-    fetch('https://db.greenbookva.shop/check', {
+    fetch(`${apiUrl}check`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
