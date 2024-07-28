@@ -1,15 +1,12 @@
-import { useSelector } from 'react-redux';
 import {
   FullPromotionDTO,
   PromotionSlideDTO,
   RecommendationBannerDTO,
   ShortPromotionDTO,
 } from '../types/requestActions';
-import { AnyResponse } from '../types/types';
-import { RootState } from '../../store';
+import { AnyResponse, apiUrl } from '../types/types';
 
 export const getRecommendationBanner = async (): Promise<AnyResponse<RecommendationBannerDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   try {
     const resp = await fetch(`${apiUrl}recommendation_banner`);
     return await resp.json();
@@ -19,7 +16,6 @@ export const getRecommendationBanner = async (): Promise<AnyResponse<Recommendat
 };
 
 export const getPromotionsSlider = async (): Promise<AnyResponse<PromotionSlideDTO[]>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   try {
     const resp = await fetch(`${apiUrl}promotions_slider`);
     return await resp.json();
@@ -29,7 +25,6 @@ export const getPromotionsSlider = async (): Promise<AnyResponse<PromotionSlideD
 };
 
 export const getPromotions = async (): Promise<AnyResponse<ShortPromotionDTO[]>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   try {
     const resp = await fetch(`${apiUrl}promotions`);
     return await resp.json();
@@ -39,7 +34,6 @@ export const getPromotions = async (): Promise<AnyResponse<ShortPromotionDTO[]>>
 };
 
 export const getPromotion = async (index): Promise<AnyResponse<FullPromotionDTO[]>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   try {
     const resp = await fetch(`${apiUrl}promotions/${index}`);
     return await resp.json();

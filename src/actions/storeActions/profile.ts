@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import { refreshModalVisibleAction } from '../../store/modalVisibleReducer';
 import {
   refreshProfileBaseAction,
@@ -9,10 +8,9 @@ import {
   refreshProfileCardsListAction,
   refreshProfileRequestAction,
 } from '../../store/profileReducer';
-import { RootState } from '../../store';
+import { apiUrl } from '../types/types';
 
 export const fetchProfileBase = (id) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function (dispatchProfile) {
     fetch(`${apiUrl}profile/` + id)
       .then((response) => response.json())
@@ -21,7 +19,6 @@ export const fetchProfileBase = (id) => {
 };
 
 export const fetchProfileFavorites = (id) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function (dispatchProfile) {
     fetch(`${apiUrl}favorites/` + id + '/count')
       .then((response) => response.json())
@@ -30,7 +27,6 @@ export const fetchProfileFavorites = (id) => {
 };
 
 export const fetchProfileShoppingCart = (id) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function (dispatchProfile) {
     fetch(`${apiUrl}shopping_cart/` + id + '/count')
       .then((response) => response.json())
@@ -39,7 +35,6 @@ export const fetchProfileShoppingCart = (id) => {
 };
 
 export const fetchProfileFavoritesList = (id) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function (dispatchProfile) {
     fetch(`${apiUrl}favorites/` + id + '/check')
       .then((response) => response.json())
@@ -48,7 +43,6 @@ export const fetchProfileFavoritesList = (id) => {
 };
 
 export const fetchProfileShoppingCartList = (id) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function (dispatchProfile) {
     fetch(`${apiUrl}shopping_cart/` + id + '/check')
       .then((response) => response.json())
@@ -57,7 +51,6 @@ export const fetchProfileShoppingCartList = (id) => {
 };
 
 export const fetchProfileCardsList = (id) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function (dispatchProfile) {
     fetch(`${apiUrl}profile/` + id + '/cards')
       .then((response) => response.json())
@@ -66,7 +59,6 @@ export const fetchProfileCardsList = (id) => {
 };
 
 export const fetchRefreshProfile = (id, name, surname, color, image, birthday) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function (dispatch) {
     const requestData = {
       name: name,
@@ -90,16 +82,12 @@ export const fetchRefreshProfile = (id, name, surname, color, image, birthday) =
 };
 
 export const fetchDeleteProfile = (id) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function () {
-    fetch(`${apiUrl}profile/` + id, { method: 'DELETE' }).then(() =>
-      window.location.reload(),
-    );
+    fetch(`${apiUrl}profile/` + id, { method: 'DELETE' }).then(() => window.location.reload());
   };
 };
 
 export const fetchUpdateCard = (id, number, date) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   const requestData = {
     code: number,
     monthyear: date,
@@ -117,16 +105,12 @@ export const fetchUpdateCard = (id, number, date) => {
 };
 
 export const fetchDeleteCard = (id) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function () {
-    fetch(`${apiUrl}card/` + id, { method: 'DELETE' }).then(() =>
-      window.location.reload(),
-    );
+    fetch(`${apiUrl}card/` + id, { method: 'DELETE' }).then(() => window.location.reload());
   };
 };
 
 export const fetchAddCard = (id: string, number: string, date: string, accountId: string) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   const requestData = {
     code: number,
     monthYear: date,

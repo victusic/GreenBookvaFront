@@ -1,7 +1,5 @@
-import { useSelector } from 'react-redux';
 import { ProductDTO } from '../types/requestActions';
-import { AnyResponse } from '../types/types';
-import { RootState } from '../../store';
+import { AnyResponse, apiUrl } from '../types/types';
 
 export const getFindProductsList = async (
   findString: string,
@@ -17,7 +15,6 @@ export const getFindProductsList = async (
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<ProductDTO[]>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   const url = new URL(`${apiUrl}find`);
   const params: { [key: string]: string | number | boolean } = {
     findString,
@@ -68,7 +65,6 @@ export const getFindCountProductsList = async (
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<string>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   const url = new URL(`${apiUrl}find/info`);
 
   const params: { [key: string]: string | number | boolean } = {
@@ -112,7 +108,6 @@ export const getFindInfoProductsList = async (
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<ProductDTO[]>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   const url = new URL(`${apiUrl}find/info`);
   const params: { [key: string]: string | number | boolean } = {
     findString,

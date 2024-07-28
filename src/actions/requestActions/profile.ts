@@ -1,10 +1,8 @@
-import { useSelector } from 'react-redux';
 import { OrderDTO, OrderProductDTO, ProductDTO, ProfileSystemDataDTO } from '../types/requestActions';
-import { AnyResponse } from '../types/types';
-import { RootState } from '../../store';
+import { AnyResponse, apiUrl } from '../types/types';
 
 export const getFavorites = async (index: number): Promise<AnyResponse<ProductDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+   
   try {
     const resp = await fetch(`${apiUrl}favorites/${index}`);
     return await resp.json();
@@ -17,7 +15,7 @@ export const addFavorites = async (
   product: number,
   account: number,
 ): Promise<AnyResponse<ProfileSystemDataDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+   
   const requestData: { [key: string]: string | number } = {
     productId: product,
     accountId: account,
@@ -41,7 +39,7 @@ export const delFavorites = async (
   product: number,
   account: number,
 ): Promise<AnyResponse<ProfileSystemDataDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+   
   const requestData: { [key: string]: string | number } = {
     productId: product,
     accountId: account,
@@ -62,7 +60,7 @@ export const delFavorites = async (
 };
 
 export const cleanFavorites = async (index: number): Promise<AnyResponse<ProfileSystemDataDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+   
   try {
     const resp = await fetch(`${apiUrl}favorites/${index}`, { method: 'DELETE' });
     return await resp.json();
@@ -72,7 +70,7 @@ export const cleanFavorites = async (index: number): Promise<AnyResponse<Profile
 };
 
 export const getOrders = async (index: number): Promise<AnyResponse<OrderDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+   
   try {
     const resp = await fetch(`${apiUrl}orders/${index}`);
     return await resp.json();
@@ -82,7 +80,7 @@ export const getOrders = async (index: number): Promise<AnyResponse<OrderDTO>> =
 };
 
 export const getOrder = async (index: number, profileId: number): Promise<AnyResponse<OrderProductDTO[]>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+   
   try {
     const resp = await fetch(`${apiUrl}order/${index}?profile=${profileId}`);
     return await resp.json();
@@ -92,7 +90,7 @@ export const getOrder = async (index: number, profileId: number): Promise<AnyRes
 };
 
 export const getShoppingCart = async (index: number): Promise<AnyResponse<ProductDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+   
   try {
     const resp = await fetch(`${apiUrl}shopping_cart/${index}`);
     return await resp.json();
@@ -105,7 +103,7 @@ export const addShoppingCart = async (
   product: number,
   account: number,
 ): Promise<AnyResponse<ProfileSystemDataDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+   
   const requestData: { [key: string]: string | number } = {
     productId: product,
     accountId: account,
@@ -129,7 +127,7 @@ export const delShoppingCart = async (
   product: number,
   account: number,
 ): Promise<AnyResponse<ProfileSystemDataDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+   
   const requestData: { [key: string]: string | number } = {
     productId: product,
     accountId: account,
@@ -150,7 +148,7 @@ export const delShoppingCart = async (
 };
 
 export const cleanShoppingCart = async (index: number): Promise<AnyResponse<ProfileSystemDataDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+   
   try {
     const resp = await fetch(`${apiUrl}shopping_cart/${index}`, { method: 'DELETE' });
     return await resp.json();
@@ -160,7 +158,7 @@ export const cleanShoppingCart = async (index: number): Promise<AnyResponse<Prof
 };
 
 export const getCard = async (index: number) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+   
   try {
     const resp = await fetch(`${apiUrl}card/${index}`);
     return await resp.json();
@@ -170,7 +168,7 @@ export const getCard = async (index: number) => {
 };
 
 export const patchPoints = async (id: number, points: number) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
+   
   const requestData: { [key: string]: string | number } = {
     points,
   };

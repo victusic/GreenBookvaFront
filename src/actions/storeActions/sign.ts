@@ -2,11 +2,9 @@ import Cookies from 'js-cookie';
 
 import { refreshTokenAction, refreshSignStateAction, refreshProfileAction } from '../../store/signReducer';
 import { AnyAction } from 'redux';
-import { RootState } from '../../store';
-import { useSelector } from 'react-redux';
+import { apiUrl } from '../types/types';
 
 export const fetchSignGetCode = (mail) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function (dispatchSign) {
     fetch(`${apiUrl}sign?mail=` + mail)
       .then((response) => response.json())
@@ -18,7 +16,6 @@ export const fetchSignGetCode = (mail) => {
 };
 
 export const fetchSignPostCode = (code, mail, token) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function (dispatchSign) {
     const requestData = {
       token: token,
@@ -54,7 +51,6 @@ export const fetchSignPostCode = (code, mail, token) => {
 };
 
 export const fetchSignUp = (name, surname, mail) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function (dispatchSign) {
     const requestData = {
       name: name,
@@ -83,7 +79,6 @@ export const fetchSignUp = (name, surname, mail) => {
 };
 
 export const fetchCheckGetCode = (id) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function (dispatchSign) {
     fetch(`${apiUrl}check/` + id)
       .then((response) => response.json())
@@ -95,7 +90,6 @@ export const fetchCheckGetCode = (id) => {
 };
 
 export const fetchCheckPostCode = (code, mail, token) => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   return function (dispatchSign) {
     const requestData = {
       token: token,

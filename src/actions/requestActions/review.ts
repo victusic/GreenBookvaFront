@@ -1,10 +1,7 @@
-import { useSelector } from 'react-redux';
 import { ReviewDTO } from '../types/requestActions';
-import { AnyResponse } from '../types/types';
-import { RootState } from '../../store';
+import { AnyResponse, apiUrl } from '../types/types';
 
 export const getReview = async (index: number): Promise<AnyResponse<ReviewDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   try {
     const resp = await fetch(`${apiUrl}review/${index}`);
     return await resp.json();
@@ -20,7 +17,6 @@ export const addReview = async (
   review: string,
   rate: number,
 ): Promise<AnyResponse<ReviewDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   const requestData: { [key: string]: string | number } = {
     productId: product,
     accountId: account,
@@ -49,7 +45,6 @@ export const updateReview = async (
   review: string,
   rate: number,
 ): Promise<AnyResponse<ReviewDTO>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   const requestData: { [key: string]: string | number } = {
     header,
     reviewText: review,
@@ -71,7 +66,6 @@ export const updateReview = async (
 };
 
 export const delReview = async (index: number): Promise<AnyResponse<unknown>> => {
-  const apiUrl = useSelector((state: RootState) => state.externalLinks.api);
   try {
     const resp = await fetch(`${apiUrl}review/${index}`, { method: 'DELETE' });
     return await resp.json();
