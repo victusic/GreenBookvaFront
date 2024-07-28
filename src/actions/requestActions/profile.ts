@@ -1,9 +1,9 @@
 import { OrderDTO, OrderProductDTO, ProductDTO, ProfileSystemDataDTO } from '../types/requestActions';
-import { AnyResponse } from '../types/types';
+import { AnyResponse, apiUrl } from '../types/types';
 
 export const getFavorites = async (index: number): Promise<AnyResponse<ProductDTO>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/favorites/${index}`);
+    const resp = await fetch(`${apiUrl}favorites/${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -20,7 +20,7 @@ export const addFavorites = async (
   };
 
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/favorites`, {
+    const resp = await fetch(`${apiUrl}favorites`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ export const delFavorites = async (
   };
 
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/favorites`, {
+    const resp = await fetch(`${apiUrl}favorites`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ export const delFavorites = async (
 
 export const cleanFavorites = async (index: number): Promise<AnyResponse<ProfileSystemDataDTO>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/favorites/${index}`, { method: 'DELETE' });
+    const resp = await fetch(`${apiUrl}favorites/${index}`, { method: 'DELETE' });
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -67,7 +67,7 @@ export const cleanFavorites = async (index: number): Promise<AnyResponse<Profile
 
 export const getOrders = async (index: number): Promise<AnyResponse<OrderDTO>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/orders/${index}`);
+    const resp = await fetch(`${apiUrl}orders/${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -76,7 +76,7 @@ export const getOrders = async (index: number): Promise<AnyResponse<OrderDTO>> =
 
 export const getOrder = async (index: number, profileId: number): Promise<AnyResponse<OrderProductDTO[]>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/order/${index}?profile=${profileId}`);
+    const resp = await fetch(`${apiUrl}order/${index}?profile=${profileId}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -85,7 +85,7 @@ export const getOrder = async (index: number, profileId: number): Promise<AnyRes
 
 export const getShoppingCart = async (index: number): Promise<AnyResponse<ProductDTO>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/shopping_cart/${index}`);
+    const resp = await fetch(`${apiUrl}shopping_cart/${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -102,7 +102,7 @@ export const addShoppingCart = async (
   };
 
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/shopping_cart`, {
+    const resp = await fetch(`${apiUrl}shopping_cart`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -125,7 +125,7 @@ export const delShoppingCart = async (
   };
 
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/shopping_cart`, {
+    const resp = await fetch(`${apiUrl}shopping_cart`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -140,7 +140,7 @@ export const delShoppingCart = async (
 
 export const cleanShoppingCart = async (index: number): Promise<AnyResponse<ProfileSystemDataDTO>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/shopping_cart/${index}`, { method: 'DELETE' });
+    const resp = await fetch(`${apiUrl}shopping_cart/${index}`, { method: 'DELETE' });
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -149,7 +149,7 @@ export const cleanShoppingCart = async (index: number): Promise<AnyResponse<Prof
 
 export const getCard = async (index: number) => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/card/${index}`);
+    const resp = await fetch(`${apiUrl}card/${index}`);
     return await resp.json();
   } catch (e) {
     return { status: false, code: 0 };
@@ -162,7 +162,7 @@ export const patchPoints = async (id: number, points: number) => {
   };
 
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/profile/${id}/points`, {
+    const resp = await fetch(`${apiUrl}profile/${id}/points`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

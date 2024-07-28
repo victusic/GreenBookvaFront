@@ -8,10 +8,11 @@ import {
   refreshProfileCardsListAction,
   refreshProfileRequestAction,
 } from '../../store/profileReducer';
+import { apiUrl } from '../types/types';
 
 export const fetchProfileBase = (id) => {
   return function (dispatchProfile) {
-    fetch('https://db.greenbookva.shop/profile/' + id)
+    fetch(`${apiUrl}profile/` + id)
       .then((response) => response.json())
       .then((json) => dispatchProfile(refreshProfileBaseAction(json)));
   };
@@ -19,7 +20,7 @@ export const fetchProfileBase = (id) => {
 
 export const fetchProfileFavorites = (id) => {
   return function (dispatchProfile) {
-    fetch('https://db.greenbookva.shop/favorites/' + id + '/count')
+    fetch(`${apiUrl}favorites/` + id + '/count')
       .then((response) => response.json())
       .then((json) => dispatchProfile(refreshProfileFavoritesAction(json)));
   };
@@ -27,7 +28,7 @@ export const fetchProfileFavorites = (id) => {
 
 export const fetchProfileShoppingCart = (id) => {
   return function (dispatchProfile) {
-    fetch('https://db.greenbookva.shop/shopping_cart/' + id + '/count')
+    fetch(`${apiUrl}shopping_cart/` + id + '/count')
       .then((response) => response.json())
       .then((json) => dispatchProfile(refreshProfileShoppingCartAction(json)));
   };
@@ -35,7 +36,7 @@ export const fetchProfileShoppingCart = (id) => {
 
 export const fetchProfileFavoritesList = (id) => {
   return function (dispatchProfile) {
-    fetch('https://db.greenbookva.shop/favorites/' + id + '/check')
+    fetch(`${apiUrl}favorites/` + id + '/check')
       .then((response) => response.json())
       .then((json) => dispatchProfile(refreshProfileFavoritesListAction(json)));
   };
@@ -43,7 +44,7 @@ export const fetchProfileFavoritesList = (id) => {
 
 export const fetchProfileShoppingCartList = (id) => {
   return function (dispatchProfile) {
-    fetch('https://db.greenbookva.shop/shopping_cart/' + id + '/check')
+    fetch(`${apiUrl}shopping_cart/` + id + '/check')
       .then((response) => response.json())
       .then((json) => dispatchProfile(refreshProfileShoppingCartListAction(json)));
   };
@@ -51,7 +52,7 @@ export const fetchProfileShoppingCartList = (id) => {
 
 export const fetchProfileCardsList = (id) => {
   return function (dispatchProfile) {
-    fetch('https://db.greenbookva.shop/profile/' + id + '/cards')
+    fetch(`${apiUrl}profile/` + id + '/cards')
       .then((response) => response.json())
       .then((json) => dispatchProfile(refreshProfileCardsListAction(json)));
   };
@@ -67,7 +68,7 @@ export const fetchRefreshProfile = (id, name, surname, color, image, birthday) =
       birthday: birthday,
     };
 
-    fetch('https://db.greenbookva.shop/profile/' + id, {
+    fetch(`${apiUrl}profile/` + id, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -82,9 +83,7 @@ export const fetchRefreshProfile = (id, name, surname, color, image, birthday) =
 
 export const fetchDeleteProfile = (id) => {
   return function () {
-    fetch('https://db.greenbookva.shop/profile/' + id, { method: 'DELETE' }).then(() =>
-      window.location.reload(),
-    );
+    fetch(`${apiUrl}profile/` + id, { method: 'DELETE' }).then(() => window.location.reload());
   };
 };
 
@@ -95,7 +94,7 @@ export const fetchUpdateCard = (id, number, date) => {
   };
 
   return function () {
-    fetch('https://db.greenbookva.shop/card/' + id, {
+    fetch(`${apiUrl}card/` + id, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -107,9 +106,7 @@ export const fetchUpdateCard = (id, number, date) => {
 
 export const fetchDeleteCard = (id) => {
   return function () {
-    fetch('https://db.greenbookva.shop/card/' + id, { method: 'DELETE' }).then(() =>
-      window.location.reload(),
-    );
+    fetch(`${apiUrl}card/` + id, { method: 'DELETE' }).then(() => window.location.reload());
   };
 };
 
@@ -121,7 +118,7 @@ export const fetchAddCard = (id: string, number: string, date: string, accountId
   };
 
   return function () {
-    fetch('https://db.greenbookva.shop/card/' + id, {
+    fetch(`${apiUrl}card/` + id, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

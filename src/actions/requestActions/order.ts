@@ -1,5 +1,5 @@
 import { OrderDTO, ProductDTO } from '../types/requestActions';
-import { AnyResponse } from '../types/types';
+import { AnyResponse, apiUrl } from '../types/types';
 
 export const sendOrder = async (
   product: number,
@@ -15,7 +15,7 @@ export const sendOrder = async (
   };
 
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/order`, {
+    const resp = await fetch(`${apiUrl}order`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ export const sendOrder = async (
 
 export const newProductCount = async (index: number): Promise<AnyResponse<ProductDTO>> => {
   try {
-    const resp = await fetch(`https://db.greenbookva.shop/order/product/count/${index}`, {
+    const resp = await fetch(`${apiUrl}order/product/count/${index}`, {
       method: 'PATCH',
     });
     return await resp.json();

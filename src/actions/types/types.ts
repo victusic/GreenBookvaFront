@@ -13,3 +13,5 @@ interface ErrorResponse extends BaseResponse {
 }
 
 export type AnyResponse<T> = SuccessResponse<T> | ErrorResponse;
+
+export const apiUrl = 'https://db.greenbookva.shop/';

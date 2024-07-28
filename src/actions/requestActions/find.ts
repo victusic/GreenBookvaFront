@@ -1,5 +1,5 @@
 import { ProductDTO } from '../types/requestActions';
-import { AnyResponse } from '../types/types';
+import { AnyResponse, apiUrl } from '../types/types';
 
 export const getFindProductsList = async (
   findString: string,
@@ -15,7 +15,7 @@ export const getFindProductsList = async (
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<ProductDTO[]>> => {
-  const url = new URL('https://db.greenbookva.shop/find');
+  const url = new URL(`${apiUrl}find`);
   const params: { [key: string]: string | number | boolean } = {
     findString,
     limit,
@@ -65,7 +65,7 @@ export const getFindCountProductsList = async (
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<string>> => {
-  const url = new URL('https://db.greenbookva.shop/find/info');
+  const url = new URL(`${apiUrl}find/info`);
 
   const params: { [key: string]: string | number | boolean } = {
     findString: findString,
@@ -108,7 +108,7 @@ export const getFindInfoProductsList = async (
   minPrice: number,
   maxPrice: number,
 ): Promise<AnyResponse<ProductDTO[]>> => {
-  const url = new URL('https://db.greenbookva.shop/find/info');
+  const url = new URL(`${apiUrl}find/info`);
   const params: { [key: string]: string | number | boolean } = {
     findString,
     minPrice,
